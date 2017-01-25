@@ -1,0 +1,439 @@
+/* Insieme del css di tutte le pagine */
+/* STANDARD FOR MOBILE */
+* {
+/*trasparent link and button selection*/
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+-webkit-box-sizing:border-box;
+}
+body {
+ -webkit-touch-callout:none;
+ /*no callouts during tap and hold*/
+ -webkit-text-size-adjust:none;
+ /* no fonts auto inflation */
+ -webkit-user-select:none;
+ /* no copy and paste, etc. */
+ background-attachment: fixed;
+ font-family: 'helveticaNeue-Light','helveticaNeue','helvetica','arial','sans-serif';
+ font-size: 12px;
+ text-transform: uppercase;
+ overflow: hidden; /*Toglie la barra orizzontale */
+ /*overflow:hidden;*/   /*Toglie le barre orizzontali E verticali!*/
+ height: 100%;
+ width: 100%;
+ margin: 0;
+ padding: 0;
+}
+/* END STANDARD MOBILE */
+/*  HeadInit  */
+
+div#log_bg{
+    position:absolute;
+    top:0%;
+    height:100%;
+    width:100%;
+}
+div#log_logo{
+    background-image:url('../img/bg.png');
+    position:relative;
+    height:60%;
+    width:100%;
+    top:0%;
+    
+    
+}
+#log_logo > #logo{
+    position:relative;
+    margin:0 auto;
+    height:300px;
+    width:300px;
+    background-image:url('../img/logoPreload.png');
+}
+div#log_content{
+    position:relative;
+    width:100%;
+    margin:0 auto;
+    height:40%;
+    
+    background-color:red;
+}
+
+#log_content > div { 
+/*Si riferisce al div che è contenuto da log_content e cioè il primo div che è presente
+nei template "Login.html" e "SceltaCitta.html", quindi qui si va a settare in maniera
+generale la presentazione di quel content all'interno dell'html "HeadInit.html" */
+    /*position:relative;
+    left:50%;
+    margin-left:-25%;*/
+}
+
+/*sezione scelta città*/
+#containerscelta{
+    position: relative;
+    width: 100%; 
+    height: 100%; 
+    background-color: yellow;
+    top: 0%;
+    left: 0%;
+    
+}
+
+/*sezione offerte con collezione offerte di prodotti*/
+#containeroff {
+    position:relative;
+    background-color:white;
+    width:100%;
+    height:100%;
+}
+
+#containeroff > div{
+    /*Il div che contiene elementi che vengono visualizzati in orizzontale
+    deve avere l'attributo white-space:nowrap che in pratica impedisce ai
+    div di andare a capo*/
+    position:relative;
+    display:block;
+    /*white-space:nowrap;*/ /*Usiamo slick*/
+    width:100%;
+    height:40%;
+    background-color:yellow;
+}
+
+#containeroff > div > div{
+ /*float:left e display:inline-block sono differenti e se ne può
+ usare solo uno per mettere gli elementi in maniera orizzontale*/
+    display:inline-block;
+    width:130px;
+    height:150px;
+    margin:10px 10px;
+    background-color:purple;
+}
+
+/* sezione prova pagina DettagliProdotto */
+
+#dp_SUP {
+    position:relative;
+    display: block;
+}
+
+#img_SUP {
+    position: relative;
+    display: inline-block;
+}
+
+#lft_dscr {
+    position: relative;
+    display: inline-block;
+    
+}
+
+#colThumb {
+    position: relative;
+    display: block;
+    background-color: purple;
+}
+
+#dp_INF {
+    position: relative;
+    display: block;
+    background-color: lightgreen;
+}
+
+/* sezione relativa a dettaglio azienda */
+
+#dp_SUPE {
+    position: relative;
+    display: block;
+}
+
+#imgAZ_SUP{
+    position: relative;
+    display: inline-block;
+}
+
+#dati_DX {
+    position: relative;
+    display: inline-block;
+}
+
+#descr_mid {
+    position: relative;
+    display: block;
+}
+
+#dp_INFA {
+    position: relative;
+    background-color: green;
+    display: block;
+}
+
+/* sezione lista dei desideri */
+
+#titolo_ {
+	display: block;
+	width:100%;
+    height:100%;
+    background-color: red;
+    text-align: center;
+}
+
+#creazListaD {
+	position: relative;
+	border-radius: 5px;
+	padding: 20px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.linea {
+	width: 80%;
+	left: 10%;
+	background-color: black;
+}
+
+/*sezione i miei indirizzi */
+
+.MI_box {
+	position: relative;
+	float: inline-block;
+	top: 0%;
+	left: 10%;
+	border: 1px solid red;
+	width: 80%;
+	height: 100%;
+	margin-top: 15px;
+}
+
+
+
+
+
+
+/*
+#containeroff > ul{
+    position:relative;
+    overflow:hidden;
+    white-space: nowrap;
+    width:100%;
+    height:100%;
+    background-color:yellow;
+}*/ /*Se vogliamo usare container in altre zone di html forse questo non si
+dovrebbe usare qui così, potrebbe darci fastidio. Risolto con cambiamento 
+dei nomi nei file .js
+
+#containeroff > ul > li{
+    float:left;
+    width: 120px;
+    height: 100px;
+    margin:20px 20px;
+}
+    */
+
+
+/*  HeadNavig   */
+#content{ /*Lo usiamo per mettere il bg in comune a tutte le pagine headNavig*/
+    position:absolute;
+    overflow:hidden;
+    top:10%;
+    left:0%;
+    height:100%;
+    width:100%;
+    background-image:url('../img/bg.png');
+    z-index:-1;
+}
+
+
+
+/* SIDEMENU!!! (in HeadNavig) */
+
+
+/* Modal Content */
+#myModal {
+    display:none;
+    position: fixed;
+    z-index:3;
+    top:0;
+    width: 75%;
+    height:100%;
+    background-color: #b83b3b; /*Per chi non supporta webkit*/
+    background-image:url("../img/patternSideMenu.png");
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {left:-75%; opacity:0} 
+    to {left:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {left:-75%; opacity:0}
+    to {left:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Barra di decorazione verticale del sidemenu*/
+#decorazione{
+    position:absolute;
+    width:10%;
+    height:100%;
+    top:0%;
+    right:0%;
+    background-color:#d32633; 
+}
+
+.onMenu {
+    display:block;
+    text-decoration:none;
+    margin-top:3%;
+    margin-left:2%;
+    width:90%;
+    padding: 1px 0px 1px 5px;
+    background: -webkit-linear-gradient(left,#df5353,#d32633);
+    border-top:2px solid #df5353;
+    border-left:2px solid #df5353;
+    border-bottom:2px solid #df5353;
+    border-radius: 4px;
+}
+#logoRes{
+    display:block;
+    position:relative;
+    width:127px;
+    height:150px;
+    margin-left:auto;
+    margin-right:auto;
+    border:transparent;
+    background:transparent;
+}
+#logoMenu{
+    display:block;
+    width:100%;
+    height:100%;
+}
+#scltCitta {
+    text-align:center;
+    text-decoration:none;
+    font-size:12px;
+    font-family:'open sans','helveticaNeue-Light','helveticaNeue','helvetica','arial','sans-serif';
+    color:white;
+    border:none;
+    background-color:transparent;
+    -webkit-appearance: none;
+    -moz-appearance:none;
+    appearance:none;
+}
+#mLinks{
+    position:absolute;
+    text-decoration:none;
+    top:80%;
+    margin-left:2%;
+    margin-top:10%;
+}
+#mLinks a{
+    display:block;
+    color:#81dd0a;
+    text-decoration:none;
+}
+/* Ombra per il sidemenu*/
+#shadMod{
+    display:none;
+    position: fixed;
+    z-index:2;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    background-color: #000000; /*Fallback*/
+    background-color:rgba(0,0,0,0.4);
+}
+
+/*FINE SIDE MENU*/
+
+/*  Barra di navigazione superiore    */
+#bar_bg{ 
+    position:fixed;
+    display:block;
+    top:0%;
+    height:10%;
+    width:100%;
+    color:white;
+    background-color:black;
+    z-index:1;
+}
+/*  direttive sulla grandezza e sulla posizione della bar_main  */
+#bar_main{
+    position:relative;
+    top:0%
+    left:0%;
+    height:60%;
+    width:100%;
+    background-color:green;
+}
+/*  Metti i bottoni della bar_main tutti in linea*/
+#bar_bg > #bar_main > div {
+  display:inline-block;
+  position:absolute;
+  height:40px;
+  width:40px;
+  top:0%;
+}
+/*  Lista di icone della barra superiore    */
+#menuIcon{
+  background-image:url('../img/icon/MenuBottone.png');
+  width:50px;
+  height:50px;
+  margin:0; /* If you want no margin */
+  padding:0; /*if your want to padding */
+  left:0px;
+  float:left;
+  
+}
+#searchIcon{
+  background-image:url('../img/icon/Search.png');
+  margin:0; /* If you want no margin */
+  padding:0; /*if your want to padding */
+  right:50px;
+  float:right;
+  
+}
+#cartIcon{
+  background-image:url('../img/icon/Cart.png');
+  margin:0; /* If you want no margin */
+  padding:0; /*if your want to padding */
+  right:0px;
+  float:right;
+  
+}
+/*  Zona della navigation bar dove ci sono i tasti "Offerte"-"aziende"-"categorie"  */
+#bar_sub{
+
+}
+#bar_sub > div{
+    display:inline-block;
+    margin-left:13%;
+
+}
+
