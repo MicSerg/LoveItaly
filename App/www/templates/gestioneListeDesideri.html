@@ -1,41 +1,61 @@
 
         <div>
+            
             <div id="titolo_">Gestione Liste Desideri</div>
+            
             <div id="creazListaD">
-                <p>Nuova Lista dei Desideri</p>
-                <hr class="linea_pic"/>
+            
                 <!-- form solo inserimento -->
-                <form>
-                    <input type="text" id="ldnome" name="nomelistadesideri"/>
+                <form id="myform" class="linea_pic" action="">
+                    <p align="center">Nuova Lista dei Desideri</p>
+                    <p>
+                    <label for="user">Inserisci Nome</label>
+                    <input type="text" id="ldnome" name="nome">
+                    </p>
+
+                    <div id="gld_bottone">
+                        <!-- bottone -->
+                        <div class="opM_button">Salva</div>
+                    </div>
                 </form>
-                <!-- bottone -->
-                <div id="gld_bottone">
-                    <div class="opM_button">Salva</div>
-                </div>
+                
+                
+            
             </div>  
-            <div id="listaD">
-                <div id="etich_l">
-                    <div>Nome Lista</div>
-                    <div>Quant.</div>
-                    <div>Data</div>
+            
+            <div id="listaD" class="i-container">
+                
+                <div id="etich_1" class="i-g">
+                    <div class="i-4" style="background-color: red">Nome Lista</div>
+                    <div class="i-2" style="background-color: red">Quant.</div>
+                    <div class="i-4" style="background-color: red">Data</div>
                 </div><br/>
-                <div>
+
+                
+                <div class="i-g">
                     <hr class="linea"/><br/>
-                    <div>NomeLista1</div>
-                    <div>4</div>
-                    <div>12/11/2006</div><br/>
+                    <div class="i-4">NomeLista1</div>
+                    <div class="i-2">4</div>
+                    <div class="i-4">12/11/2006</div>
+                    <div class="i-2">X</div><br/>
                     <hr class="linea"/><br/>
-                    <div>NomeLista2</div>
-                    <div>9</div>
-                    <div>2/1/2016</div><br/>
+                    <div class="i-4">NomeLista2</div>
+                    <div class="i-2">9</div>
+                    <div class="i-4">2/1/2016</div>
+                    <div class="i-2">X</div><br/>
                     <hr class="linea"/><br/>
+
+
                 </div>
                   
             </div> 
 
             <div id="gld_bottone">
                 <div class="opM_button">Torna Indietro</div>
-            </div>
+            </div> 
+        
+        </div>
+
 
             <!--
             <div id="listaD">
@@ -58,4 +78,4 @@
             <!-- bottone per tornare indietro -->
 
           
-        </div>
+        
