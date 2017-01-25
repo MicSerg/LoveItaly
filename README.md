@@ -25,5 +25,3 @@ Tabella di marcia: Cosa manca?
 
 
 * NOTA BENE = Bisognerà risistemare tutti gli indirizzi dei template e alcuni codici html (tra qui quello dell'index che richiama proprio cordova).
-
-
