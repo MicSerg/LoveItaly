@@ -15,13 +15,20 @@ define(function(require){
 
     	className:"",
 
-    	events: {},
+    	events: {
+		"click #MI_box" : "toSalvaIndirizzo",
+	},
 
     	render: function(){
     		this.el.innerHTML=this.template({});
     		return this;
     	},
-
+	
+	toSalvaIndirizzo: function(event){
+            Backbone.history.navigate("salvaindirizzo",{
+                trigger: true
+            });
+	},
     });
     return mieiIndirizzi;
 });
