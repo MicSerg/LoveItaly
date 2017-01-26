@@ -18,12 +18,12 @@ define(function(require) {
 */
 	
 	var $ = require("jquery");
-    var slick = require("slider");
-    var Backbone = require("backbone");
-    //Lista delle Viste (quelle che contengono altre pagine)
-    var HeadInitView = require("views/HeadInitView");
-    var HeadNavigView = require("views/HeadNavigView");
-    var HeadMenuView = require("views/HeadMenuView");
+    	var slick = require("slider");
+    	var Backbone = require("backbone");
+    	//Lista delle Viste (quelle che contengono altre pagine)
+    	var HeadInitView = require("views/HeadInitView");
+    	var HeadNavigView = require("views/HeadNavigView");
+    	var HeadMenuView = require("views/HeadMenuView");
 
    	//Lista pagine di HeadInitView
 	var Preload = require("views/pages/Preload");
@@ -37,10 +37,13 @@ define(function(require) {
 
 	//Lista pagine di HeadMenuView
 	var MieiIndirizzi = require("views/pages/MieiIndirizzi");
+	var SalvaIndirizzo = require("views/pages/SalvaIndirizzo");
 
 	var GestListeDesideri = require("views/pages/GestListeDesideri");
+	var ListaDesideri = require("views/pages/ListaDesideri");
 
 	var MieiOrdini = require("views/pages/MieiOrdini");
+	var Ordine = require("views/pages/Ordine");
 
 	console.log('inizio router.js');
 
@@ -61,7 +64,10 @@ define(function(require) {
 			"showheadmenu": "showHeadMenu",
 			"mieiindirizzi": "showIndList",
 			"gestlistedesideri" : "showGestListDes",
-			"mieiordini" : "showMieiOrdini"
+			"mieiordini" : "showMieiOrdini",
+			"salvaindirizzo": "",
+			"listadesideri": "",
+			"ordine": "",
 		},
 
 		/*i primi attributi servono per determinare delle view specifiche che
@@ -109,15 +115,14 @@ define(function(require) {
 		},
 
 		showOfferte: function(){
-			// QUESTA sta con la structureView!
 			console.log("router.js -> offerte!!");
 			
 
 			var page= new Offerte({});
 			this.changePage(page);
 			$(".single-item").slick({
-                    dots: true
-            });
+			    dots: true
+		    	});
 		},
 
 		showDettaglioProdotto: function(){
@@ -142,14 +147,32 @@ define(function(require) {
 			var page= new MieiIndirizzi({});
 			this.changePage(page);
 		},
+		showSalvaInd: function(){
+			console.log("router.js > salva indirizzo");
+			
+			var page=new SalvaIndirizzo({});
+			this.changePage(page);
+		},
 		showGestListDes: function(){
 			console.log("router -> gest Lista Desideri");
 			var page= new GestListeDesideri({});
 			this.changePage(page);
 		},
+		showListDes: function(){
+			console.log("router js > Lista desideri");
+			
+			var page=new ListaDesideri({});
+			this.changePage(page);
+		},
 		showMieiOrdini: function(){
 			console.log("router -> miei ordini!");
 			var page= new MieiOrdini({});
+			this.changePage(page);
+		},
+		showOrdine: function(){
+			console.log("router js > Ordine");
+			
+			var page=new Ordine({});
 			this.changePage(page);
 		},
 
