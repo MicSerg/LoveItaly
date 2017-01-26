@@ -65,9 +65,9 @@ define(function(require) {
 			"mieiindirizzi": "showIndList",
 			"gestlistedesideri" : "showGestListDes",
 			"mieiordini" : "showMieiOrdini",
-			"salvaindirizzo": "",
-			"listadesideri": "",
-			"ordine": "",
+			"salvaindirizzo": "showSalvaInd",
+			"listadesideri": "showListDes",
+			"ordine": "showOrdine",
 		},
 
 		/*i primi attributi servono per determinare delle view specifiche che
