@@ -15,12 +15,20 @@ define(function(require){
 
     	className:"",
 
-    	events: {},
+    	events: {
+		"click #gld_bottone" = "toListaDesideri",
+	},
 
     	render: function(){
     		this.el.innerHTML=this.template({});
     		return this;
     	},
+	   
+	toListaDesideri: function(event){
+		Backbone.history.navigate("listadesideri",{
+                trigger: true
+		});
+	},
 
     });
     return gestListeDesideri;
