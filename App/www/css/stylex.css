@@ -252,7 +252,7 @@ dei nomi nei file .js
 
 
 /* Modal Content */
-#myModal {
+#sideModal {
     display:none;
     position: fixed;
     z-index:3;
