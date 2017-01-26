@@ -24,8 +24,10 @@ body {
  padding: 0;
 }
 /* END STANDARD MOBILE */
+
+
 /* NOTA BENE !!! ----> IL CSS E' DIVISO PER SEZIONI! *********************** */
-/*  HeadInit  */
+/*  HeadInit ************************************************************************************ */
 
 div#log_bg{
     position:absolute;
@@ -54,8 +56,7 @@ div#log_content{
     height:40%; 
     background-color:red;
 }
-
-#log_content > div { 
+#log_content > div { /*DA DEFINIRE*/
 /*Si riferisce al div che è contenuto da log_content e cioè il primo div che è presente
 nei template "Login.html" e "SceltaCitta.html", quindi qui si va a settare in maniera
 generale la presentazione di quel content all'interno dell'html "HeadInit.html" */
@@ -64,7 +65,7 @@ generale la presentazione di quel content all'interno dell'html "HeadInit.html" 
     margin-left:-25%;*/
 }
 
-/*sezione scelta città*/
+/*sezione scelta città ************************************************************************ */
 #containerscelta{
     position: relative;
     width: 100%; 
@@ -75,7 +76,7 @@ generale la presentazione di quel content all'interno dell'html "HeadInit.html" 
     
 }
 
-/*sezione offerte con collezione offerte di prodotti*/
+/*sezione offerte con collezione offerte di prodotti *********************************************** */
 #containeroff {
     position:relative;
     background-color:white;
@@ -105,7 +106,7 @@ generale la presentazione di quel content all'interno dell'html "HeadInit.html" 
     background-color:purple;
 }
 
-/* sezione prova pagina DettagliProdotto */
+/* sezione prova pagina DettagliProdotto ******************************************************** */
 
 #dp_SUP {
     position:relative;
@@ -134,7 +135,7 @@ generale la presentazione di quel content all'interno dell'html "HeadInit.html" 
     background-color: lightgreen;
 }
 
-/* sezione relativa a dettaglio azienda */
+/* sezione relativa a dettaglio azienda ********************************************************** */
 
 #dp_SUPE {
     position: relative;
@@ -162,20 +163,20 @@ generale la presentazione di quel content all'interno dell'html "HeadInit.html" 
     display: block;
 }
 
-/* sezione lista dei desideri */
+/* sezione lista dei desideri ****************************************************** */
 
 #titolo_ {
-	display: block;
-	width:100%;
+    display: block;
+    width:100%;
     height:100%;
     background-color: red;
     text-align: center;
 }
 
 #creazListaD {
-	position: relative;
-	border-radius: 5px;
-	padding: 20px;
+    position: relative;
+    border-radius: 5px;
+    padding: 20px;
 }
 
 input[type=text] {
@@ -194,7 +195,7 @@ input[type=text] {
 	background-color: black;
 }
 
-/*sezione i miei indirizzi */
+/*sezione i miei indirizzi ******************************************************** */
 
 .MI_box {
 	position: relative;
@@ -233,7 +234,7 @@ dei nomi nei file .js
     */
 
 
-/*  HeadNavig   */
+/*  HeadNavig ***************************************************************************** */
 #content{ /*Lo usiamo per mettere il bg in comune a tutte le pagine headNavig*/
     position:absolute;
     overflow:hidden;
@@ -247,7 +248,7 @@ dei nomi nei file .js
 
 
 
-/* SIDEMENU!!! (in HeadNavig) */
+/* SIDEMENU!!! (in HeadNavig)************************************************************************* */
 
 
 /* Modal Content */
@@ -261,24 +262,23 @@ dei nomi nei file .js
     background-color: #b83b3b; /*Per chi non supporta webkit*/
     background-image:url("../img/patternSideMenu.png");
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    -webkit-animation-name: animatetop;
+    -webkit-animation-name: animateleft;
     -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
+    animation-name: animateleft;
     animation-duration: 0.4s
 }
 
-/* Add Animation */
-@-webkit-keyframes animatetop {
+/* Animazione per SideMenu*/
+@-webkit-keyframes animateleft {
     from {left:-75%; opacity:0} 
     to {left:0; opacity:1}
 }
 
-@keyframes animatetop {
+@keyframes animateleft {
     from {left:-75%; opacity:0}
     to {left:0; opacity:1}
 }
 
-/* The Close Button */
 .close {
     color: white;
     float: right;
@@ -292,8 +292,8 @@ dei nomi nei file .js
     text-decoration: none;
     cursor: pointer;
 }
-/*Barra di decorazione verticale del sidemenu*/
-#decorazione{
+
+#decorazione{/*Barra di decorazione verticale del sidemenu*/
     position:absolute;
     width:10%;
     height:100%;
@@ -354,8 +354,8 @@ dei nomi nei file .js
     color:#81dd0a;
     text-decoration:none;
 }
-/* Ombra per il sidemenu*/
-#shadMod{
+
+#shadMod{/* Ombra per il SideMenu */
     display:none;
     position: fixed;
     z-index:2;
@@ -367,9 +367,36 @@ dei nomi nei file .js
     background-color:rgba(0,0,0,0.4);
 }
 
-/*FINE SIDE MENU*/
+/*Fine SideMenu, Inizio Modal Carrello ********************************************** */
+#cartModal{ /*Modal del carrello*/
+    display:none;
+    position: fixed;
+    z-index:3;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: #b83b3b; /*Per chi non supporta webkit*/
+    background-image:url("../img/patternSideMenu.png");
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animateright;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animateright;
+    animation-duration: 0.4s
+}
 
-/*  Barra di navigazione superiore    */
+/* Animazione del carrello */
+@-webkit-keyframes animateright {
+    from {right:-75%; opacity:0} 
+    to {right:0; opacity:1}
+}
+
+@keyframes animateright {
+    from {right:-75%; opacity:0}
+    to {right:0; opacity:1}
+}
+
+
+/*  Barra di navigazione superiore ************************************************** */
 #bar_bg{ 
     position:fixed;
     display:block;
@@ -380,7 +407,7 @@ dei nomi nei file .js
     background-color:black;
     z-index:1;
 }
-/*  direttive sulla grandezza e sulla posizione della bar_main  */
+
 #bar_main{
     position:relative;
     top:0%
@@ -389,16 +416,16 @@ dei nomi nei file .js
     width:100%;
     background-color:green;
 }
-/*  Metti i bottoni della bar_main tutti in linea*/
-#bar_bg > #bar_main > div {
+
+#bar_bg > #bar_main > div { /*  Metti i bottoni della bar_main tutti in linea*/
   display:inline-block;
   position:absolute;
   height:40px;
   width:40px;
   top:0%;
 }
-/*  Lista di icone della barra superiore    */
-#menuIcon{
+
+#menuIcon{ /*  Lista di icone della barra superiore    */
   background-image:url('../img/icon/MenuBottone.png');
   width:50px;
   height:50px;
