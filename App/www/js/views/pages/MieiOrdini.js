@@ -16,19 +16,20 @@ define(function(require){
     	className:"",
 
     	events: {
-		"click #MI_box" : "toSalvaIndirizzo",
+		"click .MO_button" = "toOrdine",
+		
 	},
 
     	render: function(){
     		this.el.innerHTML=this.template({});
     		return this;
     	},
-	
-	toSalvaIndirizzo: function(event){
-            Backbone.history.navigate("salvaindirizzo",{
+	toOrdine: function(event){
+		Backbone.history.navigate("ordine",{
                 trigger: true
-            });
-	},
+		});
+	}
+	
 
     });
     return mieiOrdini;
