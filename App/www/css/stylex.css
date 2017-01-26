@@ -24,6 +24,7 @@ body {
  padding: 0;
 }
 /* END STANDARD MOBILE */
+/* NOTA BENE !!! ----> IL CSS E' DIVISO PER SEZIONI! *********************** */
 /*  HeadInit  */
 
 div#log_bg{
@@ -38,8 +39,6 @@ div#log_logo{
     height:60%;
     width:100%;
     top:0%;
-    
-    
 }
 #log_logo > #logo{
     position:relative;
@@ -52,8 +51,7 @@ div#log_content{
     position:relative;
     width:100%;
     margin:0 auto;
-    height:40%;
-    
+    height:40%; 
     background-color:red;
 }
 
@@ -121,8 +119,7 @@ generale la presentazione di quel content all'interno dell'html "HeadInit.html" 
 
 #lft_dscr {
     position: relative;
-    display: inline-block;
-    
+    display: inline-block;  
 }
 
 #colThumb {
