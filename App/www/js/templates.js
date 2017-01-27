@@ -17,24 +17,24 @@ define({
 
     headnavig:"../../templates/headNavig.html",
     offerte:"../../templates/offerte.html",
-    
-    headmenu:"../../templates/headMenu.html",
-
-    cart:"../../templates/carrello.html",
     dettaglioAzienda:"../../templates/dettaglioAzienda.html",
     dettaglioProdotto:"../../templates/dettaglioProdotto.html",
-    gestListeDesideri:"../../templates/gestioneListeDesideri.html",
-    insDatiSpedizione:"../../templates/insDatiSpedizione.html",
     listaAziende:"../../templates/listaAziende.html",
     listaCategorie:"../../templates/listaCategorie.html",
+    risCategoria:"../../templates/risultatoCategoria.html",
+    risRicerca:"../../templates/risultatoRicerca.html",
+
+    headmenu:"../../templates/headMenu.html",
+    gestListeDesideri:"../../templates/gestioneListeDesideri.html",
     listaDesideri:"../../templates/listaDesideri.html",
     mieiIndirizzi:"../../templates/mieiIndirizzi.html", //Inserito...
     mieiOrdini:"../../templates/mieiOrdini.html",
-    
+    creaInd:"../../templates/salvaIndirizzo.html",
     ordine:"../../templates/ordine.html",
+    opzioni:"../../templates/opzioni.html",
+    aiuto:"../../templates/aiuto.html",
+    //Le due schermate del carrello da decidere -> headMenu?
     riepOrdine:"../../templates/riepilogoOrdine.html",
-    risCategoria:"../../templates/risultatoCategoria.html",
-    risRicerca:"../../templates/risultatoRicerca.html",
-    creaInd:"../../templates/salvaIndirizzo.html"
+    insDatiSpedizione:"../../templates/insDatiSpedizione.html",
     
 });

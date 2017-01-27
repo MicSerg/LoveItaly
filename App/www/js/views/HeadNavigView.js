@@ -52,9 +52,9 @@ define(function(require){
             "click #m_wlist" : function(){this.enteringMenu("gestlistedesideri");},
             "click #m_archord" : function(){this.enteringMenu("mieiordini");},
             "click #m_ladr" : function(){this.enteringMenu("mieiindirizzi");},
-            //"click #m_opz" : function(){this.enteringMenu("");},
+            "click #m_opz" : function(){this.enteringMenu("opzioni");},
             //"click #m_newsletter" : function(){this.enteringMenu("");},
-            //"click #m_help" : function(){this.enteringMenu("");},
+            "click #m_aiuto" : function(){this.enteringMenu("aiuto");},
 
             //<******fine eventi che mi portano in HeadMenuView
 

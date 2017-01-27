@@ -3,14 +3,6 @@ define(function(require) {
 /*	Tutte variabili per identificare view, librerie, modelli, pagine	*/
 /*	Da notare : Mettile in ordine! */
 /*
-	ERRORE ATTUALE
-	this.structureView.contentElement è indefinito, e dà errore alla riga
-	122 del file utils.js. Consulta questo file perché il prof ha commentato
-	tutto e quindi si potrebbe capire a cosa si riferisca questa variabile.
-	Molto probabile che si tratti di qualcosa legato all'html, "content" 
-	suggerisce che sia qualcosa relativo alla visualizzazione, che abbia la
-	vera struttura della pagina 
-	----
 	APPUNTO : I MODELLI (gli script all'interno della cartella "model") servono
 	soltanto per le chiamate API, quindi sicuro saranno qualcosa che si andrà
 	a modificare dopo, e non riguarda gli errori di ora
@@ -18,12 +10,12 @@ define(function(require) {
 */
 	
 	var $ = require("jquery");
-    	var slick = require("slider");
-    	var Backbone = require("backbone");
-    	//Lista delle Viste (quelle che contengono altre pagine)
-    	var HeadInitView = require("views/HeadInitView");
-    	var HeadNavigView = require("views/HeadNavigView");
-    	var HeadMenuView = require("views/HeadMenuView");
+    var slick = require("slider");
+    var Backbone = require("backbone");
+    //Lista delle Viste (quelle che contengono altre pagine)
+    var HeadInitView = require("views/HeadInitView");
+    var HeadNavigView = require("views/HeadNavigView");
+    var HeadMenuView = require("views/HeadMenuView");
 
    	//Lista pagine di HeadInitView
 	var Preload = require("views/pages/Preload");
@@ -38,12 +30,12 @@ define(function(require) {
 	//Lista pagine di HeadMenuView
 	var MieiIndirizzi = require("views/pages/MieiIndirizzi");
 	var SalvaIndirizzo = require("views/pages/SalvaIndirizzo");
-
 	var GestListeDesideri = require("views/pages/GestListeDesideri");
 	var ListaDesideri = require("views/pages/ListaDesideri");
-
 	var MieiOrdini = require("views/pages/MieiOrdini");
 	var Ordine = require("views/pages/Ordine");
+	var Opzioni = require("views/pages/Opzioni");
+	var Aiuto = require("views/pages/Aiuto");
 
 	console.log('inizio router.js');
 
@@ -57,10 +49,12 @@ define(function(require) {
 			"preload":"showPreload",
 			"sceltaCitta":"showSceltaCitta",
 			"login":"showLogin",
-			"offerte":"showOfferte",
+
 			"showheadnavig":"showHeadNavig",
+			"offerte":"showOfferte",
 			"dettaglioprodotto":"showDettaglioProdotto",
 			"dettaglioazienda":"showDettaglioAzienda",
+
 			"showheadmenu": "showHeadMenu",
 			"mieiindirizzi": "showIndList",
 			"gestlistedesideri" : "showGestListDes",
@@ -68,6 +62,8 @@ define(function(require) {
 			"salvaindirizzo": "showSalvaInd",
 			"listadesideri": "showListDes",
 			"ordine": "showOrdine",
+			"opzioni": "showOpzioni",
+			"aiuto": "showAiuto",
 		},
 
 		/*i primi attributi servono per determinare delle view specifiche che
@@ -173,6 +169,16 @@ define(function(require) {
 			console.log("router js > Ordine");
 			
 			var page=new Ordine({});
+			this.changePage(page);
+		},
+		showOpzioni: function(){
+			console.log("router > Opzioni");
+			var page=new Opzioni({});
+			this.changePage(page);
+		},
+		showAiuto: function(){
+			console.log("router > Aiuto");
+			var page=new Aiuto({});
 			this.changePage(page);
 		},
 
