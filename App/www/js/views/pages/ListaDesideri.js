@@ -6,7 +6,7 @@ define(function(require){
     var handlebars = require("handlebars");
     console.log("Entro in ListaDesideri");
 
-    var ListaDesideri = Utils.Page.extend({
+    var listaDesideri = Utils.Page.extend({
     	constructorName: "ListaDesideri",
     	initialize: function(){
     		this.template=Utils.templates.listaDesideri;

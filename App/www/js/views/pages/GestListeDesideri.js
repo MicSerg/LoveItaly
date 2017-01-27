@@ -16,7 +16,7 @@ define(function(require){
     	className:"",
 
     	events: {
-		"click #gld_bottone" = "toListaDesideri",
+		"click #gld_bottone" : "toListaDesideri",
 	},
 
     	render: function(){

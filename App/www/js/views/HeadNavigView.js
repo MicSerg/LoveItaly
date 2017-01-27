@@ -101,12 +101,12 @@ define(function(require){
             console.log("showSideMenu!!!! --------------DA FARE");
             console.log(this.el);
             console.log(this.el.innerHTML);
-            console.log(this.$el.find('#myModal')[0].style);
-            this.$el.find('#myModal')[0].style.display="block";
+            console.log(this.$el.find('#sideModal')[0].style);
+            this.$el.find('#sideModal')[0].style.display="block";
             this.$el.find('#shadMod')[0].style.display="block";
         },
         closeSideMenu: function(){
-            this.$el.find('#myModal')[0].style.display="none";
+            this.$el.find('#sideModal')[0].style.display="none";
             this.$el.find('#shadMod')[0].style.display="none";
         },
         showSearch:function(){
