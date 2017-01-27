@@ -251,7 +251,7 @@ dei nomi nei file .js
 /* SIDEMENU!!! (in HeadNavig)************************************************************************* */
 
 
-/* Modal Content */
+/*  */
 #sideModal {
     display:none;
     position: fixed;
@@ -355,7 +355,7 @@ dei nomi nei file .js
     text-decoration:none;
 }
 
-#shadMod{/* Ombra per il SideMenu */
+#sdwModal{/* Ombra per il SideMenu */
     display:none;
     position: fixed;
     z-index:2;

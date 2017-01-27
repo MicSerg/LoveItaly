@@ -44,8 +44,10 @@ define(function(require){
             //SIDEMENU
             "click #menuIcon" : "showSideMenu",
             "click #close" : "closeSideMenu", //Chiude side premendo la X
-            "click #shadMod" : "closeSideMenu", //Chiude side cliccando fuori
-            //FINE SIDEMENU
+            "click #sdwModal" : "closeSideMenu", //Chiude side cliccando fuori
+            //FINE SIDEMENU INIZIO CART 
+            "click #cartIcon" : "showCart",
+            "click #cartClose" : "closeCart",
             //*****Eventi che mi portano nel menu con la struttura HeadMenuView:
             "click #m_wlist" : function(){this.enteringMenu("gestlistedesideri");},
             "click #m_archord" : function(){this.enteringMenu("mieiordini");},
@@ -58,7 +60,6 @@ define(function(require){
 
 
             "click #searchIcon" : "showSearch",
-            "click #cartIcon" : "showCart",
             //Eventi scatenati dal click della sub-bar
             "click #tastoOfferte" : "showOfferte",
             "click #tastoCategorie" : "showListaCategorie",
@@ -98,22 +99,24 @@ define(function(require){
             console.log("vai verso lista aziende");
         },
         showSideMenu: function(){
-            console.log("showSideMenu!!!! --------------DA FARE");
-            console.log(this.el);
-            console.log(this.el.innerHTML);
-            console.log(this.$el.find('#sideModal')[0].style);
+            console.log("Apertura SideMenu");
             this.$el.find('#sideModal')[0].style.display="block";
-            this.$el.find('#shadMod')[0].style.display="block";
+            this.$el.find('#sdwModal')[0].style.display="block";
         },
         closeSideMenu: function(){
             this.$el.find('#sideModal')[0].style.display="none";
-            this.$el.find('#shadMod')[0].style.display="none";
+            this.$el.find('#sdwModal')[0].style.display="none";
         },
         showSearch:function(){
             console.log("che succede quando clicco la ricerca?");
         },
         showCart:function() {
-            console.log("Che succede quando clicco il carrello?");
+            console.log("Apertura Carrello");
+            this.$el.find('#cartModal')[0].style.display="block";
+        },
+        closeCart:function(){
+            console.log("Chiusura Carrello");
+            this.$el.find('#cartModal')[0].style.display="none";
         },
 
 
