@@ -436,13 +436,34 @@ dei nomi nei file .js
   
 }
 #searchIcon{
+  position:relative;
   background-image:url('../img/icon/Search.png');
-  margin:0; /* If you want no margin */
-  padding:0; /*if your want to padding */
-  right:50px;
+  background-position: 0px 0px 0px;
+  /*padding: 12px 20px 12px 40px;*/
+  background-repeat: no-repeat;
+  width:50px;
+  height:50px;
+  right:20px;
+  top:1px;
   float:right;
-  
 }
+#searchIcon > input[type=text]{
+
+  position:relative;
+  top:4px;
+  left:5px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  width:30px;
+  height:30px;
+}
+#searchIcon > input[type=text]:focus{
+  position:relative;
+  left:-250px;
+  width:250px;
+}
+
 #cartIcon{
   background-image:url('../img/icon/Cart.png');
   margin:0; /* If you want no margin */

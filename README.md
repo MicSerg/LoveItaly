@@ -6,9 +6,9 @@ Tabella di marcia: Cosa manca?
 1) Finalizzare struttura html delle schermate;
 
 2) Finire la navigazione:
-- Bisogna poter ritornare da dove si sono aperte le schermate del menu, quindi in una delle schermate della "headNavig";
 - Bisogna mettere le schermate della navigazione del carrello (Sono sotto HeadMenu!)
 - Bisogna inserire il richiamo alla schermata di login nel menu e nel carrello;
+- Bisogna fare le schermate di ricerca non appena si può!
 
 3) Creare i modelli e le collection di Backbone;
 
