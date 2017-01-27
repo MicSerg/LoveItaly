@@ -16,19 +16,24 @@ define(function(require){
     	className:"",
 
     	events: {
-		"click .MO_button" : "toOrdine",
-		
-	},
+    		"click .MO_button" : "toOrdine",
+    		"click #tastoIndietro" : "goBack",
+    	},
 
     	render: function(){
     		this.el.innerHTML=this.template({});
     		return this;
     	},
-	toOrdine: function(event){
-		Backbone.history.navigate("ordine",{
+        goBack: function(event){
+            Backbone.history.navigate("showheadnavig",{
                 trigger: true
-		});
-	}
+            });
+        },
+    	toOrdine: function(event){
+    		Backbone.history.navigate("ordine",{
+                    trigger: true
+    		});
+    	}
 	
 
     });

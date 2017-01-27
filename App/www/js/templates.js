@@ -29,7 +29,7 @@ define({
     listaDesideri:"../../templates/listaDesideri.html",
     mieiIndirizzi:"../../templates/mieiIndirizzi.html", //Inserito...
     mieiOrdini:"../../templates/mieiOrdini.html",
-    creaInd:"../../templates/salvaIndirizzo.html",
+    salvaIndirizzo:"../../templates/salvaIndirizzo.html",
     ordine:"../../templates/ordine.html",
     opzioni:"../../templates/opzioni.html",
     aiuto:"../../templates/aiuto.html",

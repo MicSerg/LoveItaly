@@ -1,7 +1,6 @@
 define(function(require){
 	var $ = require("jquery");
 	var Backbone = require("backbone");
-
     var Utils = require("utils");
 
     var sceltaCitta = Utils.Page.extend({

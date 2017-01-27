@@ -45,9 +45,7 @@ define(function(require){
             "click #menuIcon" : "showSideMenu",
             "click #close" : "closeSideMenu", //Chiude side premendo la X
             "click #sdwModal" : "closeSideMenu", //Chiude side cliccando fuori
-            //FINE SIDEMENU INIZIO CART 
-            "click #cartIcon" : "showCart",
-            "click #cartClose" : "closeCart",
+            //FINE SIDEMENU
             //*****Eventi che mi portano nel menu con la struttura HeadMenuView:
             "click #m_wlist" : function(){this.enteringMenu("gestlistedesideri");},
             "click #m_archord" : function(){this.enteringMenu("mieiordini");},
@@ -55,9 +53,15 @@ define(function(require){
             "click #m_opz" : function(){this.enteringMenu("opzioni");},
             //"click #m_newsletter" : function(){this.enteringMenu("");},
             "click #m_aiuto" : function(){this.enteringMenu("aiuto");},
-
             //<******fine eventi che mi portano in HeadMenuView
-
+            //INIZIO CART 
+            //RICORDA TASTO PER ELIMINARE PRODOTTI DAL CARRELLO!!
+            //SIA UNO ALLA VOLTA CHE TUTTI INSIEME!
+            "click #cartIcon" : "showCart",
+            "click #cartClose" : "closeCart",
+            //EVENTI DI CART
+            "click #tastoCheckOut":"proceedPurchase",
+            //FINE CART
 
             "click #searchIcon" : "showSearch",
             //Eventi scatenati dal click della sub-bar
@@ -117,6 +121,15 @@ define(function(require){
         closeCart:function(){
             console.log("Chiusura Carrello");
             this.$el.find('#cartModal')[0].style.display="none";
+        },
+        proceedPurchase:function(){
+            console.log("Procedi con l'acquisto del carrello");
+            /*IMPORTANTE:
+            SE si è loggati -> Si procede con "insDatiSpedizione"
+            SE non si è loggati -> Si va al login e poi "insDatiSped"
+            QUI sarà presente un IF che camperà TUTTO sull'autenticazione
+            */
+
         },
 
 

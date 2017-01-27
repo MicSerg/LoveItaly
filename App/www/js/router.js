@@ -112,7 +112,10 @@ define(function(require) {
 
 		showOfferte: function(){
 			console.log("router.js -> offerte!!");
-			
+			if(this.secondView != "offerte") {
+				console.log("****** TRASFORMA secondView!!! >>>>" + this.secondView);
+				this.secondView = "offerte";
+			}
 
 			var page= new Offerte({});
 			this.changePage(page);
@@ -123,13 +126,20 @@ define(function(require) {
 
 		showDettaglioProdotto: function(){
 			console.log("router.js -> dettaglioProdotto");
-
+			if(this.secondView != "dettaglioprodotto") {
+				console.log("****** TRASFORMA secondView!!! >>>>" + this.secondView);
+				this.secondView = "dettaglioprodotto";
+			}
 			var page=new DettaglioProdotto({});
 			this.changePage(page);
 		},
 
 		showDettaglioAzienda: function(){
 			console.log("router.js -> dettaglioAzienda");
+			if(this.secondView != "dettaglioazienda") {
+				console.log("****** TRASFORMA secondView!!! >>>>" + this.secondView);
+				this.secondView = "dettaglioazienda";
+			}
 
 			var page=new DettaglioAzienda({});
 			this.changePage(page);
@@ -202,7 +212,10 @@ define(function(require) {
 			console.log("router.js -> showHeadNavig!!");
 			$('#log_bg').remove(); // Rimuovo log_bg della pagina precedente
 			
-			if(this.structureView){ // La structure view è true, esiste sicuramente
+			if(this.structureView){ 
+				if(this.structureView.secondView){ 
+					this.secondView = this.structureView.secondView;
+				}
 				this.structureView = new HeadNavigView();
 				console.log("Router.js -> showHeadNavig");
 				document.body.appendChild(this.structureView.render().el);
@@ -221,8 +234,8 @@ define(function(require) {
 			$('header').remove(); // Rimuove HeadNavig
 			$('#content').remove(); // Rinuove l'altro id presente, content
 			//Cambia dinamicamente la pagina.
-			this.menuView = this.structureView.menuView; /*IMPORTANTISSIMA*/
 			if(this.structureView){
+				this.menuView = this.structureView.menuView; /*IMPORTANTISSIMA*/
 				this.structureView = new HeadMenuView();
 				document.body.appendChild(this.structureView.render().el);
 				this.structureView.trigger("inTheDOM");

@@ -16,19 +16,26 @@ define(function(require){
     	className:"",
 
     	events: {
-		"click #gld_bottone" : "toListaDesideri",
-	},
+		  "click #gld_bottone" : "toListaDesideri",
+          "click #tastoIndietro" : "goBack",
+        },
 
     	render: function(){
     		this.el.innerHTML=this.template({});
     		return this;
     	},
-	   
-	toListaDesideri: function(event){
-		Backbone.history.navigate("listadesideri",{
+
+        goBack: function(event){
+            Backbone.history.navigate("showheadnavig",{
                 trigger: true
-		});
-	},
+            });
+        },
+	   
+    	toListaDesideri: function(event){
+    		Backbone.history.navigate("listadesideri",{
+                    trigger: true
+    		});
+    	},
 
     });
     return gestListeDesideri;

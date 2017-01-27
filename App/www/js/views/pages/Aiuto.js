@@ -16,7 +16,7 @@ define(function(require){
     	className: "",
 
     	events: {
-    		"click #tastoIndietro" : "toOfferte", 
+    		"click #tastoIndietro" : "goBackToNavig", 
     	},
 
     	render: function(){
@@ -24,11 +24,12 @@ define(function(require){
     		return this;
     	},
 
-        toOfferte: function(){ 
-            Backbone.history.navigate("dettaglioazienda",{
+        goBackToNavig: function(){ 
+            console.log("back toOfferte from Aiuto");
+            Backbone.history.navigate("showheadnavig",{
                 trigger: true
             });
-        }
+        },
 
     });
     return aiuto;

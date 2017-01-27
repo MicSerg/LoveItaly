@@ -42,7 +42,7 @@ define(function(require){
             Backbone.history.navigate("dettaglioprodotto",{
                 trigger: true
             });
-        }
+        },
 
     });
     return offerte;

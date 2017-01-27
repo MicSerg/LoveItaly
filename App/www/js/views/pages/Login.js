@@ -36,7 +36,6 @@ define(function(require){
         ci riferiamo alla funzione showHeadNavig usando lo stesso nome ma con le lettere
         minuscole*/
         headNavig: function(event){
-           
             Backbone.history.navigate("showheadnavig",{
                 trigger: true
             });
