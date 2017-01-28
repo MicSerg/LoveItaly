@@ -119,11 +119,15 @@ define(function(require) {
 
 			var page= new Offerte({});
 			this.changePage(page);
-			$('.single-item').slick({
+			$('.autoplay').slick({
+				
 				dots:true,
-			    slideToShow:3,
-			    slideToScroll:1,
-			    autoplay: true,
+				slidesToShow: 1,
+  				slidesToScroll: 1,
+				centerMode:true,
+				centerPadding:'65px',
+				arrows:false,
+			    autoplay:true,		  
 				autoplaySpeed: 2000
 		    });
 		},
