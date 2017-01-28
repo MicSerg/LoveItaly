@@ -120,8 +120,11 @@ define(function(require) {
 			var page= new Offerte({});
 			this.changePage(page);
 			$(".single-item").slick({
-			    dots: true
-		    	});
+			    dots: true,
+			    arrows: true,
+			    autoplay: true,
+				autoplaySpeed: 2000
+		    });
 		},
 
 		showDettaglioProdotto: function(){

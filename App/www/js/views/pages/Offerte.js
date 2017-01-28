@@ -14,8 +14,6 @@ define(function(require){
 
     	initialize: function(){
     		this.template = Utils.templates.offerte;
-            console.log("Inizializza");
-
     	},
 
     	id: "",
@@ -23,18 +21,20 @@ define(function(require){
 
         //in offerte c'è solo l'evento che ti porta al dettaglio prodotto.
     	events: {
-    		"click #containeroff" : "toDettProdotto", 
+    		"click #prova" : "toDettProdotto", 
     	},
 
     	render: function(){
-    		this.el.innerHTML = this.template({});
-            this.slideInit();
-    		return this;
+            var self = this;
+    		self.el.innerHTML = self.template({});
+            self.slideInit();
+    		return self;
     	},
 
         slideInit: function(e){
             $(".single-item").slick({
                 dots: true,
+                arrows: true,
                 adaptiveHeight: true
             });
         },

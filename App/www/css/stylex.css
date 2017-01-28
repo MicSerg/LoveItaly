@@ -76,36 +76,6 @@ generale la presentazione di quel content all'interno dell'html "HeadInit.html" 
     
 }
 
-/*sezione offerte con collezione offerte di prodotti *********************************************** */
-#containeroff {
-    position:relative;
-    background-color:white;
-    width:100%;
-    height:100%;
-}
-
-#containeroff > div{
-    /*Il div che contiene elementi che vengono visualizzati in orizzontale
-    deve avere l'attributo white-space:nowrap che in pratica impedisce ai
-    div di andare a capo*/
-    position:relative;
-    display:block;
-    /*white-space:nowrap;*/ /*Usiamo slick*/
-    width:100%;
-    height:40%;
-    background-color:yellow;
-}
-
-#containeroff > div > div{
- /*float:left e display:inline-block sono differenti e se ne può
- usare solo uno per mettere gli elementi in maniera orizzontale*/
-    display:inline-block;
-    width:130px;
-    height:150px;
-    margin:10px 10px;
-    background-color:purple;
-}
-
 /* sezione prova pagina DettagliProdotto ******************************************************** */
 
 #dp_SUP {
@@ -210,30 +180,6 @@ generale la presentazione di quel content all'interno dell'html "HeadInit.html" 
 
 
 
-
-
-
-/*
-#containeroff > ul{
-    position:relative;
-    overflow:hidden;
-    white-space: nowrap;
-    width:100%;
-    height:100%;
-    background-color:yellow;
-}*/ /*Se vogliamo usare container in altre zone di html forse questo non si
-dovrebbe usare qui così, potrebbe darci fastidio. Risolto con cambiamento 
-dei nomi nei file .js
-
-#containeroff > ul > li{
-    float:left;
-    width: 120px;
-    height: 100px;
-    margin:20px 20px;
-}
-    */
-
-
 /*  HeadNavig ***************************************************************************** */
 #content{ /*Lo usiamo per mettere il bg in comune a tutte le pagine headNavig*/
     position:absolute;
@@ -245,6 +191,37 @@ dei nomi nei file .js
     background-image:url('../img/bg.png');
     z-index:-1;
 }
+
+/*sezione offerte con collezione offerte di prodotti *********************************************** */
+#container_Offerte{
+    position:relative;
+    
+    width:100%;
+    height:100%;
+}
+
+.single-item{
+    position:relative;
+    height:40%;
+    width:100%;
+    background-color: yellow;
+}
+
+.single-item > div{
+ /*float:left e display:inline-block sono differenti e se ne può
+ usare solo uno per mettere gli elementi in maniera orizzontale*/
+    display:inline-block;
+    margin:0 auto;
+    width:130;
+    height:150;
+}
+
+.pannello > div{
+    width:130;
+    height:150;
+    background-color:black;
+}
+
 
 
 
