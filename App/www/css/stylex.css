@@ -183,43 +183,40 @@ generale la presentazione di quel content all'interno dell'html "HeadInit.html" 
 /*  HeadNavig ***************************************************************************** */
 #content{ /*Lo usiamo per mettere il bg in comune a tutte le pagine headNavig*/
     position:absolute;
-    overflow:hidden;
+
     top:10%;
     left:0%;
-    height:100%;
+    height:100vh;
     width:100%;
     background-image:url('../img/bg.png');
-    z-index:-1;
+    z-index:-4;
 }
 
 /*sezione offerte con collezione offerte di prodotti *********************************************** */
 #container_Offerte{
     position:relative;
-    
+    display:block;
+    top:0px;
+    left:0px;
     width:100%;
+    height:25vh;
+    background-color:yellow;
+}
+
+.single-item{ /*Spazio dello slider, normale*/
     height:100%;
+    background-color:purple;
 }
 
-.single-item{
+
+.pannello > div { /*Elementi della slider, con errore*/
     position:relative;
-    height:40%;
-    width:100%;
-    background-color: yellow;
-}
-
-.single-item > div{
- /*float:left e display:inline-block sono differenti e se ne può
- usare solo uno per mettere gli elementi in maniera orizzontale*/
-    display:inline-block;
+    display:block;
+    width:130px;
+    height:150px;
     margin:0 auto;
-    width:130;
-    height:150;
-}
-
-.pannello > div{
-    width:130;
-    height:150;
-    background-color:black;
+    border:1px solid gray;
+    background-color:red;
 }
 
 

@@ -119,9 +119,10 @@ define(function(require) {
 
 			var page= new Offerte({});
 			this.changePage(page);
-			$(".single-item").slick({
-			    dots: true,
-			    arrows: true,
+			$('.single-item').slick({
+				dots:true,
+			    slideToShow:3,
+			    slideToScroll:1,
 			    autoplay: true,
 				autoplaySpeed: 2000
 		    });

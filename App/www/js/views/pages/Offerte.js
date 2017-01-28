@@ -32,10 +32,12 @@ define(function(require){
     	},
 
         slideInit: function(e){
-            $(".single-item").slick({
-                dots: true,
-                arrows: true,
-                adaptiveHeight: true
+            $('.single-item').slick({
+                dots:true,
+                slideToShow:3,
+                slideToScroll:1,
+                autoplay: true,
+                autoplaySpeed: 2000
             });
         },
         toDettProdotto: function(event){
