@@ -163,7 +163,7 @@ generale la presentazione di quel content all'interno dell'html "HeadInit.html" 
     display: block;
 }
 
-/* sezione lista dei desideri ****************************************************** */
+/* sezione GESTIONE lista dei desideri ****************************************************** */
 
 #titolo_ {
     display: block;
@@ -179,7 +179,7 @@ generale la presentazione di quel content all'interno dell'html "HeadInit.html" 
     padding: 20px;
 }
 
-input[type=text] {
+#myform > input[type=text] { /*Da modificare, sbagliato.*/
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -448,7 +448,6 @@ dei nomi nei file .js
   float:right;
 }
 #searchIcon > input[type=text]{
-
   position:relative;
   top:4px;
   left:5px;
@@ -474,13 +473,29 @@ dei nomi nei file .js
 }
 /*  Zona della navigation bar dove ci sono i tasti "Offerte"-"aziende"-"categorie"  */
 #bar_sub{
-
+    position:relative;
+    top:0%;
+    left:0%;
+    width:100%;
+    background-color: red;
+    height:40%;
 }
 #bar_sub > div{
-    display:inline-block;
-    margin-left:13%;
-
+    height:100%;
+    width:100%;
 }
+#bar_sub > div > div{
+    position:relative;
+    margin-top:2%;
+    top:-65%;
+    display:inline-block;
+    height:80%;
+    text-align: center;
+    border:1px solid white;
+    border-radius: 2px;
+}
+
+
 
 /* ****Salva Indirizzo************ */
 #SI_Form_ > label {

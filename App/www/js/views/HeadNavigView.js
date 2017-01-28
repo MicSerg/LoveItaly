@@ -65,9 +65,9 @@ define(function(require){
 
             "click #searchIcon" : "showSearch",
             //Eventi scatenati dal click della sub-bar
-            "click #tastoOfferte" : "showOfferte",
-            "click #tastoCategorie" : "showListaCategorie",
-            "click #tastoAziende" : "showListaAziende"
+            "click #tOfferte" : "showOfferte",
+            "click #tCategorie" : "showListaCategorie",
+            "click #tAziende" : "showListaAziende"
 
     	},
 
@@ -92,15 +92,30 @@ define(function(require){
         },
 
         showOfferte:function(){
+            var self=this;
+            self.switchColor("#tOfferte","#tCategorie","#tAziende");
+
             Backbone.history.navigate("offerte",{
                 trigger: true
             });
         },
         showListaCategorie:function(){
+            var self=this;
+            self.switchColor("#tCategorie","#tOfferte","#tAziende");
             console.log("Vai verso lista categorie");
         },
         showListaAziende:function(){
+            var self=this;
+            self.switchColor("#tAziende","#tCategorie","#tOfferte");
             console.log("vai verso lista aziende");
+        },
+        switchColor: function(a,b,c){
+            this.$el.find(a)[0].style.backgroundColor="white";
+            this.$el.find(a)[0].style.color="black";
+            this.$el.find(b)[0].style.backgroundColor="transparent";
+            this.$el.find(b)[0].style.color="white";
+            this.$el.find(c)[0].style.backgroundColor="transparent";
+            this.$el.find(c)[0].style.color="white";
         },
         showSideMenu: function(){
             console.log("Apertura SideMenu");
