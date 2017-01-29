@@ -50,7 +50,8 @@ define(function(require){
             "click #m_wlist" : function(){this.enteringMenu("gestlistedesideri");},
             "click #m_archord" : function(){this.enteringMenu("mieiordini");},
             "click #m_ladr" : function(){this.enteringMenu("mieiindirizzi");},
-            "click #m_opz" : function(){this.enteringMenu("opzioni");},
+            "click #m_opz" : "toOpzioni",
+            "click #op_back" : "FromOpzioniToMenu",
             //"click #m_newsletter" : function(){this.enteringMenu("");},
             "click #m_aiuto" : function(){this.enteringMenu("aiuto");},
             //<******fine eventi che mi portano in HeadMenuView
@@ -122,10 +123,19 @@ define(function(require){
             this.$el.find('#sideModal')[0].style.display="block";
             this.$el.find('#sdwModal')[0].style.display="block";
         },
+        toOpzioni: function(){
+            this.$el.find('#parteSM')[0].style.display="none";
+            this.$el.find('#parteOP')[0].style.display="block";
+        },
+        FromOpzioniToMenu: function(){
+            this.$el.find('#parteSM')[0].style.display="block";
+            this.$el.find('#parteOP')[0].style.display="none";
+        },
         closeSideMenu: function(){
             this.$el.find('#sideModal')[0].style.display="none";
             this.$el.find('#sdwModal')[0].style.display="none";
         },
+
         showSearch:function(){
             console.log("che succede quando clicco la ricerca?");
         },

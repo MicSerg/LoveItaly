@@ -342,6 +342,9 @@ generale la presentazione di quel content all'interno dell'html "HeadInit.html" 
     color:#81dd0a;
     text-decoration:none;
 }
+#parteOP{
+    display:none;
+}
 
 #sdwModal{/* Ombra per il SideMenu */
     display:none;
@@ -482,7 +485,10 @@ generale la presentazione di quel content all'interno dell'html "HeadInit.html" 
     border:1px solid white;
     border-radius: 2px;
 }
-
+#tOfferte{ /*Quando viene aperta la prima volta, si presenta così*/
+    background-color:white;
+    color:black;
+}
 
 
 /* ****Salva Indirizzo************ */
