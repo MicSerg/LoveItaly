@@ -8,12 +8,18 @@ Tabella di marcia: Cosa manca?
 Elenco Schermate con % completate:
 
 90% -> HeadNavig & Offerte;
-40% -> SceltaCittà, Login, Dettaglio Prodotto; 
-20% -> Dettaglio Azienda;
-0% -> Riepilogo Ordine, Ins Dati Spedizione, Lista Aziende, Ordine, Miei Ordini, Lista Desideri, Gestione Lista Desideri, Miei Indirizzi, Salva indirizzo, Lista Categorie, Categoria Scelta / Ricerca, Aiuto, Opzioni.
 
-Cosa manca effettivamente? 
+40% -> SceltaCittà, Login, Dettaglio Prodotto;
+
+20% -> Dettaglio Azienda;
+
+0% -> Riepilogo Ordine, Ins Dati Spedizione, Lista Aziende, Ordine, Miei Ordini, Lista Desideri, Gestione Lista Desideri, Miei Indirizzi, Salva indirizzo, Lista Categorie, Categoria Scelta / Ricerca, Aiuto, Opzioni;
+
+
+*** Cosa manca effettivamente? *** 
+
 HeadNavig: Manca struttura carrello + bottone per comprare, manca il rendere il tasto di offerte bianco all'inizio visto che ci si trova in offerte, manca la schermata di opzioni che va a rimpiazzare il sideMenu.
+
 Offerte:Definizione della struttura del PRODOTTO, miglioramenti vari css, aggiunta al carrello E alla lista desideri;
 
 40% -> Mancano molte cose a livello strutturale e stilistico (html e css);
@@ -25,8 +31,11 @@ Offerte:Definizione della struttura del PRODOTTO, miglioramenti vari css, aggiun
 
 
 2) Finire la navigazione:
+
 - Bisogna mettere le schermate della navigazione del carrello (Sono sotto HeadMenu!)
+
 - Bisogna inserire il richiamo alla schermata di login nel menu e nel carrello;
+
 - Bisogna fare le schermate di ricerca non appena si può!
 
 3) Creare i modelli e le collection di Backbone;
@@ -53,31 +62,43 @@ Quali sono le schermate che più di tutte hanno bisogno di handlebars e quindi d
 
 * Ricerca/Categoria Scelta -> Serve per caricare lista di prodotti O aziende.
 HeadNavig -> Serve per completare il menu da Loggati e NON.
+
 SceltaCittà -> Serve per pre-caricare le città di loveItaly.
+
 Login -> Va inserita l'autenticazione vera e propria.
+
 * Dettaglio prodotto -> Serve per avere tutte le informazioni su uno specifico prodotto.
+
 Lista Categorie -> Serve per avere la lista delle categorie.
+
 * Dettaglio Azienda -> serve per avere i dettagli dell'azienda specifica E serve per avere la lista dei prodotti di quella specifica azienda.
+
 Lista Aziende -> Serve per avere la lista delle aziende in loveItaly.
+
 Miei Indirizzi -> serve per avere tutti gli indirizzi salvati da un'utente.
+
 Indirizzo -> Serve per permettere ad un utente di salvare altri indirizzi.
+
 ** Lista Desideri -> Serve per avere la lista dei prodotti di una lista desideri di un utente specifico.
+
 Gestione Lista Desideri -> Serve per avere la lista delle liste dei desideri di un utente specifico oltre che per crearne altre.
+
 *** Ordine -> Serve per poter avere i dettagli su di un ordine specifico dell'utente.
+
 miei ordini -> Serve per avere la lista degli ultimi ordini fatti dall'utente.
+
 Ins Dati Spedizione -> Serve per mandare un segnale al database che qualcuno ha effettuato un ordine.
 
 NOTA BENE: 
 * = Queste pagine permettono all'utente di mettere i prodotti nella lista desideri O/E nel carrello!
+
 **= Queste pagine permettono all'utente di mettere i prodotti nel carrello!
+
 ***= Queste pagine permettono all'utente di poter ri-comprare un ordine interamente!
 
 
 CASO SPECIALE : Carrello -> Questa schermata (che in realtà non è una schermata a sé ma una parte di HeadNavig) ha bisogno della Session per poter salvare in locale (penso) gli oggetti che si sono messi nel carrello.
 Da notare che quando si va nella schermata InsIndirizzoSpedizione, si ha bisogno della data del giorno in cui è stato fatto l'ordine come data di partenza per la consegna!!
-
-
-
 
 7) Provare l'applicazione in cordova di nuovo;
 
