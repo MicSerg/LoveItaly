@@ -38,7 +38,7 @@ div#log_bg{
 div#log_logo{
     background-image:url('../img/bg.png');
     position:relative;
-    height:60%;
+    height:50%;
     width:100%;
     top:0%;
 }
@@ -53,86 +53,143 @@ div#log_content{
     position:relative;
     width:100%;
     margin:0 auto;
-    height:40%; 
-    background-color:red;
-}
-#log_content > div { /*DA DEFINIRE*/
-/*Si riferisce al div che è contenuto da log_content e cioè il primo div che è presente
-nei template "Login.html" e "SceltaCitta.html", quindi qui si va a settare in maniera
-generale la presentazione di quel content all'interno dell'html "HeadInit.html" */
-    /*position:relative;
-    left:50%;
-    margin-left:-25%;*/
+    height:50%; 
+    
+
 }
 
-/*sezione scelta città ************************************************************************ */
-#containerscelta{
-    position: relative;
-    width: 100%; 
-    height: 100%; 
-    background-color: yellow;
-    top: 0%;
-    left: 0%;
+/*schermata scelta città*/
+#sc_Container { /*cont scelta*/
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+}
+#a_Sceltac{
+    position:absolute;
+    top:0px;
+    left:0px;
+    height:40%;
+    width:100%;
+    background-color: rgba(162,28,38,.1);
+}
+#a_Sceltac > div{
+    position:relative;
+    vertical-align:middle;
+    left:50%;
+    margin-left:-25%;
+    top:50%; /* DA MODIFICARE IN SEGUITO!*/
+    /*margin-top:-25%;*/
     
 }
-
-/* sezione prova pagina DettagliProdotto ******************************************************** */
-
-#dp_SUP {
+#separate{
+    position:absolute;
+    top:40%;
+    left:0px;
+    height:20%;
+    width:100%;
+}
+#separate > p{
     position:relative;
-    display: block;
+    top:15%;
+    text-align: center;
+    
+}
+#b_Sceltac{
+    position:absolute;
+    top:60%;
+    left:0px;
+    height:40%;
+    width:100%;
+    background-color: rgba(71,122,61,.1);
+
 }
 
-#img_SUP {
-    position: relative;
-    display: inline-block;
+#b_Sceltac > div{
+    position:relative;
+    width:60%;   
+    top:0px;
+    left:0px;
+    left:20%;
+    text-align:center;
+}
+select {
+    position:relative;
+    display:block;
+    width: 60%;
+    left:20%;
+    height: 30px;
+    color:white;
+    padding:0 0 0 0; /* Da togliere -> inutile*/
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: #555555;
+    text-align: center;
 }
 
-#lft_dscr {
-    position: relative;
-    display: inline-block;  
+/*LOGIN*/
+
+#l_Container{
+    position:relative;
+    width:80%;
+    height:100%;
+    top:0px;
+    left:10%;
 }
 
-#colThumb {
-    position: relative;
-    display: block;
-    background-color: purple;
+#lForm{
+    position:relative;
+    top:0px;
+    left:0px;
+    width:100%;
 }
-
-#dp_INF {
-    position: relative;
-    display: block;
-    background-color: lightgreen;
+#lForm > div{ /*LINEE*/
+    position:relative;
+    top:0px;
+    left:0px;
+    height:1px;
+    width:100%;
+    background-color: black;
 }
+#lForm > form{
 
-/* sezione relativa a dettaglio azienda ********************************************************** */
-
-#dp_SUPE {
-    position: relative;
-    display: block;
 }
-
-#imgAZ_SUP{
-    position: relative;
-    display: inline-block;
+#lForm > form > input{
+    position:relative;
+    width:80%;
+    height:100%;
+    left:10%;
+    text-align: center;
+    border:none;
+    color:rgb(30,30,30);
 }
-
-#dati_DX {
-    position: relative;
-    display: inline-block;
-}
-
-#descr_mid {
-    position: relative;
-    display: block;
-}
-
-#dp_INFA {
-    position: relative;
+#pButton {
+    position:relative;
+    margin-top:10px;
+    width:100%;
     background-color: green;
-    display: block;
 }
-
+#pButton > div{
+    position:relative;
+    
+}
+#automate{
+    position:relative;
+    margin-top:10px;
+}
+#link{
+    margin-top:10px;
+    display:block;
+}
+#link_ps{
+    display:inline-block;
+    float:left;
+}
+#link_r{
+    display:inline-block;
+    float:right;
+}
 /* sezione GESTIONE lista dei desideri ****************************************************** */
 
 #titolo_ {
@@ -191,48 +248,6 @@ generale la presentazione di quel content all'interno dell'html "HeadInit.html" 
     background-image:url('../img/bg.png');
     z-index:-4;
 }
-
-/*sezione offerte con collezione offerte di prodotti *********************************************** */
-#container_Offerte{
-    position:relative;
-    overflow: visible;
-    display:block;
-    top:0px;
-    left:0px;
-    width:100%;
-    height:25vh;
-}
-#container_Nuovi{
-    position:relative;
-    overflow: visible;
-    display:block;
-
-    width:100%;
-    height:25vh;
-}
-
-.autoplay{ /*Spazio dello slider, normale*/
-    
-    overflow: visible;
-
-    height:100%;
-    width:auto;
-    margin-left:0px;
-    margin-right:0px;
-    /*background-color:purple;*/
-}
-
-
-.productBox { /*Elementi della slider, con errore*/
-    display:block;
-    overflow: visible;
-    margin:0 auto;
-    width:130px;
-    height:150px;
-    border:1px solid grey;
-    background-color:red;
-}
-
 
 
 
@@ -489,6 +504,109 @@ generale la presentazione di quel content all'interno dell'html "HeadInit.html" 
     background-color:white;
     color:black;
 }
+
+
+
+/*** SCHERMATA OFFERTE! *********************************************** */
+#container_Offerte{
+    position:relative;
+    overflow: visible;
+    display:block;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:25vh;
+}
+#container_Nuovi{
+    position:relative;
+    overflow: visible;
+    display:block;
+
+    width:100%;
+    height:25vh;
+}
+
+
+.autoplay{ /*Spazio dello slider, normale*/
+    
+    overflow: visible;
+
+    height:100%;
+    width:auto;
+    margin-left:0px;
+    margin-right:0px;
+    /*background-color:purple;*/
+}
+
+
+.productBox { /*Elementi della slider, con errore*/
+    display:block;
+    overflow: visible;
+    margin:0 auto;
+    width:130px;
+    height:150px;
+    border:1px solid grey;
+    background-color:red;
+}
+/* sezione prova pagina DettagliProdotto ******************************************************** */
+
+#dp_SUP {
+    position:relative;
+    display: block;
+}
+
+#img_SUP {
+    position: relative;
+    display: inline-block;
+}
+
+#lft_dscr {
+    position: relative;
+    display: inline-block;  
+}
+
+#colThumb {
+    position: relative;
+    display: block;
+    background-color: purple;
+}
+
+#dp_INF {
+    position: relative;
+    display: block;
+    background-color: lightgreen;
+}
+
+/* sezione relativa a dettaglio azienda ********************************************************** */
+
+#dp_SUPE {
+    position: relative;
+    display: block;
+}
+
+#imgAZ_SUP{
+    position: relative;
+    display: inline-block;
+}
+
+#dati_DX {
+    position: relative;
+    display: inline-block;
+}
+
+#descr_mid {
+    position: relative;
+    display: block;
+}
+
+#dp_INFA {
+    position: relative;
+    background-color: green;
+    display: block;
+}
+
+
+
 
 
 /* ****Salva Indirizzo************ */

@@ -17,7 +17,7 @@ define(function(require){
     	className: "",
 
     	events: {
-            "click #container" : "toLogin"
+            "click #sc_Container" : "toLogin"
     		//Click sul bottone per andare nella login
     		//Click sul bottone in fondo per andare nella pagine delle offerte 
     		//da NON connesso

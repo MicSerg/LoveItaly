@@ -1,26 +1,30 @@
 
-        <div id="container" class="container">
-            
-            <div class="bgSC">
-                <div>
-                    <div class="redButton" id="lLogin">Connettiti all'applicazione</div>
-                </div>
-           </div>
-
-           <div id="separate"><p>OPPURE</p></div>
-
-           <div class="bgSC" id="sc_2BG">
-                <select id="tendina">
-                    <option value="volvo">Pescara</option>
-                    <option value="saab">Chieti</option>
-                    <option value="opel">Aquila</option>
-                    <option value="audi">Lanciano</option>
-                </select>
-
-
-                <div>
-                    <div class="redButton" id="lScelta">Scegli la citta ed entra</div>
-                </div>
-           </div>
-           
+<div id="sc_Container">
+  
+    <div id="a_Sceltac">
+        <div>
+            <div class="redButton" id="lLogin">Connettiti all'applicazione</div>
         </div>
+    </div>
+
+    <div id="separate"><p>OPPURE</p></div>
+
+    <div id="b_Sceltac">
+      <div>
+          <p>Scegli la città dove ricevere</p>
+          <form>
+              <select id="sel_Citta" name="citta">
+                <!-- Qua ci vanno le città prese dal server -->
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+              </select>
+          </form>
+          <div class="redButton" id="lScelta">Scegli la citta ed entra
+          </div>
+      </div>
+
+    </div>
+
+</div>
