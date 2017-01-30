@@ -2,7 +2,6 @@ define(function(require) {
 
     var Backbone = require("backbone");
     var Utils = require("utils");
-    var Products = require("models/Products");
     var SearchList = require("models/SearchList");
     var Prodotti = require("models/Prodotti");
     var productView = require("views/pages/productView");
