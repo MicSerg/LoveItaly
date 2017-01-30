@@ -2,9 +2,10 @@
 
 define(function(require){
 	var $ = require("jquery");
-    var Backbone = require("backbone");
-    var Utils = require("utils");
-    var handlebars = require("handlebars");
+    	var Backbone = require("backbone");
+    	var Utils = require("utils");
+    	var handlebars = require("handlebars");
+	var ListaSearch = require("views/pages/ListaSearch");
 
     console.log("Entro in HeadInitView.js");
 
