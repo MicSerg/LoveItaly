@@ -1,7 +1,23 @@
 # LoveItaly
 Applicazione mobile per LoveItaly.
 
+Percentuale realizzata dell'applicazione: 20% circa (volendo essere buoni!);
+
+
 Tabella di marcia: Cosa manca?
+
+** IMPORTANTE ** 
+{
+	Non esistono chiamate API per il server che ci permettano di avere una lista desideri e nemmeno di gestire varie liste desideri. In più non esistono nemmeno chiamate API che ci permettano di gestire più indirizzi di spedizione / fatturazione e crearne di nuovi.
+	Dopo aver scoperto ciò, rimuoveremo le seguenti schermate presenti nel nostro design document:
+
+	Salva indirizzo, Miei indirizzi, Lista Desideri, Gestione Lista Desideri.
+
+	Avverrà anche una leggera modifica del side menu presente nella nostra Homepage, cioè la schermata offerte.
+	L'idea è quella di inserire un pulsante "Gestisci Account" che non sia altro che un link che riporta l'utente al sito di LoveItaly, precisamente nella sezione di gestione del proprio account così da poter modificare da lì le informazioni che desidera.
+}
+
+
 
 1) Finalizzare struttura html delle schermate:
 
@@ -13,7 +29,7 @@ Elenco Schermate con % completate:
 
 20% -> Dettaglio Azienda;
 
-0% -> Riepilogo Ordine, Ins Dati Spedizione, Lista Aziende, Ordine, Miei Ordini, Lista Desideri, Gestione Lista Desideri, Miei Indirizzi, Salva indirizzo, Lista Categorie, Categoria Scelta / Ricerca, Aiuto, Opzioni;
+0% -> Riepilogo Ordine, Ins Dati Spedizione, Lista Aziende, Ordine, Miei Ordini, Lista Categorie, Categoria Scelta / Ricerca, Aiuto, Opzioni;
 
 
 *** Cosa manca effettivamente? *** 
@@ -45,10 +61,8 @@ Offerte:Definizione della struttura del PRODOTTO, miglioramenti vari css, aggiun
 - Sessione per mantenere l'autenticazione;
 - Chiamata API per caricare lista di prodotti (Di una categoria, Di una determinata azienda, In offerta, nuovi prodotti e quelli fatti tramite una ricerca);
 - Chiamata API per caricare lista Aziende (con tutti i dettagli);
-- Chiamata API per caricare liste Desideri e una lista desideri specifica;
 - Chiamata API per caricare lista Ordini fatti (storico ordini) e un ordine specifico;
-- Chiamata API per caricare lista Indirizzi e un indirizzo specifico;
-- Chiamata API per aggiungere un oggetto ad una determinata lista desideri di un determinato account;
+- Chiamata API per avere l'indirizzo di spedizione principale dell'account dell'utente. (Serve per la schermata "insDatiSpedizione")
 - Chiamata API per aggiungere un ordine fatto allo storico ordini;
 - // Forse altro, per ora non mi viene nulla in mente
 
@@ -74,14 +88,6 @@ Lista Categorie -> Serve per avere la lista delle categorie.
 * Dettaglio Azienda -> serve per avere i dettagli dell'azienda specifica E serve per avere la lista dei prodotti di quella specifica azienda.
 
 Lista Aziende -> Serve per avere la lista delle aziende in loveItaly.
-
-Miei Indirizzi -> serve per avere tutti gli indirizzi salvati da un'utente.
-
-Indirizzo -> Serve per permettere ad un utente di salvare altri indirizzi.
-
-** Lista Desideri -> Serve per avere la lista dei prodotti di una lista desideri di un utente specifico.
-
-Gestione Lista Desideri -> Serve per avere la lista delle liste dei desideri di un utente specifico oltre che per crearne altre.
 
 *** Ordine -> Serve per poter avere i dettagli su di un ordine specifico dell'utente.
 

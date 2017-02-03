@@ -47,9 +47,7 @@ define(function(require){
             "click #sdwModal" : "closeSideMenu", //Chiude side cliccando fuori
             //FINE SIDEMENU
             //*****Eventi che mi portano nel menu con la struttura HeadMenuView:
-            "click #m_wlist" : function(){this.enteringMenu("gestlistedesideri");},
             "click #m_archord" : function(){this.enteringMenu("mieiordini");},
-            "click #m_ladr" : function(){this.enteringMenu("mieiindirizzi");},
             "click #m_opz" : "toOpzioni",
             "click #op_back" : "FromOpzioniToMenu",
             //"click #m_newsletter" : function(){this.enteringMenu("");},

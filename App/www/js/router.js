@@ -28,10 +28,6 @@ define(function(require) {
 	var DettaglioAzienda = require("views/pages/DettaglioAzienda");
 
 	//Lista pagine di HeadMenuView
-	var MieiIndirizzi = require("views/pages/MieiIndirizzi");
-	var SalvaIndirizzo = require("views/pages/SalvaIndirizzo");
-	var GestListeDesideri = require("views/pages/GestListeDesideri");
-	var ListaDesideri = require("views/pages/ListaDesideri");
 	var MieiOrdini = require("views/pages/MieiOrdini");
 	var Ordine = require("views/pages/Ordine");
 	var Opzioni = require("views/pages/Opzioni");
@@ -56,11 +52,7 @@ define(function(require) {
 			"dettaglioazienda":"showDettaglioAzienda",
 
 			"showheadmenu": "showHeadMenu",
-			"mieiindirizzi": "showIndList",
-			"gestlistedesideri" : "showGestListDes",
 			"mieiordini" : "showMieiOrdini",
-			"salvaindirizzo": "showSalvaInd",
-			"listadesideri": "showListDes",
 			"ordine": "showOrdine",
 			"opzioni": "showOpzioni",
 			"aiuto": "showAiuto",
@@ -155,29 +147,7 @@ define(function(require) {
 
 		//*********************************************
 		//Inizio Funzioni per schermate interne al menu
-		showIndList: function(){
-			console.log("ruoter.js -> MIEI INDIRIZZI");
 
-			var page= new MieiIndirizzi({});
-			this.changePage(page);
-		},
-		showSalvaInd: function(){
-			console.log("router.js > salva indirizzo");
-			
-			var page=new SalvaIndirizzo({});
-			this.changePage(page);
-		},
-		showGestListDes: function(){
-			console.log("router -> gest Lista Desideri");
-			var page= new GestListeDesideri({});
-			this.changePage(page);
-		},
-		showListDes: function(){
-			console.log("router js > Lista desideri");
-			
-			var page=new ListaDesideri({});
-			this.changePage(page);
-		},
 		showMieiOrdini: function(){
 			console.log("router -> miei ordini!");
 			var page= new MieiOrdini({});
