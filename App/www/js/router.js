@@ -33,6 +33,10 @@ define(function(require) {
 	var Opzioni = require("views/pages/Opzioni");
 	var Aiuto = require("views/pages/Aiuto");
 
+	//Eccessione HeadMenuView -> Raggiungibile da Carrello
+	var InsDatiSpedizione = require("views/pages/InsDatiSpedizione");
+	var RiepilogoOrdine = require("views/pages/RiepilogoOrdine");
+
 	console.log('inizio router.js');
 
 	var AppRouter = Backbone.Router.extend({
@@ -56,6 +60,9 @@ define(function(require) {
 			"ordine": "showOrdine",
 			"opzioni": "showOpzioni",
 			"aiuto": "showAiuto",
+
+			"insdatispedizione": "showSpedizione",
+			"riepilogoordine": "showRiepilogo"
 		},
 
 		/*i primi attributi servono per determinare delle view specifiche che
@@ -170,7 +177,17 @@ define(function(require) {
 			this.changePage(page);
 		},
 
+		showSpedizione: function(){
+			console.log("router > checkout");
+			var page=new InsDatiSpedizione({});
+			this.changePage(page);
+		},
 
+		showRiepilogo: function(){
+			console.log("router > riepilogo");
+			var page=new RiepilogoOrdine({});
+			this.changePage(page);
+		},
 
 
 		/*Cosa viene fatto in questa funzione?
@@ -188,8 +205,8 @@ define(function(require) {
 		pagina delle offerte*/
 		showHeadNavig: function(){ 
 			console.log("router.js -> showHeadNavig!!");
-			$('#log_bg').remove(); // Rimuovo log_bg della pagina precedente
-			
+			if($('#Head_Menu').length) $('#Head_Menu').remove(); // Rimuove HeadNavig
+			if($('#Head_Init').length) $('#Head_Init').remove();
 			if(this.structureView){ 
 				if(this.structureView.secondView){ 
 					this.secondView = this.structureView.secondView;
@@ -209,9 +226,8 @@ define(function(require) {
 		/* showHeadMenu*/
 		showHeadMenu: function(){//Argomento da aggiungere: View da aprire
 			console.log("router.js -> showHeadMenu!!");
-			$('header').remove(); // Rimuove HeadNavig
-			$('#content').remove(); // Rinuove l'altro id presente, content
-			//Cambia dinamicamente la pagina.
+			if($('#Head_Navig').length) $('#Head_Navig').remove(); // Rimuove HeadNavig
+			if($('#Head_Init').length) $('#Head_Init').remove();
 			if(this.structureView){
 				this.menuView = this.structureView.menuView; /*IMPORTANTISSIMA*/
 				this.structureView = new HeadMenuView();
@@ -227,6 +243,8 @@ define(function(require) {
 
 		showHeadInit: function(){
 			console.log("router.js -> showHeadInit!!");
+			if($('#Head_Navig').length) $('#Head_Navig').remove(); // Rimuove HeadNavig
+			if($('#Head_Menu').length) $('#Head_Menu').remove();
 			if(!this.structureView){
 				this.structureView = new HeadInitView();
 				console.log("showHeadInit - router.js");

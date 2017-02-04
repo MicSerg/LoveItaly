@@ -11,7 +11,7 @@ define(function(require){
 
     var HeadInitView = Backbone.View.extend({
     	constructorName: "HeadInitView",
-    	id: "main",
+    	id: "Head_Init",
 
     	events: {
     		//Evento click per cambiare pagina qui? Non dovrebbe essere così

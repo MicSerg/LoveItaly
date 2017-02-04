@@ -38,7 +38,7 @@ define(function(require){
 
     var HeadNavigView = Backbone.View.extend({
     	constructorName: "HeadNavigView",
-    	id: "HNview",
+    	id: "Head_Navig",
 
     	events: {//Eventi scatenati
             //SIDEMENU
@@ -59,7 +59,7 @@ define(function(require){
             "click #cartIcon" : "showCart",
             "click #cartClose" : "closeCart",
             //EVENTI DI CART
-            "click #tastoCheckOut":"proceedPurchase",
+            "click #m_Sped": function(){this.enteringMenu("insdatispedizione");},
             //FINE CART
 
             "click #searchIcon" : "showSearch",
@@ -73,7 +73,7 @@ define(function(require){
     	initialize: function(){
     		console.log("inizializza Head Navig");
     		this.template = Utils.templates.headnavig;
-    		console.log(this.template);
+    		
     	},
     	render: function(){
     		this.el.innerHTML = this.template({});
@@ -81,7 +81,10 @@ define(function(require){
     		return this;
     	},
 
-        enteringMenu: function(_string){ //PENSA BENE
+        enteringMenu: function(_string){ 
+        // Per entrare nel HeadMenu uso un metodo alternativo che permette
+        // di mettere una qualsiasi view all'inizio di ogni apertura della
+        // structure "headMenu"
             console.log("enteringMenu... Connesso!");
             this.menuView = _string;
             Backbone.history.navigate("showheadmenu",{
@@ -145,15 +148,7 @@ define(function(require){
             console.log("Chiusura Carrello");
             this.$el.find('#cartModal')[0].style.display="none";
         },
-        proceedPurchase:function(){
-            console.log("Procedi con l'acquisto del carrello");
-            /*IMPORTANTE:
-            SE si è loggati -> Si procede con "insDatiSpedizione"
-            SE non si è loggati -> Si va al login e poi "insDatiSped"
-            QUI sarà presente un IF che camperà TUTTO sull'autenticazione
-            */
-
-        },
+        
 
 
     });

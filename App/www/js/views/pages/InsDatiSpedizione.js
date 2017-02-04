@@ -3,32 +3,38 @@ define(function(require){
 	var Backbone = require("backbone");
 	var Utils = require("utils");
 
-	var riepilogoordine = Utils.Page.extend({
-		constructorName: "riepilogoordine",
+	var insdatispedizione = Utils.Page.extend({
+		constructorName: "insdatispedizione",
 
 		initialize: function(){
-			this.template=Utils.templates.riepilogoOrdine;
+			this.template=Utils.templates.insDatiSpedizione;
 
 		},
-		id: "riepilogo_ordine", // ID che tiene TUTTO riepilogo ordine
+		id: "",
 		className: "",
 		events: {
 			"click #t_Back" : "goBackToNavig",
+			"click #t_Riepilogo" : "showRiepilogoOrdine",
 		},
 
 		render: function(){
 			this.el.innerHTML = this.template({});
 			return this;
 		},
-
+		showRiepilogoOrdine: function(){
+			console.log("verso Riepilogo Ordine");
+			Backbone.history.navigate("riepilogoordine",{
+				trigger: true
+			});
+		},
 		goBackToNavig: function(){
-			console.log("torna ad offerte");
+			console.log("da insDatiSpedizione a Offerte");
 			Backbone.history.navigate("showheadnavig",{
 				trigger: true
 			});
 		},
 
 	});
-	return riepilogoordine;
+	return insdatispedizione;
 
 });

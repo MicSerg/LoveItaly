@@ -1,68 +1,68 @@
 
-        <div class="appMenu">
+        <div>
 <!--    CAMBIAMENTI DA APPORTARE: 
         La form comprenderà tutte le cose che si possono settare in questa pagina
         e quindi bisognerà strutturare l'html a modo
  -->
            <!-- <div id="titolo_">Scegli Indirizzo</div>-->
-            <div id="lineaSX">
+<!-- ** ** ** ** ** ** ** Decorazione barra a Sinistra ** ** ** ** ** -->
+            <div id="lineaSX"> 
                 <div class="circle" id="topCircle"></div>
                 <div class="circle" id="middleCircle"></div>
                 <div class="circle" id="bottomCircle"></div>
             </div>
-            <div id="intScegliInd">
-                <div id="scegliIndirizzo">
-                    <p class="nomeSezione"> Scegli indirizzo </p>
-                    <div> 
-                        <div>Scegli un indirizzo di consegna:</div>
-                        <form class="isInd">
-                        <select id="indirizziUtente" name="indirizziUtente">
-                          <option value="indirizzo001">Primo Indirizzo dell'utente</option>
-                          <option value="indirizzo002">Secondo Indirizzo dell'utente</option>
-                          <option value="indirizzo003">Terzo Indirizzo dell'utente</option>
-                        </select> 
-                        </form> 
-                    </div>
-                    <div>QUAD Usa lo stesso indirizzo per la fatturazione </div>
-                    <div class="MD_spedButton">
-                        <div class="opM_button">Mostra Dettagli Indirizzo</div>
-                    </div>
+<!-- Fine decorazione barra a sinistra -->
 
-                    <div>Scegli un indirizzo di fatturazione: </div>
-                    <div> 
-                        <form class="isInd">
-                            <select id="indirizziUtente" name="indirizziUtente">
-                              <option value="indirizzo001">Primo Indirizzo dell'utente</option>
-                              <option value="indirizzo002">Secondo Indirizzo dell'utente</option>
-                              <option value="indirizzo003">Terzo Indirizzo dell'utente</option>
-                            </select> 
-                        </form>  
-                    </div>
-                    <div class="MD_spedButton">
-                        <div class="opM_button">Mostra Dettagli Indirizzo</div>
-                    </div>
+            <div id="spedizioneDetail">
+                <div id="indirDetail">
+                    <!-- Bisogna usare icecream per sistemare -->
                     
                 </div>
-                <div id="scegliConsegna">  
-                    <p> Scegli la modalità della consegna </p><br>
+                <div id="consegnaDetail">  
+                    <!-- Bisogna usare icecream per sistemare -->
+                    <div>Indirizzo di Consegna</div><br>
                     
-                    <div> Scegli il giorno della consegna: </div>
-                    <div> Tendina piccola     ------>      Consegna Gratuita! </div>
-                    
-                    <div> Scegli la data della consegna: </div>
 
-                    <div> giorno mese anno </div>
-                    <div> tendinaGiorno  TendinaMese   TendinaAnno</div>
+                    <!-- "giorno" da tenere? -->
+                    <div>Scegli il giorno della consegna:</div>
+                    <div>Tendina piccola     ------>     Consegna Gratuita!</div>
+                    
+                    <div>Scegli la data della consegna:</div>
+                    <!-- La sistemazione di queste stringhe è fondamentale **
+                         Forse userò i-3 per tutte e tre le stringhe e andrò
+                         ad usare ovviamente 3 endine per queste "tendine", 
+                         molto probabilmente creerò una classe per collegare
+                         lo style di queste "select -> option" -->
+                    <div>Giorno</div>
+                    <div>Mese</div>
+                    <div>Anno</div>
+
+                    <form id="scltData" class="">
+                        <select name="opt_Giorno">
+                            <option value="1"> </option>
+                        </select>
+                        <select name="opt_Mese">
+                            <option value="1"> </option>
+                        </select>
+                        <select name="opt_Anno">
+                            <option value="1"> </option>
+                        </select>
+                    </form>
 
                     <div>  </div>
                     <br>
-                    <div>QUAD Questa è una spesa regalo </div>
-                    <div>QUAD Accetto le condizioni generali di vendita </div>
-                    <div>QUAD Accetto le clausole indicate... </div>
+                    <!-- QUAD= Sta per quadratino con possibilità spunta -->
+                    <form>
+                        <input type="checkbox" name="isRegalo" value="html"/> Questa è una spesa regalo?<br />
+                        <input type="checkbox" name="accCond1" value="html"/> Accetto le condizioni generali di vendita.<br />
+                        <input type="checkbox" name="accCond2" value="html"/> Accetto le clausole indicate...<br />
+                    </form>
                 </div>
-                <div id="scegliBottoni">
-                    <div class="opM_button">Procedi con Paypal</div>
-                    <div class="opM_button">Torna al Carrello</div>
+                <div id="sped_t">
+                    <!-- Bisogna usare icecream per sistemare -->
+                    <!-- Quando si procede, bisogna fare chiamata "PUT" ? -->
+                    <div id="t_Riepilogo" class="opM_button">Procedi con Paypal</div>
+                    <div id="t_Back" class="opM_button">Torna al Carrello</div>
                 </div>
             </div>
 

@@ -34,7 +34,7 @@ define({
     opzioni:"../../templates/opzioni.html",
     aiuto:"../../templates/aiuto.html",
     //Le due schermate del carrello da decidere -> headMenu?
-    riepOrdine:"../../templates/riepilogoOrdine.html",
+    riepilogoOrdine:"../../templates/riepilogoOrdine.html",
     insDatiSpedizione:"../../templates/insDatiSpedizione.html",
     
 });
