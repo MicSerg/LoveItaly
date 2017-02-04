@@ -18,7 +18,7 @@ define(function(require){
     	className: "",
 
     	events: {
-    		"click #container" : "toDettAzienda", 
+    		"click #detAziendaButton" : "toDettAzienda", 
     	},
 
     	render: function(){

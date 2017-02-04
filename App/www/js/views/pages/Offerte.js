@@ -21,7 +21,7 @@ define(function(require){
 
         //in offerte c'è solo l'evento che ti porta al dettaglio prodotto.
     	events: {
-    		"click #prova" : "toDettProdotto", 
+    		"click .productBox" : "toDettProdotto", 
     	},
 
     	render: function(){
