@@ -26,6 +26,7 @@ define(function(require) {
 	var Offerte = require("views/pages/Offerte");
 	var DettaglioProdotto = require("views/pages/DettaglioProdotto");
 	var DettaglioAzienda = require("views/pages/DettaglioAzienda");
+	var ListaAziende = require("views/pages/ListaAziende");
 
 	//Lista pagine di HeadMenuView
 	var MieiOrdini = require("views/pages/MieiOrdini");
@@ -54,6 +55,7 @@ define(function(require) {
 			"offerte":"showOfferte",
 			"dettaglioprodotto":"showDettaglioProdotto",
 			"dettaglioazienda":"showDettaglioAzienda",
+			"listaaziende":"showListaAziende",
 
 			"showheadmenu": "showHeadMenu",
 			"mieiordini" : "showMieiOrdini",
@@ -149,6 +151,16 @@ define(function(require) {
 			}
 
 			var page=new DettaglioAzienda({});
+			this.changePage(page);
+		},
+
+		showListaAziende: function(){
+			console.log("router.js -> listaAziende");
+			if(this.secondView != "listaaziende"){
+				this.secondView = "listaaziende";
+			}
+
+			var page=new ListaAziende({});
 			this.changePage(page);
 		},
 

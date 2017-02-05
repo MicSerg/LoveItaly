@@ -110,6 +110,9 @@ define(function(require){
             var self=this;
             self.switchColor("#tAziende","#tCategorie","#tOfferte");
             console.log("vai verso lista aziende");
+            Backbone.history.navigate("listaaziende",{
+                trigger:true
+            });
         },
         switchColor: function(a,b,c){
             this.$el.find(a)[0].style.backgroundColor="white";

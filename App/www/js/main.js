@@ -14,8 +14,6 @@ require.config({
         utils: '../lib/utils/utils',
         session: '../lib/backbone.session',
         md5: '../lib/md5.min'
-
-
 	},
 	shim: {
 		'jquery': {
@@ -41,23 +39,17 @@ require.config({
 });
 
 require(['backbone', 'utils'], function(Backbone, Utils) {
-    console.log("MAIN:> Primo Require backbone / utils");
-
-    require(['preloader', 'router'], function(PreLoader, AppRouter) { // entra in navigazViewJs perché entra in routerJS ORA
-
-
-        console.log("MAIN:> Secondo Require preloader / router");
-        //Forse qui bisogna mettere un evento per caricare prima tutte le cose e poi procedere
-        //con il codice
-        //document.addEventListener("deviceready", run, false);
-        window.onload=run();
+    //console.log("MAIN:> Primo Require backbone / utils");
+    require(['preloader', 'router'], function(PreLoader, AppRouter) {
+        //console.log("MAIN:> Secondo Require preloader / router");
+        //document.addEventListener("deviceready", run, false); // <-- per cordova
+        window.onload=run(); // <- per provarlo in browser
         require(['materialize', 'jquery'], function(Materialize, $) {
-            //document.addEventListener("deviceready", initComponents, false);
-            //initComponents();
-            console.log("MAIN:> Terzo Require materialize / jquery");
+            //document.addEventListener("deviceready", initComponents, false); // <-- per cordova
+            //console.log("MAIN:> Terzo Require materialize / jquery");
 
-            initComponents();
-            //PER ORA INIT COMPONENT MI E' INUTILE!
+            initComponents(); // <-- per provarlo in browser
+
             function initComponents() {
                 console.log("MAIN:> funzione initComponents dentro il terzo require");
                 require(
@@ -71,15 +63,12 @@ require(['backbone', 'utils'], function(Backbone, Utils) {
                 });
 
             }
-            console.log("MAIN:> dopo initComponents, fine terzo require?");
-             // Per ora uso questo non avendo bisogno di cordova.js
 
         });
 
-        //run(); // Per ora uso questo non avendo bisogno di cordova.js
 
         function run() {
-            console.log("MAIN:> Funzione run()");
+            //console.log("MAIN:> Funzione run()");
 
             // Here we precompile ALL the templates so that the app will be quickier when switching views
             // see utils.js
@@ -103,14 +92,14 @@ require(['backbone', 'utils'], function(Backbone, Utils) {
 
                 function startRouter() {
                     // launch the router
-                    console.log("MAIN:> funzione startRouter() in run() ");
+                    //console.log("MAIN:> funzione startRouter() in run() ");
 
                     var router = new AppRouter();
 
-                    console.log("MAIN:> AppRouter fatto, appena finisce questo faccio history.start");
-                    console.log(AppRouter);
+                    //console.log("MAIN:> AppRouter fatto, appena finisce questo faccio history.start");
+                    //console.log(AppRouter);
                     Backbone.history.start();
-                    console.log("Ha finito tutto in main!");
+                    //console.log("Ha finito tutto in main!");
                     
                 }
             });
