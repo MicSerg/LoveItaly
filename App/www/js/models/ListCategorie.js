@@ -10,9 +10,9 @@ define(function(require) {
         xhr.setRequestHeader('Authorization', token);
     }
 
-    var ListaCategorie = Backbone.Model.extend({
+    var ListCategorie = Backbone.Model.extend({
 
-       constructorName: "ListaCategorie",
+       constructorName: "ListCategorie",
 
        initialize: function() {
 
@@ -31,5 +31,5 @@ define(function(require) {
     }
 });
 
-    return ListaCategorie;
+    return ListCategorie;
 });
