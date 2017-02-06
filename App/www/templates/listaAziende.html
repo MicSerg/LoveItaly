@@ -17,10 +17,12 @@ Ne sono tanti ma ce la possiamo fare!
             
 
 <div id="az_Content">
-        
-    <div class="az_Quad"> 
-	    <div class="a_nome">Prova</div>
-	    <div class="a_img"><!-- Stringa URL immagine --></div>
-    </div>
-        
+
+{{#each this}}
+        <div class="az_Quad" id="dettaglio_azienda" data-az="{{this.id}}"> 
+	        <div class="a_nome">{{this.name}}</div>
+	        <div>{{this.img}}</div>
+        </div>
+    {{/each}}
+
 </div>
