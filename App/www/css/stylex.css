@@ -562,6 +562,25 @@ select#sel_Citta {
     display: block;
 }
 
+/* ******* SCHERMATA LISTA AZIENDE ********************************* */
+#lista_Aziende {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:100%;
+    height:100%;
+}
+.az_Quad {
+    display:inline-block;
+    margin-left:6px;
+    margin-top:6px;
+    margin-bottom: 6px;
+    width:110px;
+    height:110px;
+    background-color: red;
+}
+
+
 /*INCOMINCIA LA NAVIGAZIONE MENU HeadMenu*/
 
 #menu_bg{

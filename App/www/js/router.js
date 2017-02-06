@@ -27,6 +27,8 @@ define(function(require) {
 	var DettaglioProdotto = require("views/pages/DettaglioProdotto");
 	var DettaglioAzienda = require("views/pages/DettaglioAzienda");
 	var ListaAziende = require("views/pages/ListaAziende");
+	var ListaCategorie = require("views/pages/ListaCategorie");
+
 
 	//Lista pagine di HeadMenuView
 	var MieiOrdini = require("views/pages/MieiOrdini");
@@ -56,6 +58,7 @@ define(function(require) {
 			"dettaglioprodotto":"showDettaglioProdotto",
 			"dettaglioazienda":"showDettaglioAzienda",
 			"listaaziende":"showListaAziende",
+			"listacategorie":"showListaCategorie",
 
 			"showheadmenu": "showHeadMenu",
 			"mieiordini" : "showMieiOrdini",
@@ -127,9 +130,9 @@ define(function(require) {
   				slidesToScroll: 1,
 				centerMode:true,
 				centerPadding:'65px',
-				arrows:false,
-			    autoplay:true,		  
-				autoplaySpeed: 2000
+				arrows:false
+			    //autoplay:true,		  
+				//autoplaySpeed: 8000
 		    });
 		},
 
@@ -146,7 +149,7 @@ define(function(require) {
 		showDettaglioAzienda: function(){
 			console.log("router.js -> dettaglioAzienda");
 			if(this.secondView != "dettaglioazienda") {
-				console.log("****** TRASFORMA secondView!!! >>>>" + this.secondView);
+				console.log("** TRASFORMA secondView!!! >>>>" + this.secondView);
 				this.secondView = "dettaglioazienda";
 			}
 
@@ -164,6 +167,15 @@ define(function(require) {
 			this.changePage(page);
 		},
 
+		showListaCategorie: function(){
+			console.log("router.js -> ListaCategorie");
+			if(this.secondView != "listacategorie"){
+				this.secondView = "listacategorie";
+			}
+
+			var page=new ListaCategorie({});
+			this.changePage(page);
+		},
 		//*********************************************
 		//Inizio Funzioni per schermate interne al menu
 

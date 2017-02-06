@@ -51,7 +51,8 @@ define(function(require){
             "click #m_opz" : "toOpzioni",
             "click #op_back" : "FromOpzioniToMenu",
             //"click #m_newsletter" : function(){this.enteringMenu("");},
-            "click #m_aiuto" : function(){this.enteringMenu("aiuto");},
+            "click #m_help" : function(){this.enteringMenu("aiuto");},
+            "click #m_account" : "checkAccountInSite",
             //<******fine eventi che mi portano in HeadMenuView
             //INIZIO CART 
             //RICORDA TASTO PER ELIMINARE PRODOTTI DAL CARRELLO!!
@@ -105,6 +106,9 @@ define(function(require){
             var self=this;
             self.switchColor("#tCategorie","#tOfferte","#tAziende");
             console.log("Vai verso lista categorie");
+            Backbone.history.navigate("listacategorie",{
+                trigger: true
+            });
         },
         showListaAziende:function(){
             var self=this;
@@ -121,6 +125,11 @@ define(function(require){
             this.$el.find(b)[0].style.color="white";
             this.$el.find(c)[0].style.backgroundColor="transparent";
             this.$el.find(c)[0].style.color="white";
+        },
+        checkAccountInSite: function(){
+            console.log("Rimanda alla pagina dell'account nel sito!")
+            //PRIMA FINESTRA PER CHIEDERE SE SI VUOLE ANDARE NEL SITO 
+            //TRAMITE BROWSER, POI LO FAI!
         },
         showSideMenu: function(){
             console.log("Apertura SideMenu");

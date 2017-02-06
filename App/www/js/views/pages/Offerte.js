@@ -39,9 +39,9 @@ define(function(require){
                 slidesToScroll: 1,
                 centerMode:true,
                 centerPadding:'65px',
-                arrows:false,
-                autoplay: true,
-                autoplaySpeed: 2000
+                arrows:false
+                //autoplay: true,
+                //autoplaySpeed: 2000
             });
         },
         toDettProdotto: function(event){

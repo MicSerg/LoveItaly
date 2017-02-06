@@ -14,7 +14,7 @@ define(function(require){
     		this.template = Utils.templates.listaAziende;
     	},
 
-    	id: "",
+    	id: "lista_Aziende",
     	className: "",
 
     	events: {
