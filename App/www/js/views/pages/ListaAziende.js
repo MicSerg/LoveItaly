@@ -1,6 +1,7 @@
 define(function(require){
 	var $ = require("jquery");
 	var Backbone = require("backbone");
+	var ListAz = require("models/ListAz");
 
     var Utils = require("utils");
 
