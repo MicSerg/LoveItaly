@@ -16,7 +16,10 @@ define(function(require){
 
     	id: "",
     	className: "",
-
+/*
+**  - Si clicca l'azienda e si apre il dettaglio azienda specifico
+**  - Si clicca il simbolo del carrello e il prodotto selezionato va nel carrello
+*/
     	events: {
     		"click #detAziendaButton" : "toDettAzienda", 
     	},

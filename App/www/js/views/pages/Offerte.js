@@ -19,7 +19,10 @@ define(function(require){
     	id: "",
     	className: "",
 
-        //in offerte c'è solo l'evento che ti porta al dettaglio prodotto.
+/*
+**  - Si clicca il prodotto e si entra nel dettaglio prodotto specifico
+**  - Si clicca il simbolo del carrello e il prodotto selezionato va nel carrello
+*/
     	events: {
     		"click .productBox" : "toDettProdotto", 
     	},

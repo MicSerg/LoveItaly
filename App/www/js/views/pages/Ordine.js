@@ -16,6 +16,7 @@ define(function(require){
 
     	className:"",
 
+
     	events: {
             "click #tastoIndietro" : "goBack"
         },

@@ -17,6 +17,10 @@ define(function(require){
     	id: "",
     	className: "",
 
+/*
+**  - Si clicca il tasto categoria e si aprono le eventuali subcategorie..
+**  - ..Oppure si va direttamente nella lista dei prodotti di quella categoria
+*/
     	events: {
     		
     	},

@@ -14,7 +14,10 @@ define(function(require){
 
     	id: "",
     	className: "",
-
+/*
+**  - Si torna indietro
+**  - Si clicca una domanda dell'aiuto e si apre la risposta!
+*/
     	events: {
     		"click #tastoIndietro" : "goBackToNavig", 
     	},
