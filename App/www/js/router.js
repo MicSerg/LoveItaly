@@ -28,7 +28,8 @@ define(function(require) {
 	var DettaglioAzienda = require("views/pages/DettaglioAzienda");
 	var ListaAziende = require("views/pages/ListaAziende");
 	var ListaCategorie = require("views/pages/ListaCategorie");
-
+	var ListAz = require("models/ListAz");
+	var ListCategorie = require("models/ListCategorie");
 
 	//Lista pagine di HeadMenuView
 	var MieiOrdini = require("views/pages/MieiOrdini");
@@ -84,6 +85,41 @@ define(function(require) {
 		menuView: "nulla", // Questo viene cambiato dinamicamente
 
 		initialize: function(options) {
+			/* INIZIO MODIFICA */
+
+			var listcat = new ListCategorie();
+
+            			listcat.fetch({
+               				 success: function(listcat, response, options) {
+                    				/*
+                    				Immagazino il modello della mia lista di categorie all'interno del localStorage
+                    				in modo da non dover effettuare chiamate API di tale lista in futuro.
+                    				*/
+                    				localStorage.setItem("cat", JSON.stringify(listcat));
+
+                			},
+                			error: function(listcat, response, options) {
+
+                			}
+            			});
+
+			/* Reperisco da JSON API lista AZIENDE */
+           		 var lista_azienda = new ListAz();
+
+            		lista_azienda.fetch({
+                		success: function(lista_azienda, response, options) {
+                    			/*
+                    			Immagazino il modello della mia lista di categorie all'interno del localStorage
+                    			in modo da non dover effettuare chiamate API di tale lista in futuro.
+                   			*/
+                    			(lista_azienda);
+                    			localStorage.setItem("lista_azienda", JSON.stringify(lista_azienda));
+
+                			},
+                		error: function(lista_azienda, response, options) {
+                		}
+            			});
+            		/* FINE MODIFICA */
 			console.log("initialize - router.js");
 			console.log(this.menuView + " <--- menuView");
 			this.currentView = undefined; // 
