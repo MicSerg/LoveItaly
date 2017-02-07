@@ -2,12 +2,13 @@ define(function(require){
 	var $ = require("jquery");
 	var Backbone = require("backbone");
     var Utils = require("utils");
+    var ListAz = require("models/ListAz");
 
     var listaAziende = Utils.Page.extend({
 
     	constructorName: "listaAziende",
 
-    	//model: ,
+    	model:ListAz,
 
     	initialize: function(){
     		this.template = Utils.templates.listaAziende;
