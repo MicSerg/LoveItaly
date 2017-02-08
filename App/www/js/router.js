@@ -30,7 +30,8 @@ define(function(require) {
 	var ListaCategorie = require("views/pages/ListaCategorie");
 	var ListAz = require("models/ListAz");
 	var ListCategorie = require("models/ListCategorie");
-
+	var Orders =require("models/Orders");
+	
 	//Lista pagine di HeadMenuView
 	var MieiOrdini = require("views/pages/MieiOrdini");
 	var Ordine = require("views/pages/Ordine");
@@ -40,6 +41,11 @@ define(function(require) {
 	//Eccessione HeadMenuView -> Raggiungibile da Carrello
 	var InsDatiSpedizione = require("views/pages/InsDatiSpedizione");
 	var RiepilogoOrdine = require("views/pages/RiepilogoOrdine");
+	
+	//collezioni
+	var Categorie = require("collections/Categorie");
+    	var Carrello = require("collections/Carrello");
+    	var Ordini = require("collections/Ordini");
 
 	console.log('inizio router.js');
 
