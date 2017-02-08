@@ -28,9 +28,23 @@ define(function(require) {
 	var DettaglioAzienda = require("views/pages/DettaglioAzienda");
 	var ListaAziende = require("views/pages/ListaAziende");
 	var ListaCategorie = require("views/pages/ListaCategorie");
+	
+	//modelli
 	var ListAz = require("models/ListAz");
 	var ListCategorie = require("models/ListCategorie");
-	var Orders =require("models/Orders");
+	var Orders = require("models/Orders");
+	var Azienda = require("models/Azienda");
+	var Customer = require("models/Customer");
+	var ListaOfferte = require("models/ListaOfferte");
+	var ListaProdottiDaCategoria = require("models/ListaProdottiDaCategoria");
+	var ListaProdottiDaAzienda = require("models/ListaProdottiDaAzienda");
+	var Prodotti = require("models/Prodotti");
+	var ProdottiHome = require("models/ProdottiHome");
+	var saleProduct = require("models/saleProduct");
+	var sweetProduct require("models(sweetProduct");
+	var SearchList = require("models/SearchList");
+	var User = require("models/User");
+
 	
 	//Lista pagine di HeadMenuView
 	var MieiOrdini = require("views/pages/MieiOrdini");
