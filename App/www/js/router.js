@@ -41,7 +41,7 @@ define(function(require) {
 	var Prodotti = require("models/Prodotti");
 	var ProdottiHome = require("models/ProdottiHome");
 	var saleProduct = require("models/saleProduct");
-	var sweetProduct require("models(sweetProduct");
+	var sweetProduct = require("models/sweetProduct");
 	var SearchList = require("models/SearchList");
 	var User = require("models/User");
 
@@ -58,8 +58,8 @@ define(function(require) {
 	
 	//collezioni
 	var Categorie = require("collections/Categorie");
-    	var Carrello = require("collections/Carrello");
-    	var Ordini = require("collections/Ordini");
+    var Carrello = require("collections/Carrello");
+    var Ordini = require("collections/Ordini");
 	var AziendeColl = require("collections/AziendeColl");
 
 	console.log('inizio router.js');

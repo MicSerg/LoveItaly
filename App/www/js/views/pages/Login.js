@@ -20,7 +20,7 @@ define(function(require){
         qualeFunzionedevievocare -> (La funzione che viene evocata per ora è headNavig che
         è dichiarata dopo la funzione "render". */
     	events: {
-    		"click #l_Container" : "headNavig"
+    		"click #buttonLogin" : "headNavig"
     	},
 
     	render: function(){

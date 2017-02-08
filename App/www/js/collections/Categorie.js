@@ -7,7 +7,7 @@ define(function(require) {
     }
 
     var Backbone = require("backbone");
-    var ListaCategorie = require("models/ListaCategorie");
+    var ListaCategorie = require("models/ListCategorie");
 
     var Categorie = Backbone.Collection.extend({
         constructorName: "Categorie",
