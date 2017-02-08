@@ -3,6 +3,7 @@ define(function(require){
     var Backbone = require("backbone");
     var Utils = require("utils");
     var handlebars = require("handlebars");
+	var Orders = require ("models/Orders");
     console.log("Entro in mieiOrdini");
 
     var mieiOrdini = Utils.Page.extend({
