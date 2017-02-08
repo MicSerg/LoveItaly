@@ -60,6 +60,7 @@ define(function(require) {
 	var Categorie = require("collections/Categorie");
     	var Carrello = require("collections/Carrello");
     	var Ordini = require("collections/Ordini");
+	var AziendeColl = require("collections/AziendeColl");
 
 	console.log('inizio router.js');
 
