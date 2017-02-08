@@ -1,6 +1,7 @@
 # LoveItaly
 Applicazione mobile per LoveItaly.
 
+
 Percentuale realizzata dell'applicazione: 20% circa (volendo essere buoni!);
 
 
@@ -106,7 +107,7 @@ NOTA BENE:
 CASO SPECIALE : Carrello -> Questa schermata (che in realtà non è una schermata a sé ma una parte di HeadNavig) ha bisogno della Session per poter salvare in locale (penso) gli oggetti che si sono messi nel carrello.
 Da notare che quando si va nella schermata InsIndirizzoSpedizione, si ha bisogno della data del giorno in cui è stato fatto l'ordine come data di partenza per la consegna!!
 
-7) Provare l'applicazione in cordova di nuovo;
+7) Provare l'applicazione in cordova e aggiustare la visualizzazione!
 
 8) Togliere tutti i commenti e ripulire il codice.
 
