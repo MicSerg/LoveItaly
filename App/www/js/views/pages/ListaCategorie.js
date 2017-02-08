@@ -1,7 +1,7 @@
 define(function(require){
 	var $ = require("jquery");
 	var Backbone = require("backbone");
-    	var ListCategorie = require("models/ListCategorie");
+    var ListCategorie = require("models/ListCategorie");
 	var Utils = require("utils");
 
     var ListaCategorie = Utils.Page.extend({

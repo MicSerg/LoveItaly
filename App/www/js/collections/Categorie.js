@@ -7,11 +7,11 @@ define(function(require) {
     }
 
     var Backbone = require("backbone");
-    var ListaCategorie = require("models/ListCategorie");
+    var ListCategorie = require("models/ListCategorie");
 
     var Categorie = Backbone.Collection.extend({
         constructorName: "Categorie",
-        model: ListaCategorie,
+        model: ListCategorie,
 
 
         url: 'http://192.168.56.101/loveitaly/api/categories/?io_format=JSON&display=full',
