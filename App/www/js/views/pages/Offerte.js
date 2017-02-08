@@ -37,7 +37,6 @@ define(function(require){
         slideInit: function(e){
             $('.autoplay').slick({
                 
-                dots:true,
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 centerMode:true,

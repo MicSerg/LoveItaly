@@ -182,7 +182,6 @@ define(function(require) {
 			this.changePage(page);
 			$('.autoplay').slick({
 				
-				dots:true,
 				slidesToShow: 1,
   				slidesToScroll: 1,
 				centerMode:true,

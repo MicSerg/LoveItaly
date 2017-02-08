@@ -2,18 +2,20 @@
 <div id="sc_Container">
   
     <div id="a_Sceltac" class="valign-wrapper center-align">
-            <div class="valign center-block" id="lLogin">Connettiti</div>
+            <a class="waves-effect waves-light btn red darken-4 valign center-block" id="lLogin">Connettiti</a>
     </div>
 
-    <div id="separate" class="valign-wrapper"><p class="valign center-block">
-      OPPURE
+    <div id="separate" class="valign-wrapper center-align"><p class="valign">
+      <h6 class="center-block">OPPURE</h6>
     </p></div>
 
-    <div id="b_Sceltac" class="valign-wrapper">
-      <div>
-          <p>Scegli la città</p> <!-- DA RIMUOVERE, LASCIO IL TASTO -->
+    <div id="b_Sceltac">
+
+          <a class="waves-effect waves-light btn red darken-4 center-block" id="lScelta">Scegli la citta ed entra
+          </a>
+
           <form>
-              <select id="sel_Citta" name="citta">
+              <select class="center-block" id="sel_Citta" name="citta">
                 <!-- Qua ci vanno le città prese dal server -->
                 <option value="volvo">Volvo</option>
                 <option value="saab">Saab</option>
@@ -21,9 +23,8 @@
                 <option value="audi">Audi</option>
               </select>
           </form>
-          <div class="redButton" id="lScelta">Scegli la citta ed entra
-          </div>
-      </div>
+
+          
 
     </div>
 
