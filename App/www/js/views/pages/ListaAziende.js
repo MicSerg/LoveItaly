@@ -21,7 +21,7 @@ define(function(require){
 **  - Si clicca un azienda e si va nel dettaglio dell'azienda specifica.
 */
     	events: {
-		"click .az_Quad" : "toDettAzienda",
+		"click #dettaglio_azienda" : "toDettAzienda",
     	},
 
     	render: function(){
@@ -40,7 +40,7 @@ define(function(require){
 
             localStorage.setItem("datoazienda", datoazienda);
 
-            Backbone.history.navigate("dettaglio_azienda", {
+            Backbone.history.navigate("dettaglioazienda", {
                 trigger: true
             });
         }
