@@ -1,12 +1,12 @@
+
 <div id="list_cat">
-            {{#each this}}
-                <div tabindex="0">
-                <div class="descrHidden" data-cat="{{this.id}}" id="listaprod">
-                <img src="{{this.img}}">
-                        <div>{{this.nome}}</div>
-                 </div>
-            {{/each}} 
-                </div>
-</div>
-                
+	<ul class="collection">
+		{{#each this}}
+
+	    	<li class="collection-item" data-cat="{{this.id}}">{{this.nome}}</li>
+	    	
+	    {{/each}}
+	</ul>
+</div>   
+
             
