@@ -436,7 +436,7 @@ select#sel_Citta {
     top:0%;
     left:0%;
     width:100%;
-    background-color: red;
+    
     height:40%;
     min-height:26px;
 }
@@ -516,32 +516,48 @@ select#sel_Citta {
 
 
 /* sezione prova pagina DettagliProdotto ******************************************************** */
+#dettaglio_Prodotto{
+}
 
-#dp_SUP {
+#dp_head{
     position:relative;
-    display: block;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:40%;
+    min-height:200px;
+    background-color: yellow;
 }
 
-#img_SUP {
-    position: relative;
-    display: inline-block;
-}
+#dp_himg{
 
-#lft_dscr {
-    position: relative;
-    display: inline-block;  
-}
+    width:200px;
 
-#colThumb {
-    position: relative;
-    display: block;
-    background-color: purple;
-}
+    height:200px;
+    background-color:green;
 
-#dp_INF {
-    position: relative;
-    display: block;
-    background-color: lightgreen;
+}
+#dp_hinf{
+
+    width:100%;
+    height:200px;
+    background-color: brown;
+}
+#dp_thumb{
+    position:relative;
+    top:0px;
+    height:10%;
+    min-height:80px;
+    width:100%;
+    background-color:purple;
+}
+#dp_dett{
+    position:relative;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:46vh;
+    background-color:white;
 }
 
 /* sezione relativa a dettaglio azienda ********************************************************** */
@@ -581,13 +597,10 @@ select#sel_Citta {
     height:100%;
 }
 .az_Quad {
-    display:inline-block;
-    margin-left:6px;
-    margin-top:6px;
-    margin-bottom: 6px;
-    width:110px;
-    height:110px;
-    background-color: red;
+    margin-top:20px;
+    width:150px;
+    height:150px;
+
 }
 
 

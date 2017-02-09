@@ -14,7 +14,7 @@ define(function(require){
     		this.template = Utils.templates.dettaglioProdotto;
     	},
 
-    	id: "",
+    	id: "dettaglio_Prodotto",
     	className: "",
 /*
 **  - Si clicca l'azienda e si apre il dettaglio azienda specifico

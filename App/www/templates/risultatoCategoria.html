@@ -1,24 +1,22 @@
+<!-- In top come titolo c'è la categoria!!!! -->
 
-        <div class="appNavig">
 
-            <div class="Scritta">Categoria Scelta</div>
-            <div id="vSet">
-                    <div class="vBlockSX">
-                        <div class="pBlock">
-                            <div class="img_block"></div>
-                            <div class="button_" id="carrello1"><div></div></div>
-                            <div class="button_" id="cuore1"><div></div></div>
-                        </div>
-                        <div class="pBlock"></div>
-                        <div class="pBlock"></div>
+<div id="rslt_content">
+<!-- 
+**** DIV che non è altro che una striscia bianca con una scritta nera sopra!
+-->
+    <div class="row">
+        {{#each this}}
+            <div class="col s6">
+                <div class="productBox card white">
+                    <div class="prod_img card-image">immagine</div>
+                    <div class="card-content">
+                        <span class="prod_nome">prodotto</span>
+                        <span class="prod_az">azienda</span>
                     </div>
-                    <div class="vBlockDX">
-                        <div class="pBlock"></div>
-                        <div class="pBlock"></div>
-                        <div class="pBlock"></div>
-                    </div>
-
+                    <a class="waves-effect waves-light btn">button</a>
+                </div>
             </div>
-
-
-        </div>
+        {{/each}}
+    </div>
+</div>

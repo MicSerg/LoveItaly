@@ -1,33 +1,19 @@
-<!-- Codice con handlebars (Da provare però)
-	{{#each this}}
-        <div class="az_Quad" data-az="{{this.id}}"> 
-	        <div class="a_nome">{{this.name}}</div>
-	        <div class="a_img">{{this.img}}</div>
-        </div>
-    {{/each}}
-
-*** Cosa si deve fare e come?
-
-az_Content è il div dove vengono creati gli az_Quad e cioè i piccoli quadrati che simboleggiano le aziende (un quadrato, un'azienda).
-Se entriamo in questa schermata SENZA usare handlebars, vedremo un solo quadratino. 
-SE usiamo il codice handlebars e lo colleghiamo bene, il codice dovrebbe essere capace di creare tanti quadratini quanti sono le aziende che prendiamo dalla chiamata alla lista di aziende, bisogna settarla ma dopo averla settata possiamo comprendere AL MEGLIO come fare le altre chiamate importanti (Lista Categorie, Lista Prodotti, Dettaglio Prodotto [Per le Thumbnail che vanno sotto l'immagine principale], Dettaglio Azienda, Dettaglio Ordine, Miei Ordini, Carrello).
-Ne sono tanti ma ce la possiamo fare!
-
+<!-- 
 -->
             
 
 <div id="az_Content">
 
-    {{#each this}}
-        <div class="az_Quad" id="dettaglio_azienda" data-az="{{this.id}}"> 
-	        <div class="a_nome">{{this.name}}</div>
-	        <div>{{this.img}}</div>
-        </div>
-    {{/each}}
+    <div class="row">
+        {{#each this}}
+            <div class="col s6">
+                <div class="az_Quad center-block red darken-4" data-az="{{this.id}}" id="dettaglio_azienda">
+                    <div class="az_img">{{this.img}}</div>
+                    <span class="az_nome">{{this.name}}</span>
+                </div>
+            </div>
+        {{/each}}
+    </div>
 
-    <!--    PROVA LISTA AZIENDA : INIZIO!
-
-    -->
     
-
 </div>

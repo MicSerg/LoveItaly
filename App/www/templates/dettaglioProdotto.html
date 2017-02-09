@@ -1,30 +1,40 @@
-          <!-- dp_SUP = superiore, dp_INF = inferiore. lo spazio sotto la barra superiore è diviso a metà per i fini di questa schermata -->
-            <div id="dp_SUP">
-                <div id="img_SUP"> <img src="img/logoPreload.png" width="150" height="150"> </div>
-                <div id="lft_dscr"> <!-- DIV CHE RAGGRUPPA ELEMENTI DX IMMAGINE -->
-                    <p id="nome_SUP">Nome Prodotto</p>
-                    <p>Quantità: 20 pezzi</p><!-- Da aggiungere in maniera dinamica tramite js -->
-                    <p>Costo: €1,10</p>  <!-- Da aggiungere in maniera dinamica tramite js -->
-                    <p>Peso: 1kg</p>
-                    
-                    <div id="button_cart" class="redButton">Aggiungi al carrello</div>
-                    <div id="button_desid" class="redButton">Aggiungi ai desideri</div>
-                    <div id="button_share" class="redButton">Invia ad un amico</div>
+<div id="dp_cont">
+
+    <div id="dp_head"><!-- primo blocco -->
+        <div class="row">
+            <div class="col s7">
+                <div id="dp_himg"><!-- Immagine -->
+                    <p>prova a</p>
                 </div>
-                <div id="colThumb">AAAAAAAAAAAAAAAAAA
-                    <div></div>
-                    <div></div>
-                    <div></div>
+            </div>
+            <div class="col s5">
+                <div id="dp_hinf"><!-- Informazioni a destra immagine -->
+                    <!-- Varie stringhe di informazione -->
+                    <!-- 2 pulsanti -->
+                    <p>Nome Prodotto</p>
+                    <p>Quantità</p>
+                    <p>Costo</p>
+                    <p>Peso</p>
                 </div>
-
             </div>
+        </div>
+    </div>
+
+    <div id="dp_thumb"><!-- secondo blocco -->
+        <div><!-- Lista Thumbnail ! USA HANDLEBARS -->
+        </div>
+    </div>
 
 
-            <div id="dp_INF">
-                <p id="titolo_INF">Dettagli prodotto</p>
-                <p id="descr_INF">Descrizione del prodotto in questione, bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla Descrizione del prodotto in questione, bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
-                <p id="titoloB_INF">Nome Azienda Produttrice</p>
-                <p id="partIva_INF">Partita Iva</p>
-                <p id="ind_INF">Indirizzo o indicazioni</p>
-                <div id="detAziendaButton" class="redButton">Dettagli Azienda</div>
-            </div>
+    <div id="dp_dett"><!-- terzo blocco -->
+        <p>Dettagli</p>
+        <p>Lista di informazioni inerenti a dettaglio prodotto ecc</p>
+
+        <p>Nome Azienda Produttrice</p>
+        <p>partita iva</p>
+        <p>indirizzo ecc ecc ecc</p>
+        <div class="center-block"> BOTTONE DETTAGLI AZIENDA </div>
+
+    </div>
+
+</div>
