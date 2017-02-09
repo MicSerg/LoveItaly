@@ -21,18 +21,25 @@ define(function(require){
 **  - Si clicca un azienda e si va nel dettaglio dell'azienda specifica.
 */
     	events: {
-            "click #dettaglio_azienda" : "toDettAzienda",
     	},
 
     	render: function(){
-            /*Qui andrebbe la chiamata all'API per avere la lista di aziende*/
+            
+            stored = JSON.parse(localStorage.getItem("lista_azienda"));
 
+            $(this.el).html(this.template(stored));
+            return this;
+        },
 
-    		this.el.innerHTML = this.template({});
-    		return this;
-    	},
-        toDettAzienda: function(){
-            Backbone.history.navigate("dettaglioazienda",{
+        dettaglio_azienda: function(e) {
+
+            e.preventDefault();
+
+            var datoazienda = $(e.currentTarget).attr("data-az");
+
+            localStorage.setItem("datoazienda", datoazienda);
+
+            Backbone.history.navigate("dettaglio_azienda", {
                 trigger: true
             });
         }
