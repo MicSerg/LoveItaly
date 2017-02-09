@@ -21,7 +21,7 @@ define(function(require){
 **  - Si clicca il simbolo del carrello e il prodotto selezionato va nel carrello
 */
     	events: {
-    		"click #detAziendaButton" : "toDettAzienda", 
+    		/*"click #detAziendaButton" : "toDettAzienda",*/
     	},
 
     	render: function(){

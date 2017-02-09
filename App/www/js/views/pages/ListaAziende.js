@@ -21,6 +21,7 @@ define(function(require){
 **  - Si clicca un azienda e si va nel dettaglio dell'azienda specifica.
 */
     	events: {
+            "click #dettaglio_azienda" : "toDettAzienda",
     	},
 
     	render: function(){
@@ -30,6 +31,11 @@ define(function(require){
     		this.el.innerHTML = this.template({});
     		return this;
     	},
+        toDettAzienda: function(){
+            Backbone.history.navigate("dettaglioazienda",{
+                trigger: true
+            });
+        }
 
     });
     return listaAziende;
