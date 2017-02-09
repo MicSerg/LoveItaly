@@ -1,36 +1,42 @@
+<div id="da_cont">
 
-            <!-- dp_SUP = superiore, dp_INF = inferiore. lo spazio sotto la barra superiore è diviso a metà per i fini di questa schermata -->
-            <div id="dp_SUPE">
-                <div id="imgAZ_SUP"> <img src="img/logoPreload.png" width="150" height="150"> </div>
-                <div id="dati_DX">
-                    <p id="nomeAZ_SUP">Nome Azienda</p>
-                    <p id="pIva_SUP">Partita Iva</p>
-                    <p id="ind_SUP">Indirizzo Azienda</p>
-                </div>
-                <div id="descr_mid">
-                    <p id="storiaAz">Storia Azienda bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
-                </div>
-                <div id="button_ContinuaStoria"> </div>
+    <div id="da_head">
+
+        <div class="row">
+            <div class="col s6">
+                <!-- Immagine Azienda -->
 
             </div>
+            <div class="col s6">
+                <!-- Descrizione Generale -->
 
-
-            <div id="dp_INFA">
-                <!-- Qui vanno prodotti a 2, come quelli che vengono visualizzati in una categoria -->
-                <div id="offerta_" class="Scritta">Prodotti dell'Azienda</div>
-                <div id="vSet">
-                    <div class="vBlockSX">
-                        <div class="pBlock"></div>
-                        <div class="pBlock"></div>
-                        <div class="pBlock"></div>
-                        <div class="pBlock"></div>
-                    </div>
-                    <div class="vBlockDX">
-                        <div class="pBlock"></div>
-                        <div class="pBlock"></div>
-                        <div class="pBlock"></div>
-                        <div class="pBlock"></div>
-                    </div>
-
-                </div>
             </div>
+        </div>
+
+    </div>
+
+    <div id="da_dett">
+        <div> <!-- STORIA --> </div>
+        <div> <!-- BOTTONE --> </div>
+    </div>
+
+    <div id="da_prod">
+
+        <div class="row">
+            {{#each this}}
+                <div class="col s6">
+                    <div class="productBox card white">
+                        <div class="prod_img card-image">immagine</div>
+                        <div class="card-content">
+                            <span class="prod_nome">prodotto</span>
+                            <span class="prod_az">azienda</span>
+                        </div>
+                        <a class="waves-effect waves-light btn">button</a>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+
+    </div>
+
+</div>

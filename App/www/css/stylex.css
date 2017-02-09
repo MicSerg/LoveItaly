@@ -537,6 +537,11 @@ select#sel_Citta {
     background-color:green;
 
 }
+#dp_himg > #a{
+    width:200px;
+    height:200px;
+    background-color:white;
+}
 #dp_hinf{
 
     width:100%;
@@ -562,31 +567,6 @@ select#sel_Citta {
 
 /* sezione relativa a dettaglio azienda ********************************************************** */
 
-#dp_SUPE {
-    position: relative;
-    display: block;
-}
-
-#imgAZ_SUP{
-    position: relative;
-    display: inline-block;
-}
-
-#dati_DX {
-    position: relative;
-    display: inline-block;
-}
-
-#descr_mid {
-    position: relative;
-    display: block;
-}
-
-#dp_INFA {
-    position: relative;
-    background-color: green;
-    display: block;
-}
 
 /* ******* SCHERMATA LISTA AZIENDE ********************************* */
 #lista_Aziende {
