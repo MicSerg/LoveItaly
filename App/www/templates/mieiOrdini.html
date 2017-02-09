@@ -1,61 +1,38 @@
-<div class="appMenu">
-          <div id="titolo_">I Miei Ordini</div>
-            
-            <div class="i-g">
-              <hr class="linea"/><br/>
-              <div class="i-6">Numero Ordine</div>
-              <div class="i-6">Data Ordine</div>
-              <div class="i-6">Inviato a </div> 
-              <div class="i-6">Totale:2000,00€</div>
-              <!-- se non uso ice-cream non si allineano con il resto -->
-              <div class="i-6">Dettagli</div>
-              <div class="i-6">Fattura</div>
+<div>
+    <div class="row">
+        <span id="m_Title" class="col s12 center-align"><h5>I Miei Ordini</h5></span>
+        <hr class="col s10 push-s1"></hr> <!-- NON  VA RIPETUTO IN HANDLEBARS! -->
+
+        <div>
+            <div class="col s6 center-align">
+              Numero Ordine
             </div>
-
-            <div class="i-g">
-              <hr class="linea"/><br/>
-              <div class="i-6">Numero Ordine</div>
-              <div class="i-6">Data Ordine</div>
-              <div class="i-6">Inviato a </div> 
-              <div class="i-6">Totale:2000,00€</div>
-              <!-- se non uso ice-cream non si allineano con il resto -->
-              <div class="i-6">Dettagli</div>
-              <div class="i-6">Fattura</div>
+            <div class="col s6 center-align">
+              Data Ordine
             </div>
-            
-            <div class="i-g">
-              <hr class="linea"/><br/>
-              <div class="i-6">Numero Ordine</div>
-              <div class="i-6">Data Ordine</div>
-              <div class="i-6">Inviato a </div> 
-              <div class="i-6">Totale:2000,00€</div>
-              <!-- se non uso ice-cream non si allineano con il resto -->
-              <div class="i-6">Dettagli</div>
-              <div class="i-6">Fattura</div>
-            </div>
-
-           
-            <!-- thumbnail + nome, costo, quantità, totale costo -->
-            <div class="i-g">
-              <hr class="linea"/><br/>
-              <div class="i-6">Numero Ordine</div>
-              <div class="i-6">Data Ordine</div>
-              <div class="i-6">Inviato a </div> 
-              <div class="i-6">Totale:2000,00€</div>
-              <!-- se non uso ice-cream non si allineano con il resto -->
-              <div class="i-6">Dettagli</div>
-              <div class="i-6">Fattura</div>
-              
-            </div>
-
-            <hr class="linea"/><br/>
-
-            <div class="MO_button"> Vai Avanti </div>
-
-            
-
-            <span id="tastoIndietro"> Bottone per tornare indietro </span>
-
-
-
         </div>
+        <div>
+            <div class="col s6 center-align">
+              inviato a
+            </div>
+            <div class="col s6 center-align">
+              Totale:2000,00€
+            </div>
+        </div>
+        <div>
+            <div class="col s6 center-align">
+              <div id="ord_det" class="waves-effect waves-light btn col s10 push-s1">
+                Dettagli
+              </div>              
+            </div>
+            <div class="col s6 center-align">
+              <div id="ord_fat" class="waves-effect waves-light btn col s10 push-s1">
+              Fattura
+              </div>
+            </div>
+        </div>
+        <hr class="col s10 push-s1"></hr> <!-- VA RIPETUTO IN HANDLEBARS!-->
+
+        <span id="tastoIndietro" class="waves-effect waves-light btn col s12 center-align">Torna alle Offerte</span>
+    </div>
+</div>

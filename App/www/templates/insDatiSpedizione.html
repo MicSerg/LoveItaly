@@ -1,69 +1,63 @@
 
-        <div>
-<!--    CAMBIAMENTI DA APPORTARE: 
-        La form comprenderà tutte le cose che si possono settare in questa pagina
-        e quindi bisognerà strutturare l'html a modo
- -->
-           <!-- <div id="titolo_">Scegli Indirizzo</div>-->
-<!-- ** ** ** ** ** ** ** Decorazione barra a Sinistra ** ** ** ** ** -->
-            <div id="lineaSX"> 
-                <div class="circle" id="topCircle"></div>
-                <div class="circle" id="middleCircle"></div>
-                <div class="circle" id="bottomCircle"></div>
+    <div>
+        <div class="center-align" id="ins_Colonna"></div>
+        <div class="circle" id="c_top"></div>
+        <div class="circle" id="c_middle"></div>
+        <div class="circle" id="c_bottom"></div>
+    </div>
+    <div id="ins_dx">
+        <div class="row">
+            <div id="ins_spedizione" class="col s12">
+                <div class="col s12">Indirizzo di spedizione</div>
+
+                <div class="col s6">Nome</div>
+                <div class="col s6">Giangiangiarlo</div>
+
+                <div class="col s6">Cognome</div>
+                <div class="col s6">miangianmiango</div>
+
+                <div class="col s6">Indirizzo</div>
+                <div class="col s6">Via miao miao,10</div>
+
+                <div class="col s6">Città/Provincia</div>
+                <div class="col s6">Roma/Roma</div>
+
+                <div class="col s6">Telefono</div>
+                <div class="col s6">0988989898</div>
             </div>
-<!-- Fine decorazione barra a sinistra -->
-
-            <div id="spedizioneDetail">
-                <div id="indirDetail">
-                    <!-- Bisogna usare icecream per sistemare -->
-                    
-                </div>
-                <div id="consegnaDetail">  
-                    <!-- Bisogna usare icecream per sistemare -->
-                    <div>Indirizzo di Consegna</div><br>
-                    
-
-                    <!-- "giorno" da tenere? -->
-                    <div>Scegli il giorno della consegna:</div>
-                    <div>Tendina piccola     ------>     Consegna Gratuita!</div>
-                    
-                    <div>Scegli la data della consegna:</div>
-                    <!-- La sistemazione di queste stringhe è fondamentale **
-                         Forse userò i-3 per tutte e tre le stringhe e andrò
-                         ad usare ovviamente 3 endine per queste "tendine", 
-                         molto probabilmente creerò una classe per collegare
-                         lo style di queste "select -> option" -->
-                    <div>Giorno</div>
-                    <div>Mese</div>
-                    <div>Anno</div>
-
-                    <form id="scltData" class="">
-                        <select name="opt_Giorno">
-                            <option value="1"> </option>
-                        </select>
-                        <select name="opt_Mese">
-                            <option value="1"> </option>
-                        </select>
-                        <select name="opt_Anno">
-                            <option value="1"> </option>
-                        </select>
-                    </form>
-
-                    <div>  </div>
-                    <br>
-                    <!-- QUAD= Sta per quadratino con possibilità spunta -->
-                    <form>
-                        <input type="checkbox" name="isRegalo" value="html"/> Questa è una spesa regalo?<br />
-                        <input type="checkbox" name="accCond1" value="html"/> Accetto le condizioni generali di vendita.<br />
-                        <input type="checkbox" name="accCond2" value="html"/> Accetto le clausole indicate...<br />
-                    </form>
-                </div>
-                <div id="sped_t">
-                    <!-- Bisogna usare icecream per sistemare -->
-                    <!-- Quando si procede, bisogna fare chiamata "PUT" ? -->
-                    <div id="t_Riepilogo" class="opM_button">Procedi con Paypal</div>
-                    <div id="t_Back" class="opM_button">Torna al Carrello</div>
-                </div>
+            <div id="ins_consegna" class="col s12">
+              
+                    <div class="col s12">Modalità di consegna</div>
+                
+                    <div class="col s12">Scegli la data della consegna</div>
+                
+                    <div class="col s4">Giorno</div>
+                    <div class="col s4">Mese</div>
+                    <div class="col s4">Anno</div>
+              
+                    <div class="col s4">Giorno</div>
+                    <div class="col s4">Mese</div>
+                    <div class="col s4">Anno</div>
+                
+                    <div class="col s12">Questa è una spesa regalo</div>
+                
+                    <div class="col s12">Accetto le condizioni generali di vendita</div>
+               
+                    <div class="col s12">Accetto le clausole indicate..</div>
+            
             </div>
 
+            <div id="ins_pulsanti" class="col s12">
+                <div class="col s6">
+                    <div class="waves-effect waves-light btn center-align col s12">Procedi</div>
+                </div>
+
+                <div class="col s6">
+                    <div class="waves-effect waves-light btn center-align col s12">Torna Indietro</div>
+                </div>
+            </div>
         </div>
+    </div>
+
+
+

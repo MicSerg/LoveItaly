@@ -1,61 +1,49 @@
-        <div>
+<div id="ord_content">
+    <div class="row">
+        <span id="m_Title" class="col s12 center-align"><h5>Ordine</h5></span>
 
-            <div id="titolo_">Ordine</div>
-
-            <hr class="linea"/><br/>
-            <!-- Prodotto,         costo, quantità, totale formattati e allineati -->
-                <div id="testa">
-                    <div class="position1"> Prodotto </div>
-                    <div class="position2"> Costo </div>
-                    <div class="position3"> Quant. </div>
-                    <div class="position4"> Totale </div> 
+        <div class="col s10 push-s1">
+            <!-- INIZIO BASE -->
+            <hr class="col s12"/>
+            <div>
+                <div class="col s6 left-align">
+                    Prodotto
                 </div>
-
-            <hr class="linea"/><br/>
-            <!-- thumbnail + nome, costo, quantità, totale costo -->
-                <div class="sezione">
-                    <div id="positionIMGSez" class="thumb"></div>
-                    <div class="positdef"> prodotto </div>
-                    <div class="positdef"> 3.00€ </div>
-                    <div class="positdef"> 2 </div>
-                    <div class="positdef"> 6.00€ </div>
+                <div class="col s2 left-align">
+                    Costo
                 </div>
-            <hr class="linea"/><br/>
-             <!-- thumbnail + nome, costo, quantità, totale costo -->
-                <div class="sezione">
-                    <div id="positionIMGSez" class="thumb"></div>
-                    <div class="positdef"> prodotto </div>
-                    <div class="positdef"> 3.00€ </div>
-                    <div class="positdef"> 2 </div>
-                    <div class="positdef"> 6.00€ </div>
+                <div class="col s2 left-align">
+                    Qnt.
                 </div>
-
-            <hr class="linea"/><br/>
-            <!-- thumbnail + nome, costo, quantità, totale costo -->
-                <div class="sezione">
-                    <div id="positionIMGSez" class="thumb"></div>
-                    <div class="positdef"> prodotto </div>
-                    <div class="positdef"> 3.00€ </div>
-                    <div class="positdef"> 2 </div>
-                    <div class="positdef"> 6.00€ </div>
+                <div class="col s2 left-align">
+                    Tot
                 </div>
-
-            <hr class="linea"/><br/>
-             <!-- thumbnail + nome, costo, quantità, totale costo -->
-                <div class="sezione">
-                    <div id="positionIMGSez" class="thumb"></div>
-                    <div class="positdef"> prodotto </div>
-                    <div class="positdef"> 3.00€ </div>
-                    <div class="positdef"> 2 </div>
-                    <div class="positdef"> 6.00€ </div>
-                </div>
-
-            <hr class="linea"/><br/>
-
-            <div class="ord_button">
-                <div class="opM_button">Compra di nuovo</div>
-                <div class="opM_button">Torna Indietro</div>
             </div>
-
+            <hr class="col s12"/>
+            <!-- FINE BASE -->
+            <!-- INIZIO PARTE HANDLEBARS / DINAMICA -->
+            <div>
+                <div class="col s2 left-align">
+                    Pics
+                </div>
+                <div class="col s4 left-align">
+                    Prodotto
+                </div>
+                <div class="col s2 left-align">
+                    3.00€
+                </div>
+                <div class="col s2 left-align">
+                    4
+                </div>
+                <div class="col s2 left-align">
+                    12.00€
+                </div>
+            </div>
+            <hr class="col s12"/>
+            <!-- FINE PARTE HANDLEBARS / DINAMICA -->
         </div>
-        <span id="tastoIndietro"> Bottone per tornare indietro </span>
+        <a id="tastoRicompra" class="waves-effect waves-light btn col s12 center-align">Compra di nuovo</a>
+        <a id="tastoIndietro" class="waves-effect waves-light btn col s12 center-align">Torna Indietro</a>
+
+    </div>
+</div>    

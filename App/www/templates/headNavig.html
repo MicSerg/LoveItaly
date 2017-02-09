@@ -41,9 +41,67 @@
             
             <div id="sdwModal"></div><!-- shadowModal serve per creare l'ombra con il resto delle cose presenti dietro al sidemenu -->
             <div id="cartModal"><!-- Carrello --> 
-                        <span id="m_Sped">Fai il CheckOut</span>
-                        <br \>
-                        <span id="cartClose">Torna Indietro</span>
+                <div class="row">
+                    <span id="m_Title" class="col s12 center-align"><h5>CARRELLO</h5></span>
+
+                    <div class="col s10 push-s1">
+                        <!-- INIZIO BASE -->
+                        <hr class="col s12"/>
+                        <div>
+                            <div class="col s6 left-align">
+                                Prodotto
+                            </div>
+                            <div class="col s2 left-align">
+                                Costo
+                            </div>
+                            <div class="col s2 left-align">
+                                Qnt.
+                            </div>
+                            <div class="col s2 left-align">
+                                Tot
+                            </div>
+                        </div>
+                        <hr class="col s12"/>
+                        <!-- FINE BASE -->
+                        <!-- INIZIO PARTE HANDLEBARS / DINAMICA -->
+                        <div>
+                            <div class="col s2 left-align">
+                                Pics
+                            </div>
+                            <div class="col s4 left-align">
+                                Prodotto
+                            </div>
+                            <div class="col s2 left-align">
+                                3.00€
+                            </div>
+                            <div class="col s2 left-align">
+                                4
+                            </div>
+                            <div class="col s2 left-align">
+                                12.00€
+                            </div>
+                        </div>
+                        <hr class="col s12"/>
+                        <!-- FINE PARTE HANDLEBARS / DINAMICA -->
+                    </div>
+                    <!-- INIZIO SECONDA PARTE CON OPERAZIONI!-->
+                    <div class="col s7 push-s4">
+                            <div class="col s8">Gestione</div>
+                            <div class="col s4">2.00€</div>
+                            <hr class="col s12"/>
+                            <div class="col s8">Consegna</div>
+                            <div class="col s4">Gratis!</div>
+                            <hr class="col s12"/>
+                            <div class="col s8">TOTALE</div>
+                            <div class="col s4">34€</div> 
+                            <!-- COME FACCIO A CALCOLARLO?? -->
+                            <hr class="col s12"/>
+
+                    </div>
+
+                    <a id="m_Sped" class="waves-effect waves-light btn col s12 center-align">Fai il Checkout</a>
+                    <a id="cartClose" class="waves-effect waves-light btn col s12 center-align">Torna Indietro</a>
+                </div>
             </div>
 
            

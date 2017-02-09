@@ -1,51 +1,67 @@
+<div id="ro_content">
+    <div class="row">
+        <span id="m_Title" class="col s12 center-align"><h5>Riepilogo Ordine</h5></span>
 
-
-            <div id="titolo_">Riepilogo Ordine</div>
-
-            <hr class="linea"/><br/>
-            <!-- Prodotto,         costo, quantità, totale formattati e allineati -->
-                <div id="testa">
-                    <div class="position1"> Prodotto </div>
-                    <div class="position2"> Costo </div>
-                    <div class="position3"> Quant. </div>
-                    <div class="position4"> Totale </div> 
+        <div class="col s10 push-s1">
+            <!-- INIZIO BASE -->
+            <hr class="col s12"/>
+            <div>
+                <div class="col s6 left-align">
+                    Prodotto
                 </div>
-
-            <hr class="linea"/><br/>
-            <!-- thumbnail + nome, costo, quantità, totale costo -->
-                <div class="sezione">
-                    <div id="positionIMGSez" class="thumb"></div>
-                    <div class="positdef"> prodotto </div>
-                    <div class="positdef"> 3.00€ </div>
-                    <div class="positdef"> 2 </div>
-                    <div class="positdef"> 6.00€ </div>
+                <div class="col s2 left-align">
+                    Costo
                 </div>
-           
-            <hr class="linea"/><br/>
-
-
-            <!-- PARTE CHE RIMANE FISSA NELLA PAGINA -->
-            <div id="calcolo">
-                <div class="sezioneCalcolo">
-                    <div id="" class="positionCalc1">GestioneOrdine</div>
-                    <div id="" class="positionCalc2">Costo</div>
+                <div class="col s2 left-align">
+                    Qnt.
                 </div>
-                <hr class="lineaMin"/><br/>
-                <div class="sezioneCalcolo">
-                    <div id="" class="positionCalc1">Consegna</div>
-                    <div id="" class="positionCalc2">Gratuita!</div>
+                <div class="col s2 left-align">
+                    Tot
                 </div>
-                <hr class="lineaMin"/><br/>
-                <div class="sezioneCalcolo">
-                    <div id="" class="positionCalc1">TOTALE</div>
-                    <div id="" class="positionCalc2">24.00€</div>
-                </div>
-                
-
             </div>
-
-            <div id="roSezButton">
-                <div class="opM_button" id="t_Back">Torna alle Offerte</div>
+            <hr class="col s12"/>
+            <!-- FINE BASE -->
+            <!-- INIZIO PRIMA PARTE HANDLEBARS / DINAMICA -->
+            <div>
+                <div class="col s2 left-align">
+                    Pics
+                </div>
+                <div class="col s4 left-align">
+                    Prodotto
+                </div>
+                <div class="col s2 left-align">
+                    3.00€
+                </div>
+                <div class="col s2 left-align">
+                    4
+                </div>
+                <div class="col s2 left-align">
+                    12.00€
+                </div>
             </div>
+            <hr class="col s12"/>
+            <!-- FINE PRIMA PARTE HANDLEBARS / DINAMICA -->
+        </div>
+        <!-- INIZIO SECONDA PARTE CON OPERAZIONI!-->
+        <div class="col s7 push-s4">
+                <div class="col s8">Gestione</div>
+                <div class="col s4">2.00€</div>
+                <hr class="col s12"/>
+                <div class="col s8">Consegna</div>
+                <div class="col s4">Gratis!</div>
+                <hr class="col s12"/>
+                <div class="col s8">TOTALE</div>
+                <div class="col s4">34€</div> 
+                <!-- COME FACCIO A CALCOLARLO?? -->
+                <hr class="col s12"/>
+
+        </div>
+
+
+        <a id="t_Back" class="waves-effect waves-light btn col s12 center-align">Torna Indietro</a>
+
+    </div>
+</div>    
+
 
 

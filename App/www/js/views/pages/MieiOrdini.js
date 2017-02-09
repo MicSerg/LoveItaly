@@ -17,7 +17,7 @@ define(function(require){
     	className:"",
 
     	events: {
-    		"click .MO_button" : "toOrdine",
+    		"click #ord_det" : "toOrdine",
     		"click #tastoIndietro" : "goBack",
     	},
 

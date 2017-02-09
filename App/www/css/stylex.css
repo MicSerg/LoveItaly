@@ -353,6 +353,9 @@ select#sel_Citta {
     to {right:0; opacity:1}
 }
 
+#cartModal > div > a{
+    margin-top:20px;
+}
 
 /*  Barra di navigazione superiore ************************************************** */
 #bar_bg{ 
@@ -621,3 +624,72 @@ select#sel_Citta {
 }
 
 /*Inserisci Dati Spedizione ******************************/
+#ins_Colonna{
+    position:absolute;
+    top:5%;
+    left:18px;
+    width:4px;
+    height:90vh;
+    background-color:rgba(255,255,255,.7);
+}
+
+.circle { 
+    width: 20px; 
+    height: 20px; 
+    background-color:rgba(255,255,255,.7);
+    -moz-border-radius: 50px; 
+    -webkit-border-radius: 50px; 
+    border-radius: 50px; 
+}
+#c_top{
+    position:absolute;
+    top:5%;
+    left:10px;
+}
+#c_middle{
+
+    position:absolute;
+    top:50%;
+    left:10px;
+}
+#c_bottom{
+    position:absolute;
+    top:92%;
+    left:10px;
+}
+#ins_dx{
+    position:absolute;
+    top:5%;
+    left:40px;
+    width:85%;
+    height:90vh;
+    background-color:yellow;
+}
+#ins_spedizione{
+    position:absolute;
+
+}
+#ins_consegna{
+    position:absolute;
+    top:50%;
+}
+#ins_pulsanti{
+    position:absolute;
+    top:95%;
+}
+
+
+/*mieiOrdini************************************/
+#m_Title{
+    color:white;
+}
+
+/*Ordine ***************************************/
+#ord_content > div > a{
+    margin-top:20px;
+}
+
+/*Riepilogo Ordine*******************************/
+#ro_content > div > a{
+    margin-top:20px;
+}
