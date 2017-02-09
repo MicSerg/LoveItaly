@@ -1,14 +1,15 @@
 define(function(require){
 	var $ = require("jquery");
 	var Backbone = require("backbone");
-
+	var Azienda = require("models/Azienda");
+	
     var Utils = require("utils");
 
     var dettaglioAzienda = Utils.Page.extend({
 
     	constructorName: "dettaglioAzienda",
 
-    	//model: sceltaCitta (?),
+    	model: Azienda,
 
     	initialize: function(){
     		this.template = Utils.templates.dettaglioAzienda;
