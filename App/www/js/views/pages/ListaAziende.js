@@ -21,6 +21,7 @@ define(function(require){
 **  - Si clicca un azienda e si va nel dettaglio dell'azienda specifica.
 */
     	events: {
+		"click #dettaglio_azienda" : "toDettAzienda",
     	},
 
     	render: function(){
@@ -31,7 +32,7 @@ define(function(require){
             return this;
         },
 
-        dettaglio_azienda: function(e) {
+       toDettAzienda: function(e) {
 
             e.preventDefault();
 
