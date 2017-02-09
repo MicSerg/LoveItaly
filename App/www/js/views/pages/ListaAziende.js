@@ -21,7 +21,7 @@ define(function(require){
 **  - Si clicca un azienda e si va nel dettaglio dell'azienda specifica.
 */
     	events: {
-		"click #dettaglio_azienda" : "toDettAzienda",
+		"click .az_Quad" : "toDettAzienda",
     	},
 
     	render: function(){
