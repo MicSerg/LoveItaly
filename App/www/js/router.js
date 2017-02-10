@@ -28,6 +28,8 @@ define(function(require) {
 	var DettaglioAzienda = require("views/pages/DettaglioAzienda");
 	var ListaAziende = require("views/pages/ListaAziende");
 	var ListaCategorie = require("views/pages/ListaCategorie");
+	var RisultatoRicerca = require("views/pages/RisultatoRicerca");
+	var RisultatoCategoria = require("views/pages/RisultatoCategoria");
 	
 	//modelli
 	var ListAz = require("models/ListAz");
@@ -81,6 +83,9 @@ define(function(require) {
 			"dettaglioazienda":"showDettaglioAzienda",
 			"listaaziende":"showListaAziende",
 			"listacategorie":"showListaCategorie",
+			"risultatocategoria":"showRisultatoCategoria",
+			"risultatoricerca":"showRisultatoRicerca"
+
 
 			"showheadmenu": "showHeadMenu",
 			"mieiordini" : "showMieiOrdini",
@@ -232,6 +237,27 @@ define(function(require) {
 			var page=new ListaCategorie({});
 			this.changePage(page);
 		},
+		showRisultatoRicerca: function(){
+			console.log("router.js -> risultatoRicerca");
+			if(this.secondView != "risultatoricerca"){
+				this.secondView = "risultatoricerca";
+			}
+			var page=new RisultatoRicerca({});
+			this.changePage(page);
+		},
+
+		showRisultatoCategoria: function(){
+			console.log("router.js -> risultatoCategoria");
+			if(this.secondView != "risultatocategoria"){
+				this.secondView = "risultatocategoria";
+			}
+			var page=new RisultatoCategoria({});
+			this.changePage(page);
+		},
+
+
+
+
 		//*********************************************
 		//Inizio Funzioni per schermate interne al menu
 

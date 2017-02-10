@@ -19,7 +19,7 @@ define(function(require){
     	className: "",
 
     	events: {
-    		"click #container" : "toDettProdotto", 
+    		"click .productBox" : "toDettProdotto", 
     	},
 
     	render: function(){

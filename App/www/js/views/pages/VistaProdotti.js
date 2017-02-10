@@ -58,7 +58,7 @@ define(function(require) {
 
                     $(that.el).html(that.template(model.toJSON()));
 
-                    /* -- Codice dei bottoni -- */
+                    /* Quantità del prodotto che si vuole comprare?*/
                     var cont = 1;
                     $("#l-btn").click(function(e) {
                         if (cont > 1) {
@@ -66,7 +66,7 @@ define(function(require) {
                             $('#span-number').html(cont);
                         }
                     });
-
+                    /* Quantità Disponibile del prodotto?*/
                     $("#r-btn").click(function(e) {
                         if (cont < 15) {
                             cont++;
