@@ -27,7 +27,9 @@ define(function(require){
     	render: function(){
             
             stored = JSON.parse(localStorage.getItem("lista_azienda"));
-
+            console.log("PROVA");
+            console.log(stored);
+            console.log("FINE PROVA");
             $(this.el).html(this.template(stored));
             return this;
         },

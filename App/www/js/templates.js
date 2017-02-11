@@ -25,8 +25,8 @@ define({
     listaAziende:"../../templates/listaAziende.html",
     listaCategorie:"../../templates/listaCategorie.html",
     // risCategoria -> lista prodotti
-    risCategoria:"../../templates/risultatoCategoria.html",
-    risRicerca:"../../templates/risultatoRicerca.html",
+    risultatoCategoria:"../../templates/risultatoCategoria.html",
+    risultatoRicerca:"../../templates/risultatoRicerca.html",
 
 //HeadMenu 
     headmenu:"../../templates/headMenu.html",

@@ -14,7 +14,7 @@ define(function(require){
         model: Lista_Ricerca,
 
         initialize: function(variabile){
-            this.template = Utils.templates.risultatoricerca;
+            this.template = Utils.templates.risultatoRicerca;
         },
 
         id: "r_ricerca",
@@ -26,10 +26,15 @@ define(function(require){
 
         render: function(){
             var temp = localStorage.getItem("datoricerca");
+
+            console.log("MIAO");
+            console.log(temp);
+
             var model = new Lista_Ricerca({
                 id: temp
             });
-
+            console.log("MODELL MIAO");
+            console.log(model);
             var that = this;
             model.fetch({
                 success: function(){
@@ -43,10 +48,12 @@ define(function(require){
                         var img2 = 'http://192.168.56.101/loveitaly/api/images/products/' + idprod + '/' + idimg + '/?ws_key=IYI6M35MLB8UVW38Y99RY3YPQWRX5X8H';
                         ((model.toJSON())[i]).img= img2;
                         ((model.toJSON())[i]).price= parseFloat(((model.toJSON())[i]).price).toFixed(2);
+
                     }
                     
+
                     $(that.el).html(that.template((model.toJSON())));
-                    return that;
+                    return this;
 
                 }
             });

@@ -168,7 +168,7 @@ define(function(require){
             this.$el.find('#sdwModal')[0].style.display="none";
         },
 
-        showSearch:function(){
+        showSearch:function(e){
             console.log("che succede quando clicco la ricerca?");
             /*
             if ($("#inp_s").is(":active")) {
@@ -185,7 +185,20 @@ define(function(require){
                 //Vai nella pagina di ricerca ma prima memorizza
                 //la stringa "prova"!! IMPORTANTE!
 
-                prova ="";
+                /*COMINCIA LA PROVA DELLA RICERCA*/
+ 
+                var keyword = $("#inp_s").val() ;
+                console.log("PAROLA RICERCATA: -->  " + keyword);
+                localStorage.setItem("datoricerca",keyword);
+
+                if (Backbone.history.fragment === 'risultatoricerca') {
+                    Backbone.history.stop();
+                    Backbone.history.start()
+                } else {
+
+                }
+
+                /*FINE RICERCA MOD*/
                 Backbone.history.navigate("risultatoricerca",{
                     trigger:true
                 });

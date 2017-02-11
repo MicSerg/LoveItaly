@@ -12,7 +12,7 @@ define(function(require){
     	model: Lista_Prod_Cat,
 
     	initialize: function(){
-    		this.template = Utils.templates.risultatocategoria;
+    		this.template = Utils.templates.risultatoCategoria;
     	},
 
     	id: "",
