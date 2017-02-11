@@ -22,6 +22,7 @@
             <hr class="col s12"/>
             <!-- FINE BASE -->
             <!-- INIZIO PRIMA PARTE HANDLEBARS / DINAMICA -->
+            {{#each this}}
             <div>
                 <div class="col s2 left-align">
                     Pics
@@ -39,7 +40,8 @@
                     12.00€
                 </div>
             </div>
-            <hr class="col s12"/>
+            <hr class="col s12"/><!-- per ogni ordine c'è una linea sotto-->
+            {{/each}}
             <!-- FINE PRIMA PARTE HANDLEBARS / DINAMICA -->
         </div>
         <!-- INIZIO SECONDA PARTE CON OPERAZIONI!-->
