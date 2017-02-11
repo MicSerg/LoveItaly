@@ -31,8 +31,14 @@ define(function(require){
     	},
 
         /* 
+        http://192.168.56.101/loveitaly/admin1/
+
         studente@mobile.it
         studente
+
+        per fare un ottimo login bisogna usare
+        nick: miao@miao.miao
+        pass: miaomiao
         */
         headNavig: function(event){
             /*COMINCIANO MODIFICHE*/
