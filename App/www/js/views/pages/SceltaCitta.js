@@ -17,10 +17,11 @@ define(function(require){
     	className: "",
 
     	events: {
-            "click #lLogin" : "toLogin"
+            "click #lLogin" : "toLogin",
     		//Click sul bottone per andare nella login
     		//Click sul bottone in fondo per andare nella pagine delle offerte 
     		//da NON connesso
+            "click #lScelta" : "toOfferte"
     	},
 
     	render: function(){
@@ -30,6 +31,11 @@ define(function(require){
 
         toLogin: function(event){
             Backbone.history.navigate("login",{
+                trigger: true
+            });
+        },
+        toOfferte: function(event){
+            Backbone.history.navigate("showheadnavig",{
                 trigger: true
             });
         }
