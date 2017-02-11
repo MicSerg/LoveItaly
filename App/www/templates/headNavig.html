@@ -6,13 +6,21 @@
                 <div id="decorazione"></div>
                 
                 <div id="parteSM">
+                    
                     <span id="close">&times;</span>
                     <div class="onMenu" href="#" id="m_logout">Logout</div>
-                    <div class="onMenu" href="#" id="m_account">Account</div>
-                    <div class="onMenu" href="#" id="m_archord">Storico Ordini</div>
-                    <div class="onMenu" id="logoRes">
-                                <img src="img/logo.png" id="logoMenu"> </img>
+                    
+                    <!-- PARTE DINAMICA!! -->
+                    <div id="side_Dinamico">
+                        <div class="onMenu" href="#" id="m_account">Account</div>
+                        <div class="onMenu" href="#" id="m_archord">Storico Ordini</div>
                     </div>
+                    <!-- FINE PARTE DINAMICA!! -->
+                        <div class="onMenu" id="logoRes">
+                                    <img src="img/logo.png" id="logoMenu"> </img>
+                        </div>
+
+                    
                     <form id="scltCitta" class="onMenu"> Prova <!--Da specificare per cambiare select-->
                         <select name="scltCitta">
                             <option value="citta001">Milano</option>
@@ -30,13 +38,15 @@
                         <a href="#">Calendario</a>
                         <a href="#">Chi Siamo</a>
                     </div>
-                </div> <!-- CHIUSURA parteSM -->
+                </div> 
+                
                 <div id="parteOP">
                     <div class="onMenu" id="op_notif">Notifiche</div>
                     <div class="onMenu" id="op_suoni">Suoni</div>
                     <div class="onMenu" id="op_cancDatiLog">Cancella Dati Login</div>
                     <div class="onMenu" id="op_back">Indietro</div>
                 </div>
+                
             </div>
             
             <div id="sdwModal"></div><!-- shadowModal serve per creare l'ombra con il resto delle cose presenti dietro al sidemenu -->

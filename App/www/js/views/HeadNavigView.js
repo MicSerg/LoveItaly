@@ -53,6 +53,9 @@ define(function(require){
             //"click #m_newsletter" : function(){this.enteringMenu("");},
             "click #m_help" : function(){this.enteringMenu("aiuto");},
             "click #m_account" : "checkAccountInSite",
+
+            "click #m_logout" : "doLogout",
+            "click #m_login" : "doLogin",
             //<******fine eventi che mi portano in HeadMenuView
             //INIZIO CART 
             //RICORDA TASTO PER ELIMINARE PRODOTTI DAL CARRELLO!!
@@ -71,6 +74,7 @@ define(function(require){
 
     	},
 
+
     	initialize: function(){
     		console.log("inizializza Head Navig");
     		this.template = Utils.templates.headnavig;
@@ -79,9 +83,24 @@ define(function(require){
     	render: function(){
     		this.el.innerHTML = this.template({});
     		this.contentElement = this.$el.find('#content')[0];
+            /*COMINCIA LA PARTE DINAMICA DELL'HTML*/
+            //SE non esiste una sessione, allora non si è connessi.
+            //quindi non mostrarmi tutto il sidemenu!
+
+            
+
     		return this;
     	},
-
+        doLogout: function(){
+            this.$el.find('#m_logout')[0].innerHTML="Login";
+            this.$el.find('#m_logout')[0].setAttribute("id","m_login");
+            this.$el.find('#side_Dinamico')[0].style.display="none";
+        },
+        doLogin: function(){
+            this.$el.find('#m_login')[0].innerHTML="Logout";
+            this.$el.find('#m_login')[0].setAttribute("id","m_logout");
+            this.$el.find('#side_Dinamico')[0].style.display="";
+        },
         enteringMenu: function(_string){ 
         // Per entrare nel HeadMenu uso un metodo alternativo che permette
         // di mettere una qualsiasi view all'inizio di ogni apertura della
