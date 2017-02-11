@@ -1,37 +1,39 @@
 <div>
     <div class="row">
         <span id="m_Title" class="col s12 center-align"><h5>I Miei Ordini</h5></span>
-        <hr class="col s10 push-s1"></hr> <!-- NON  VA RIPETUTO IN HANDLEBARS! -->
 
-        <div>
-            <div class="col s6 center-align">
-              Numero Ordine
-            </div>
-            <div class="col s6 center-align">
-              Data Ordine
-            </div>
-        </div>
-        <div>
-            <div class="col s6 center-align">
-              inviato a
-            </div>
-            <div class="col s6 center-align">
-              Totale:2000,00€
-            </div>
-        </div>
-        <div>
-            <div class="col s6 center-align">
-              <div id="ord_det" class="waves-effect waves-light btn col s10 push-s1">
-                Dettagli
-              </div>              
-            </div>
-            <div class="col s6 center-align">
-              <div id="ord_fat" class="waves-effect waves-light btn col s10 push-s1">
-              Fattura
+        <hr class="col s10 push-s1"></hr> <!-- NON  VA RIPETUTO IN HANDLEBARS! -->
+        {{#each this}}
+          <div>
+              <div class="col s6 center-align">
+                Numero Ordine
               </div>
-            </div>
-        </div>
-        <hr class="col s10 push-s1"></hr> <!-- VA RIPETUTO IN HANDLEBARS!-->
+              <div class="col s6 center-align">
+                Data Ordine
+              </div>
+          </div>
+          <div>
+              <div class="col s6 center-align">
+                inviato a
+              </div>
+              <div class="col s6 center-align">
+                Totale:2000,00€
+              </div>
+          </div>
+          <div>
+              <div class="col s6 center-align">
+                <div id="ord_det" class="waves-effect waves-light btn col s10 push-s1">
+                  Dettagli
+                </div>              
+              </div>
+              <div class="col s6 center-align">
+                <div id="ord_fat" class="waves-effect waves-light btn col s10 push-s1">
+                Fattura
+                </div>
+              </div>
+          </div>
+          <hr class="col s10 push-s1"></hr> <!-- VA RIPETUTO IN HANDLEBARS!-->
+        {{/each}}
 
         <span id="tastoIndietro" class="waves-effect waves-light btn col s12 center-align">Torna alle Offerte</span>
     </div>
