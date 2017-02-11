@@ -84,7 +84,7 @@ define(function(require) {
 			"listaaziende":"showListaAziende",
 			"listacategorie":"showListaCategorie",
 			"risultatocategoria":"showRisultatoCategoria",
-			"risultatoricerca":"showRisultatoRicerca"
+			"risultatoricerca":"showRisultatoRicerca",
 
 
 			"showheadmenu": "showHeadMenu",

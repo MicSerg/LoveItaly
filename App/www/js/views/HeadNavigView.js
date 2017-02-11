@@ -151,6 +151,29 @@ define(function(require){
 
         showSearch:function(){
             console.log("che succede quando clicco la ricerca?");
+            /*
+            if ($("#inp_s").is(":active")) {
+                console.log("attivo!!!!!");
+            }
+            if ($("#inp_s").is(":focus")) {
+                console.log("focus!!!!!");
+            }
+            */
+            //document.getElementById("inp_s").value = "Johnny Bravo";
+            var prova = document.getElementById("inp_s").value;
+
+            if(prova != ""){ // IF SBAGLIATO! bisogna vedere tante cose
+                //Vai nella pagina di ricerca ma prima memorizza
+                //la stringa "prova"!! IMPORTANTE!
+
+                prova ="";
+                Backbone.history.navigate("risultatoricerca",{
+                    trigger:true
+                });
+
+            }
+            
+
         },
         showCart:function() {
             console.log("Apertura Carrello");

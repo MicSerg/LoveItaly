@@ -22,7 +22,7 @@ define(function(require){
 **  - ..Oppure si va direttamente nella lista dei prodotti di quella categoria
 */
     	events: {
-    		
+    		"click #t_cat":"toRisCat",
     	},
 
     	render: function() {
@@ -59,7 +59,7 @@ define(function(require){
             return this;
         },
 
-        listaprod: function(e) {
+        toRisCat: function(e) {
 
             e.preventDefault();
 
@@ -67,16 +67,16 @@ define(function(require){
 
             localStorage.setItem("datocategoria", datocategoria);
 
-            Backbone.history.navigate("listaprod", {
+            Backbone.history.navigate("risultatocategoria", {
                 trigger: true
             });
         },
-
+        /* -> SBAGLIATO!!!!!
         prodotto: function(e) {
             Backbone.history.navigate("listaprodotti", {
                 trigger: true
             });
-        }
+        }*/
 
     });
     return ListaCategorie;
