@@ -2,12 +2,14 @@ define(function(require){
 	var $ = require("jquery");
 	var Backbone = require("backbone");
     var Utils = require("utils");
+	var User = require("models/User");
+
 
     var login = Utils.Page.extend({
 
     	constructorName: "login",
 
-    	//model: login (?),
+    	model: User,
 
     	initialize: function(){
     		this.template = Utils.templates.login;
