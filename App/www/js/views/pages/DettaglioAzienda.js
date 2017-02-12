@@ -1,7 +1,8 @@
 define(function(require){
 	var $ = require("jquery");
 	var Backbone = require("backbone");
-	var Azienda = require("models/Azienda");
+	var ListaProdottiDaAzienda = require("models/ListaProdottiDaAzienda");
+    var Azienda = require ("models/Azienda");
 	
     var Utils = require("utils");
 
@@ -23,8 +24,31 @@ define(function(require){
     	},
 
     	render: function(){
-    		this.el.innerHTML = this.template({});
-    		return this;
+    		//this.el.innerHTML = this.template({});
+    		//return this;
+            var temp = localStorage.getItem("datoazienda");
+            var model = new Azienda({
+                id: temp
+            });
+
+            var that = this;
+            model.fetch({
+                success: function() {
+
+                    var temptext = model.get('short_description');
+
+                    /*****************************************************
+                     * Questa funzione serve ad eliminare i tag e ottenere
+                     * semplice testo puro. Ci serviamo quindi di una
+                     * funzione jQuery
+                     *****************************************************/
+                    model.set("short_description", $(temptext).text());
+                    $(that.el).html(that.template(model.toJSON()));
+                    return that;
+
+                }
+            });
+
     	},
 
         toDettProdotto: function(event){
@@ -36,3 +60,4 @@ define(function(require){
     });
     return dettaglioAzienda;
 });
+
