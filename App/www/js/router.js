@@ -94,7 +94,11 @@ define(function(require) {
 			"aiuto": "showAiuto",
 
 			"insdatispedizione": "showSpedizione",
-			"riepilogoordine": "showRiepilogo"
+			"riepilogoordine": "showRiepilogo",
+
+
+			//Route speciale per login.
+			"gotologin":"forceLogin"
 		},
 
 		/*i primi attributi servono per determinare delle view specifiche che
@@ -109,6 +113,7 @@ define(function(require) {
 		secondView: "offerte",
 		loginView: "login",
 		menuView: "nulla", // Questo viene cambiato dinamicamente
+		lateLogCart: false,
 
 		initialize: function(options) {
 			/* INIZIO MODIFICA */
@@ -149,6 +154,8 @@ define(function(require) {
 			console.log("initialize - router.js");
 			console.log(this.menuView + " <--- menuView");
 			this.currentView = undefined; // 
+
+			
 		},
 
 		showPreload: function(){
@@ -186,14 +193,13 @@ define(function(require) {
 			var page= new Offerte({});
 			this.changePage(page);
 			$('.autoplay').slick({
-				
-				slidesToShow: 1,
-  				slidesToScroll: 1,
-				centerMode:true,
-				centerPadding:'65px',
-				arrows:false
-			    //autoplay:true,		  
-				//autoplaySpeed: 8000
+
+	  			dots: false,
+	            infinite: true,
+	            slidesToShow: 1,
+	            slidesToScroll: 1,
+	            centerMode: true,
+	            variableWidth: true
 		    });
 		},
 
@@ -334,12 +340,13 @@ define(function(require) {
 			console.log("router.js -> showHeadMenu!!");
 			if($('#Head_Navig').length) $('#Head_Navig').remove(); // Rimuove HeadNavig
 			if($('#Head_Init').length) $('#Head_Init').remove();
-			if(this.structureView){
-				this.menuView = this.structureView.menuView; /*IMPORTANTISSIMA*/
+			if(this.currentView.menuView=="insdatispedizione"){
+				this.menuView = this.currentView.menuView; /*IMPORTANTISSIMA*/
+			}
 				this.structureView = new HeadMenuView();
 				document.body.appendChild(this.structureView.render().el);
 				this.structureView.trigger("inTheDOM");
-			}
+			
 			//Alla fine qui rimane "nulla", come se non cambiasse niente
 			this.navigate(this.menuView, {
 				trigger:true
@@ -356,11 +363,32 @@ define(function(require) {
 				console.log("showHeadInit - router.js");
 				document.body.appendChild(this.structureView.render().el);
 				this.structureView.trigger("inTheDOM");
-				//Che cazzo fa ?
+
 			}
 			this.navigate(this.firstView, {
 				trigger:true
 			});
+		},
+		// Funzione "speciale" per login "ritardato"
+		forceLogin: function(){
+			console.log("Devi loggare prima");
+			if($('#Head_Navig').length) $('#Head_Navig').remove(); // Rimuove HeadNavig
+			
+				console.log("faccio le cose di routine");
+				this.lateLogCart = this.structureView.lateLogCart;
+				this.structureView = new HeadInitView();
+				//this.structureView.switchDes = this.lateLogCart;
+				//Comunico al login che la destinazione è un'altra!
+				document.body.appendChild(this.structureView.render().el);
+				this.structureView.trigger("inTheDOM");
+			
+
+			this.navigate(this.loginView,{
+				trigger:true
+			});
+			this.currentView.switchDes = this.lateLogCart
+			console.log("ECCO SECONDO PUNTO");
+			console.log(this.currentView.switchDes);
 		},
 
 	});

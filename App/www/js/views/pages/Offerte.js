@@ -1,7 +1,9 @@
 define(function(require){
 	var $ = require("jquery");
+
 	var Backbone = require("backbone");
     var Utils = require("utils");
+
     //inserimento modelli
     var Prodotti_Home = require ("models/Prodotti_Home");
     //nuovo modello prodotti_home che filtra i primi 5 prodotti
@@ -96,27 +98,34 @@ define(function(require){
 
                             $(that.el).html(that.template(arraytest));
 
-                            //that.slideInit(); vanno modificati
-                            //that.startnav();
+                            $(document).ready(function () {
+                                console.log("QUALCUNO MI LEGGE???");
+                                that.slideInit();
+                            });
+
+                            
 
                             return that;
                         }
                     });
+
                 }
             });
     	},
 
         slideInit: function(e){
+            console.log("COMINCIO SLIDEINIT!!!");
             $('.autoplay').slick({
                 
+                dots: false,
+                infinite: true,
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                centerMode:true,
-                centerPadding:'65px',
-                arrows:false
-                //autoplay: true,
-                //autoplaySpeed: 2000
+                centerMode: true,
+                variableWidth: true
+
             });
+            
         },
         toDettProdotto: function(event){
             Backbone.history.navigate("dettaglioprodotto",{

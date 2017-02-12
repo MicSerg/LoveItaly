@@ -39,6 +39,7 @@ define(function(require){
     var HeadNavigView = Backbone.View.extend({
     	constructorName: "HeadNavigView",
     	id: "Head_Navig",
+        lateLogCart: false,
 
     	events: {//Eventi scatenati
             //SIDEMENU
@@ -62,8 +63,9 @@ define(function(require){
             //SIA UNO ALLA VOLTA CHE TUTTI INSIEME!
             "click #cartIcon" : "showCart",
             "click #cartClose" : "closeCart",
+
             //EVENTI DI CART
-            "click #m_Sped": function(){this.enteringMenu("insdatispedizione");},
+            "click #m_Sped": "doCheckOut",
             //FINE CART
 
             "click #searchIcon" : "showSearch",
@@ -81,25 +83,50 @@ define(function(require){
     		
     	},
     	render: function(){
+            console.log(this.template({}));
+            console.log("ECCOLO");
     		this.el.innerHTML = this.template({});
     		this.contentElement = this.$el.find('#content')[0];
             /*COMINCIA LA PARTE DINAMICA DELL'HTML*/
             //SE non esiste una sessione, allora non si è connessi.
             //quindi non mostrarmi tutto il sidemenu!
-
-            
+            console.log(this.$el.find('#m_logout')[0].innerHTML);
+            console.log(this);
+            console.log(this.template);
+            console.log("FINEFINEFINEFINE");
+            if(!localStorage.getItem("sessione")){
+                this.$el.find('#m_logout')[0].innerHTML="Login";
+                this.$el.find('#m_logout')[0].setAttribute("id","m_login");
+                this.$el.find('#side_Dinamico')[0].style.display="none";
+            }//se sei connesso, rimane tutto uguale
 
     		return this;
     	},
         doLogout: function(){
+            
             this.$el.find('#m_logout')[0].innerHTML="Login";
             this.$el.find('#m_logout')[0].setAttribute("id","m_login");
             this.$el.find('#side_Dinamico')[0].style.display="none";
+
+            if(localStorage.getItem("sessione")){
+                console.log("rimuovi la sessione");
+                localStorage.removeItem("sessione");
+            }
+            
         },
         doLogin: function(){
+            /*
             this.$el.find('#m_login')[0].innerHTML="Logout";
             this.$el.find('#m_login')[0].setAttribute("id","m_logout");
             this.$el.find('#side_Dinamico')[0].style.display="";
+            */
+            console.log("Non posso entrare!");
+            this.lateLogCart=false;
+            //Setto lateLogCart=true così da sapere che sto andando
+            //in login
+            Backbone.history.navigate("gotologin", {
+                trigger: true
+            });
         },
         enteringMenu: function(_string){ 
         // Per entrare nel HeadMenu uso un metodo alternativo che permette
@@ -111,6 +138,27 @@ define(function(require){
                 trigger: true,
             });
             console.log("fine entering Menu");
+        },
+
+        doCheckOut: function(e){
+            console.log("Posso entrare nel checkout?");
+
+            var utente = localStorage.getItem("sessione");
+            if (utente === null) {
+                console.log("Non posso entrare!");
+                this.lateLogCart=true;
+                //Setto lateLogCart=true così da sapere che sto andando
+                //in login
+                Backbone.history.navigate("gotologin", {
+                    trigger: true
+                });
+            } else {
+                console.log("posso entrare!!")
+                this.menuView = "insdatispedizione";
+                Backbone.history.navigate("showheadmenu", {
+                    trigger: true
+                });
+            }
         },
 
         showOfferte:function(){

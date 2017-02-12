@@ -16,7 +16,8 @@ body {
  font-family: 'helveticaNeue-Light','helveticaNeue','helvetica','arial','sans-serif';
  font-size: 12px;
  text-transform: uppercase;
- overflow: hidden; /*Toglie la barra orizzontale */
+ overflow-x: hidden; /*Toglie la barra orizzontale */
+ overflow-y:auto;
  /*overflow:hidden;*/   /*Toglie le barre orizzontali E verticali!*/
  height: 100%;
  width: 100%;
@@ -103,7 +104,7 @@ div#log_content{
     width:80%;
 }
 
-#b_Sceltac > form{
+#b_Sceltac > select{
     position:relative;
     top:30%;
 }
@@ -190,16 +191,7 @@ select#sel_Citta {
 
 
 /*  HeadNavig ***************************************************************************** */
-#content{ /*Lo usiamo per mettere il bg in comune a tutte le pagine headNavig*/
-    position:absolute;
-    overflow:visible;
-    top:10%;
-    left:0%;
-    height:100vh;
-    width:100%;
-    background-image:url('../img/bg.png');
-    z-index:-4;
-}
+
 
 
 
@@ -464,10 +456,29 @@ select#sel_Citta {
 
 
 
+#content{ /*Lo usiamo per mettere il bg in comune a tutte le pagine headNavig*/
+    position:absolute;
+    overflow:hidden;
+    top:10%;
+    left:0%;
+    height:100%;
+    width:100%;
+    background-image:url('../img/bg.png');
+    z-index:-4;
+}
+#list_cat{
+    position:relative;
+    overflow-y:auto;
+    left:0px;
+    top:0px;
+    width:100%;
+    height:auto;
+}
+
 /*** SCHERMATA OFFERTE! *********************************************** */
 #container_Offerte{
     position:relative;
-    overflow: visible;
+
 
     top:2vh;
     left:0px;
@@ -476,27 +487,19 @@ select#sel_Citta {
 }
 #container_Nuovi{
     position:relative;
-    overflow: visible;
-    display:block;
+
+    left:0px;
     top:15vh;
     width:100%;
     height:25vh;
 }
 
 
-.autoplay{ /*Spazio dello slider, normale*/ 
-    overflow: visible;
-    height:100%;
-    width:100%;
-}
-
 /*Qualcosa di sbagliato nella posizione delle varie productbox!!!*/
 .productBox { /*Elementi della slider, con errore*/
-    display:inline-block;
-    overflow: visible;
-    margin:0 auto;
     width:150px;
     height:200px;
+    margin:-9px;
     border:1px solid grey;
     background-color:red;
 }
@@ -595,13 +598,23 @@ select#sel_Citta {
 }
 
 /* ******* SCHERMATA LISTA AZIENDE ********************************* */
+
+
 #lista_Aziende {
-    position:absolute;
+    position:relative;
+    height:100%;
+    overflow-y:auto;
+}
+#az_Content {
+    position:relative;
+    
     left:0px;
     top:0px;
     width:100%;
-    height:100%;
+
 }
+
+
 .az_Quad {
     margin-top:20px;
     width:150px;
@@ -693,3 +706,5 @@ select#sel_Citta {
 #ro_content > div > a{
     margin-top:20px;
 }
+
+

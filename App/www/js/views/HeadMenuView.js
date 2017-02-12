@@ -13,7 +13,7 @@ define(function(require){
     var HeadMenuView = Backbone.View.extend({
     	constructorName: "HeadMenuView",
     	id: "Head_Menu",
-
+        
     	events:{
 
     	},

@@ -12,21 +12,28 @@ define(function(require){
     	model: User,
 
     	initialize: function(){
+            console.log("ECCO IL LOGIN");
+            console.log(this.structureView);
     		this.template = Utils.templates.login;
+            console.log(this.template);
     	},
 
     	id: "",
     	className: "",
-
+        switchDes: false,
+        menuView: "insdatispedizione",
         /* in events in pratica scriviamo: "tipodievento   tagHTMLinteressatoAquelevento :
         qualeFunzionedevievocare -> (La funzione che viene evocata per ora è headNavig che
         è dichiarata dopo la funzione "render". */
     	events: {
-    		"click #buttonLogin" : "headNavig"
+    		"click #buttonLogin" : "doLogin"
     	},
 
     	render: function(){
+            console.log("Render?");
+
     		this.el.innerHTML = this.template({});
+
     		return this;
     	},
 
@@ -40,7 +47,7 @@ define(function(require){
         nick: miao@miao.miao
         pass: miaomiao
         */
-        headNavig: function(event){
+        doLogin: function(event){
             /*COMINCIANO MODIFICHE*/
             el: $("lForm");
             var self=this;
@@ -57,9 +64,23 @@ define(function(require){
                     localStorage.setItem("sessione", nickname);
                     localStorage.setItem("idsess", (utente.attributes.customers)[0].id);
                     localStorage.setItem("keyorder", (utente.attributes.customers)[0].secure_key);
-                    Backbone.history.navigate("showheadnavig",{
-                        trigger: true
-                    });
+                    
+                    console.log("switch --> " + self.switchDes);
+                    if(self.switchDes){
+                        //vai in insDatiSpedizione
+                        console.log("da LOGIN vado in spedizione");
+                        Backbone.history.navigate("showheadmenu",{
+                            trigger: true
+                        });
+                    }else{
+                        console.log("da LOGIN vado in headNavig");
+                        //MANCA THIS.SECONDVIEW PER
+                        //INDIRIZZARE NEL PRECISO POSTO LASCIATO!!!!!
+                        Backbone.history.navigate("showheadnavig",{
+                            trigger: true
+                        });
+                    }
+                    
                 },
                 error: function(){
                     //condizione di errore
