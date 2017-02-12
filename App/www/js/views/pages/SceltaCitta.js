@@ -35,9 +35,17 @@ define(function(require){
             });
         },
         toOfferte: function(event){
-            Backbone.history.navigate("showheadnavig",{
-                trigger: true
-            });
+            if(this.$el.find('#sel_Citta')[0].value != ""){
+            
+                event.preventDefault();
+
+                var dataloc = this.$el.find('#sel_Citta')[0].value;
+                localStorage.setItem("localizzazione", dataloc);
+
+                Backbone.history.navigate("showheadnavig",{
+                    trigger: true
+                });
+            }
         }
 
     });
