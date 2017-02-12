@@ -22,8 +22,9 @@ define(function(require){
     	},
 
     	render: function(){
-    		this.el.innerHTML=this.template({});
-    		return this;
+    		var stored = JSON.parse(localStorage.getItem("cat"));
+            	$(this.el).html(this.template(stored));
+            	return this;
     	},
         goBack: function(event){
             Backbone.history.navigate("showheadnavig",{
