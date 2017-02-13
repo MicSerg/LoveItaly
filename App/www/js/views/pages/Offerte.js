@@ -40,7 +40,7 @@ define(function(require){
     	},
 
     	render: function(){
-            //inizio modifiche
+            
             /*****************************************************
              * Riempio la home con i miei oggetti di interesse
              *****************************************************/
