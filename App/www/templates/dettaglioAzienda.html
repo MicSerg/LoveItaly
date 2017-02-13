@@ -5,11 +5,11 @@
         <div id="nome_azienda" class="center-align"><h6>{{this.name}}</h6></div>
         <br><br>
         <p id="da_descrizione">{{short_description}}</p>
-        <!--description -->
+        
     </div>
 
     <div id="da_dett">
-        <div id="storia_azienda" class="center-align"><h6>Storia Azienda</h6></div><!-- STORIA -->
+        <div id="storia_azienda" class="center-align"><h6>Storia Azienda</h6></div>
         <br>
         <p id="da_storia">{{meta_description}}</p>
        
@@ -19,7 +19,7 @@
 
         <div class="row">
             <div class="col s12 center-align">Prodotti Dell'Azienda</div>
-            {{#each this}} <!-- Sbagliato perché si riferisce ad altro -->
+            {{#each this}}
                 <div class="col s6">
                     <div class="productBox card white">
                         <div class="prod_img card-image">immagine</div>
