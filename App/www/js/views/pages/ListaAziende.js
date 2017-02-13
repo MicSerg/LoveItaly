@@ -17,9 +17,7 @@ define(function(require){
     	id: "lista_Aziende",
     	className: "",
 
-/*  Quali sono gli eventi?
-**  - Si clicca un azienda e si va nel dettaglio dell'azienda specifica.
-*/
+
     	events: {
 		"click #dettaglio_azienda" : "toDettAzienda",
     	},
@@ -27,9 +25,7 @@ define(function(require){
     	render: function(){
             
             stored = JSON.parse(localStorage.getItem("lista_azienda"));
-            console.log("PROVA");
-            console.log(stored);
-            console.log("FINE PROVA");
+            
             $(this.el).html(this.template(stored));
             return this;
         },
