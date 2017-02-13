@@ -30,9 +30,15 @@ define(function(require){
     	},
 
         toLogin: function(event){
-            Backbone.history.navigate("login",{
-                trigger: true
-            });
+            if(!localStorage.getItem("sessione")){
+                Backbone.history.navigate("login",{
+                    trigger: true
+                });
+            }else{
+                Backbone.history.navigate("showheadnavig",{
+                    trigger: true
+                });
+            }
         },
         toOfferte: function(event){
             if(this.$el.find('#sel_Citta')[0].value != ""){

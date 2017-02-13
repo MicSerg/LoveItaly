@@ -49,6 +49,7 @@ define(function(require){
         */
         doLogin: function(event){
             /*COMINCIANO MODIFICHE*/
+
             el: $("lForm");
             var self=this;
             var nickname=$(this.el).find("#fusername").val();
@@ -58,32 +59,35 @@ define(function(require){
                 email: nickname,
                 psw: passw
             });
-
             utente.fetch({
                 success: function(){
+
+
                     localStorage.setItem("sessione", nickname);
                     localStorage.setItem("idsess", (utente.attributes.customers)[0].id);
                     localStorage.setItem("keyorder", (utente.attributes.customers)[0].secure_key);
-                    
-                    console.log("switch --> " + self.switchDes);
+                        
+
                     if(self.switchDes){
-                        //vai in insDatiSpedizione
-                        console.log("da LOGIN vado in spedizione");
-                        Backbone.history.navigate("showheadmenu",{
-                            trigger: true
-                        });
+                            //vai in insDatiSpedizione
+                            console.log("da LOGIN vado in spedizione");
+                            Backbone.history.navigate("showheadmenu",{
+                                trigger: true
+                            });
                     }else{
-                        console.log("da LOGIN vado in headNavig");
-                        //MANCA THIS.SECONDVIEW PER
-                        //INDIRIZZARE NEL PRECISO POSTO LASCIATO!!!!!
-                        Backbone.history.navigate("showheadnavig",{
-                            trigger: true
-                        });
+                            console.log("da LOGIN vado in headNavig");
+                            //MANCA THIS.SECONDVIEW PER
+                            //INDIRIZZARE NEL PRECISO POSTO LASCIATO!!!!!
+                            Backbone.history.navigate("showheadnavig",{
+                                trigger: true
+                            });
                     }
+            
                     
                 },
                 error: function(){
                     //condizione di errore
+                    
                 }
             });
 

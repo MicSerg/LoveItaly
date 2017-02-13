@@ -125,6 +125,15 @@ define(function(require){
                 console.log("rimuovi la sessione");
                 localStorage.removeItem("sessione");
             }
+            if(localStorage.getItem("idsess")){
+                console.log("rimuovi idsess");
+                localStorage.removeItem("idsess");
+            }
+            if(localStorage.getItem("keyorder")){
+                console.log("rimuovi keyorder");
+                localStorage.removeItem("keyorder");
+
+            }
             
         },
         doLogin: function(){
@@ -222,6 +231,11 @@ define(function(require){
             this.$el.find('#parteOP')[0].style.display="block";
         },
         FromOpzioniToMenu: function(){
+            if(!localStorage.getItem("sessione")){
+                this.$el.find('#m_logout')[0].innerHTML="Login";
+                this.$el.find('#m_logout')[0].setAttribute("id","m_login");
+                this.$el.find('#side_Dinamico')[0].style.display="none";
+            }
             this.$el.find('#parteSM')[0].style.display="block";
             this.$el.find('#parteOP')[0].style.display="none";
         },
@@ -270,10 +284,19 @@ define(function(require){
 
         },
         cancDatiLog: function(){
-            //rimuove TUTTo il localStorage.. per ora solo sessione
+
             if(localStorage.getItem("sessione")){
                 console.log("rimuovi la sessione");
                 localStorage.removeItem("sessione");
+            }
+            if(localStorage.getItem("idsess")){
+                console.log("rimuovi idsess");
+                localStorage.removeItem("idsess");
+            }
+            if(localStorage.getItem("keyorder")){
+                console.log("rimuovi keyorder");
+                localStorage.removeItem("keyorder");
+
             }
         },
         showCart:function() {
