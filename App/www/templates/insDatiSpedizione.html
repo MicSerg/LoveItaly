@@ -8,42 +8,79 @@
     <div id="ins_dx">
         <div class="row">
             <div id="ins_spedizione" class="col s12">
-                <div class="col s12">Indirizzo di spedizione</div>
+                <div class="col s12"><h6><b>Indirizzo di spedizione</h6></b></div>
+                <br></br>
+                <div class="col s6" id="sp_nome">Nome</div>
+                <br></br>
 
-                <div class="col s6">Nome</div>
-                <div class="col s6">Giangiangiarlo</div>
-
-                <div class="col s6">Cognome</div>
-                <div class="col s6">miangianmiango</div>
-
-                <div class="col s6">Indirizzo</div>
-                <div class="col s6">Via miao miao,10</div>
-
-                <div class="col s6">Città/Provincia</div>
-                <div class="col s6">Roma/Roma</div>
-
-                <div class="col s6">Telefono</div>
-                <div class="col s6">0988989898</div>
+                <div class="col s6" id="sp_surn">Cognome</div>
+                <br></br>
+                <div class="col s6" id="sp_ind">Indirizzo</div>
+                <br></br>
+                <div class="col s6" id="sp_cit">Città/Provincia</div>
+                <br></br>
+                <div class="col s6" id="sp_tel">Telefono</div>
+                <br></br>
             </div>
             <div id="ins_consegna" class="col s12">
               
-                    <div class="col s12">Modalità di consegna</div>
+                    <div class="col s12"><h6><b>Modalità di consegna</b></h6></div>
                 
-                    <div class="col s12">Scegli la data della consegna</div>
+                    <div class="col s12"><b>Scegli la data della consegna:</b></div>
                 
-                    <div class="col s4">Giorno</div>
-                    <div class="col s4">Mese</div>
-                    <div class="col s4">Anno</div>
+                    <div class="col s6">Giorno</div>
+                    <div class="col s6">Mese</div>
+                    <!--<div class="col s4">Anno</div>-->
               
-                    <div class="col s4">Giorno</div>
-                    <div class="col s4">Mese</div>
-                    <div class="col s4">Anno</div>
-                
-                    <div class="col s12">Questa è una spesa regalo</div>
-                
-                    <div class="col s12">Accetto le condizioni generali di vendita</div>
-               
-                    <div class="col s12">Accetto le clausole indicate..</div>
+                    <div class="col s6">
+                        <select class="browser-default center-block" id="selGiorno" name="giorno">
+                            <option value="" disabled selected>Giorno</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+
+                    </div>
+                    <div class="col s6">
+                        <select class="browser-default center-block" id="selMese" name="mese">
+                            <option value="" disabled selected>Mese</option>
+                            <option value="1">gennaio</option>
+                            <option value="2">febbraio</option>
+                            <option value="3">marzo</option>
+                            <option value="4">aprile</option>
+                            <option value="5">maggio</option>
+                            <option value="6">giugno</option>
+                            <option value="7">luglio</option>
+                            <option value="8">agosto</option>
+                            <option value="9">settembre</option>
+                            <option value="10">ottobre</option>
+                            <option value="11">novembre</option>
+                            <option value="12">dicembre</option>
+                        </select>
+                    </div>
+                    <!--<div class="col s6">Anno</div>-->
+
+                        <p class="col s12">
+                          <input type="checkbox" id="chkb_a" value="chkb_a">
+                          <label> è una spesa regalo</label>
+                        </p>
+                        <p class="col s12">
+                          <input type="checkbox" id="chkb_b" value="chkb_b">
+                          <label>Accetto le condizioni generali di vendita</label>
+                        </p>
+                        
+
+
+
+
+
             
             </div>
 

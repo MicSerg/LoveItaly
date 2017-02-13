@@ -642,6 +642,9 @@ select#sel_Citta {
 }
 
 /*Inserisci Dati Spedizione ******************************/
+#spedizione_dati{
+    color:white;
+}
 #ins_Colonna{
     position:absolute;
     top:5%;
@@ -681,7 +684,7 @@ select#sel_Citta {
     left:40px;
     width:85%;
     height:90vh;
-    background-color:yellow;
+
 }
 #ins_spedizione{
     position:absolute;
@@ -691,11 +694,19 @@ select#sel_Citta {
     position:absolute;
     top:50%;
 }
+#chkb_a{
+    color:black;
+}
 #ins_pulsanti{
     position:absolute;
     top:95%;
 }
-
+#selGiorno{
+    color:black;
+}
+#selMese{
+    color:black;
+}
 
 /*mieiOrdini************************************/
 #m_Title{

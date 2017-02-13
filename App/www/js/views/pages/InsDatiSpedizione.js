@@ -10,7 +10,7 @@ define(function(require){
 			this.template=Utils.templates.insDatiSpedizione;
 
 		},
-		id: "",
+		id: "spedizione_dati",
 		className: "",
 		events: {
 			"click #t_Back" : "goBackToNavig",
