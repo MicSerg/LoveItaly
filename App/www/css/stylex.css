@@ -498,6 +498,10 @@ select#sel_Citta {
     width:100%;
     height:25vh;
 }
+#dettaglioprodotto > div > img{
+max-height:100%; 
+max-width:100%;
+}
 
 
 /*Qualcosa di sbagliato nella posizione delle varie productbox!!!*/
