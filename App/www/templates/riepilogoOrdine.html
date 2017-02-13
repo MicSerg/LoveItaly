@@ -9,38 +9,31 @@
                 <div class="col s6 left-align">
                     Prodotto
                 </div>
-                <div class="col s2 left-align">
+                <div class="col s3 left-align">
                     Costo
                 </div>
-                <div class="col s2 left-align">
+                <div class="col s3 left-align">
                     Qnt.
-                </div>
-                <div class="col s2 left-align">
-                    Tot
                 </div>
             </div>
             <hr class="col s12"/>
             <!-- FINE BASE -->
             <!-- INIZIO PRIMA PARTE HANDLEBARS / DINAMICA -->
             {{#each this}}
-            <div>
-                <div class="col s2 left-align">
-                    Pics
+            <div class="riga_cart">
+                            
+                <div class="col s6 left-align">
+                    {{this.name}}
                 </div>
-                <div class="col s4 left-align">
-                    Prodotto
+                <div class="col s3 left-align">
+                    {{this.price}}
                 </div>
-                <div class="col s2 left-align">
-                    3.00€
+                <div class="col s3 left-align">
+                    {{this.quantity}}
                 </div>
-                <div class="col s2 left-align">
-                    4
-                </div>
-                <div class="col s2 left-align">
-                    12.00€
-                </div>
+                            
             </div>
-            <hr class="col s12"/><!-- per ogni ordine c'è una linea sotto-->
+            <hr class="col s12"/>
             {{/each}}
             <!-- FINE PRIMA PARTE HANDLEBARS / DINAMICA -->
         </div>

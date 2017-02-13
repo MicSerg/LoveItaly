@@ -16,7 +16,7 @@ define(function(require){
     		this.template = Utils.templates.dettaglioAzienda;
     	},
 
-    	id: "",
+    	id: "Dett_Azienda",
     	className: "",
 
     	events: {
@@ -36,13 +36,9 @@ define(function(require){
                 success: function() {
 
                     var temptext = model.get('short_description');
-
-                    /*****************************************************
-                     * Questa funzione serve ad eliminare i tag e ottenere
-                     * semplice testo puro. Ci serviamo quindi di una
-                     * funzione jQuery
-                     *****************************************************/
                     model.set("short_description", $(temptext).text());
+
+
                     $(that.el).html(that.template(model.toJSON()));
                     return that;
 

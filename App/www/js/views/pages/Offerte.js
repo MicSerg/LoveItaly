@@ -35,7 +35,8 @@ define(function(require){
 **  - Si clicca il simbolo del carrello e il prodotto selezionato va nel carrello
 */
     	events: {
-    		"click .productBox" : "toDettProdotto", 
+    		"click .productBox" : "toDettProdotto",
+            
     	},
 
     	render: function(){
@@ -50,7 +51,7 @@ define(function(require){
             var sale2 = new sweetProduct();
             var arraytest = [];
             var loca = localStorage.getItem("localizzazione");
-
+            console.log(localStorage.getItem("Carrello") + "<------");
             online.fetch({
                 success: function() {
 
@@ -75,11 +76,7 @@ define(function(require){
                                 console.log("INDICE: >", i);
                                 var idprod = ((arraytest[0][i])).id;
                                 var idtemp = (arraytest[0][i]);
-                                console.log("ALTRA ROBA");
-                                console.log("idtemp >" + idtemp);
-                                console.log("idprod >" + idprod);
-                                console.log((idtemp.associations));
-                                console.log((idtemp.associations.images));
+
                                 if(idtemp.associations.images != undefined){
                                     idimg = (idtemp.associations.images[0]).id;
                                     idprod = idprod;
@@ -107,7 +104,7 @@ define(function(require){
                             $(that.el).html(that.template(arraytest));
 
                             $(document).ready(function () {
-                                console.log("QUALCUNO MI LEGGE???");
+                             
                                 that.slideInit();
                             });
 
@@ -143,6 +140,7 @@ define(function(require){
                 trigger: true
             });
         },
+        
 
     });
     return offerte;

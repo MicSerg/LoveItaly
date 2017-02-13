@@ -23,6 +23,7 @@ define(function(require){
 */
     	events: {
     		"click #detAziendaButton" : "toDettAzienda",
+            "click #p_cart" : "addCart",
     	},
 
     	render: function(){
@@ -69,17 +70,27 @@ define(function(require){
 
 
     	},
-        aggiungiAlCarrello: function(e){
-/*
-      el: $("#product-form");
-            var arraytemp = [];
-            arraytemp = localStorage.getItem("Carrello");
-            var self = this;
 
-            // In pratica prendi ogni campo dall'html e lo metti in delle var
-            // con cui crei un modello
-            //che vai ad inserire in una var "carrello" che si andrà
-            //a salvare nel local storage."
+        addCart: function(e){
+            //localStorage.removeItem("Carrello");
+            console.log("CARRELLO CONTIENE:");
+            console.log(JSON.parse(localStorage.getItem("Carrello")));
+            var arraytemp = [];
+            if(localStorage.getItem("Carrello") != null){
+                
+                arraytemp.push(JSON.parse(localStorage.getItem("Carrello")));
+            }
+            var self = this;
+            //var idprod =$(this.el).find("#dettaglioprodotto")[0].value;
+            //var idprod = this.$el.find('#dettaglioprodotto').getAttribute("data-prod");
+            var idprod =e.currentTarget.parentElement.getAttribute("data-prod"),
+                nome=e.currentTarget.parentElement.getAttribute("data-nome"),
+                prezzo=e.currentTarget.parentElement.getAttribute("data-prz"),
+                quantita=e.currentTarget.parentElement.getAttribute("data-qnt");
+            console.log(idprod + " <--------- ID PRODOTTO");
+
+            /*****************************************************
+             
 
             var idprod = $(this.el).find("#id_prodotto").val(),
                 name = $(this.el).find("#name").val(),
@@ -95,24 +106,32 @@ define(function(require){
                 quantity: quantity,
                 total: price * quantity
             });
-
+            
             var Carrello = JSON.parse(localStorage["Carrello"]);
             Carrello.push(prod);
             localStorage["Carrello"] = JSON.stringify(Carrello);
-
-            if (Backbone.history.fragment === 'basket') {
-                Backbone.history.stop();
-                Backbone.history.start()
+            * Prendo valori da HTML
+             *****************************************************/
+            var prod = new Prodotti({
+                name: nome,
+                id: idprod,
+                price: parseFloat(prezzo).toFixed(2),
+                quantity: quantita
+            });
+            
+            if(localStorage.getItem("Carrello")){
+                var Carrello = JSON.parse(localStorage.getItem("Carrello"));
+            }else{
+                var Carrello = [];
             }
+            Carrello.push(prod);
 
-            Backbone.history.navigate("basket", {
-                trigger: true
-            });      
-
-
-
-
-*/
+            localStorage.setItem("Carrello" , JSON.stringify(Carrello));
+            
+            console.log("dopo ris che cosa c'è?");
+            console.log(localStorage.getItem("Carrello"));
+            console.log("FINE");
+            //localStorage.removeItem("Carrello");
 
         },
         toDettAzienda: function(){

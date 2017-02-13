@@ -1,32 +1,4 @@
-/*Script della NAVBAR che si trova nella navigazione del content.
-Avrà i tastini: Menu, ricerca & carrello. 
-Avrà le scorciatoie: Offerte, Categorie, Aziende.
 
-***Ecco quali eventi verranno strutturati dalle SOTTO PAGINE (NON dalla BARRA):
-Eventi di "navigazione" (click)
-Offerte: si può andare in dettaglio prodotto
-dettaglio prodotto: si può andare in dettaglio azienda
-dettaglio azienda: si può andare in dettaglio prodotto
-***Eventi strutturati dalla BARRA:
-tasto menu: apre il menu <-(modal? come lo apro?)
-tasto ricerca: si apre lo spazio di ricerca, dopo aver scritto la stringa e premuto
-il tasto "ok" (quale dei tasti?) viene fatta una query per cercare i prodotti con
-quel nome.
-tasto carrello: Si apre il carrello <-(Modal? stessa cosa del menu?)
-***Eventi strutturati dalla SUB BARRA:
-tasto OFFERTE: si ritorna nella schermata "offerte"
-tasto Aziende: Si va nella schermata "lista Aziende"
-tasto categorie: si va nella schermata "lista categorie"
------- 
-Da lista aziende si può andare a dettaglio azienda.
-Da lista categorie si fa una query cercando tutti i prodotti di una determinata 
-categoria e vengono visualilzzati (si usa la schermata "Risultato")
-
-------
-
--> Mancano le schermate del Menu e del cart.
-
-*/
 
 define(function(require){
 	var $ = require("jquery");
@@ -67,6 +39,7 @@ define(function(require){
 
             //EVENTI DI CART
             "click #m_Sped": "doCheckOut",
+            "click #m_Del": "deleteCart",
             //FINE CART
 
             "click #searchIcon" : "showSearch",
@@ -88,17 +61,10 @@ define(function(require){
     		
     	},
     	render: function(){
-            console.log(this.template({}));
-            console.log("ECCOLO");
-    		this.el.innerHTML = this.template({});
+
+    		this.el.innerHTML = this.template( JSON.parse(localStorage.getItem("Carrello")) );
     		this.contentElement = this.$el.find('#content')[0];
-            /*COMINCIA LA PARTE DINAMICA DELL'HTML*/
-            //SE non esiste una sessione, allora non si è connessi.
-            //quindi non mostrarmi tutto il sidemenu!
-            console.log(this.$el.find('#m_logout')[0].innerHTML);
-            console.log(this);
-            console.log(this.template);
-            console.log("FINEFINEFINEFINE");
+
             if(!localStorage.getItem("sessione")){
                 this.$el.find('#m_logout')[0].innerHTML="Login";
                 this.$el.find('#m_logout')[0].setAttribute("id","m_login");
@@ -302,10 +268,20 @@ define(function(require){
         showCart:function() {
             console.log("Apertura Carrello");
             this.$el.find('#cartModal')[0].style.display="block";
+            if(localStorage.getItem("Carrello")){
+
+            }
         },
-        closeCart:function(){
+        closeCart: function(){
             console.log("Chiusura Carrello");
             this.$el.find('#cartModal')[0].style.display="none";
+        },
+        deleteCart: function(e){
+            console.log("cancella cart");
+            if(localStorage.getItem("Carrello")){
+                localStorage.removeItem("Carrello");
+            }
+              
         },
         
 

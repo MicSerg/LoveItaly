@@ -17,7 +17,7 @@ define(function(require){
 		},
 
 		render: function(){
-			this.el.innerHTML = this.template({});
+			this.el.innerHTML = this.template( JSON.parse(localStorage.getItem("Carrello")) );
 			return this;
 		},
 

@@ -2,33 +2,24 @@
 
     <div id="da_head">
 
-        <div class="row">
-            <div class="col s6 left">
-                <!-- Immagine Azienda -->
-                <div>Qui va l'immagine</div>
-            </div>
-            <div class="col s6 right">
-                <!-- Descrizione Generale -->
-                <div id="da_descrizione">
-                    {{short_description}}
-                </div>
-            </div>
-        </div>
-
+        <div id="nome_azienda" class="center-align"><h6>{{this.name}}</h6></div>
+        <br><br>
+        <p id="da_descrizione">{{short_description}}</p>
+        <!--description -->
     </div>
 
     <div id="da_dett">
-        <div><!-- STORIA -->
-             {{meta_description}}
-        </div>
-        <div> <!-- BOTTONE --> </div>
+        <div id="storia_azienda" class="center-align"><h6>Storia Azienda</h6></div><!-- STORIA -->
+        <br>
+        <p id="da_storia">{{meta_description}}</p>
+       
     </div>
 
     <div id="da_prod">
 
         <div class="row">
             <div class="col s12 center-align">Prodotti Dell'Azienda</div>
-            {{#each this}}
+            {{#each this}} <!-- Sbagliato perché si riferisce ad altro -->
                 <div class="col s6">
                     <div class="productBox card white">
                         <div class="prod_img card-image">immagine</div>
@@ -36,7 +27,6 @@
                             <span class="prod_nome">prodotto</span>
                             <span class="prod_az">azienda</span>
                         </div>
-                        <a class="waves-effect waves-light btn">button</a>
                     </div>
                 </div>
             {{/each}}

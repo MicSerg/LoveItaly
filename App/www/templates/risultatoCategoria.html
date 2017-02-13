@@ -9,17 +9,13 @@
         {{#each this}}
             <div class="col s6">
                 <div class="productBox card white" id="dettaglioprodotto" data-prod="{{id}}">
-                    {{#if img}}
-                <div class="prod_img card-image">
+                    <div class="prod_img card-image">
                     <img src="{{img}}" data-prod="{{id}}">
-                    {{else}}
-                    <img src="img/no.jpg" data-prod="{{id}}"> {{/if}}
-                 </div>
+                    </div>
                     <div class="card-content" data-prod="{{id}}">
                         <span class="prod_nome">{{name}}</span>
                         <span class="prod_az"></span>
                     </div>
-                    <a class="waves-effect waves-light btn">button</a>
                 </div>
             </div>
         {{/each}}

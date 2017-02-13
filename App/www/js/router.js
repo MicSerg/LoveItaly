@@ -1,13 +1,6 @@
 define(function(require) {
 	
-/*	Tutte variabili per identificare view, librerie, modelli, pagine	*/
-/*	Da notare : Mettile in ordine! */
-/*
-	APPUNTO : I MODELLI (gli script all'interno della cartella "model") servono
-	soltanto per le chiamate API, quindi sicuro saranno qualcosa che si andrà
-	a modificare dopo, e non riguarda gli errori di ora
 
-*/
 	
 	var $ = require("jquery");
     var slick = require("slider");
@@ -66,12 +59,12 @@ define(function(require) {
 	console.log('inizio router.js');
 
 	var AppRouter = Backbone.Router.extend({
-		/*Devo riempire questo oggetto router per poter fare il tutto*/
+
 		constructorName: "AppRouter",
 
 		routes: {
 
-			"":"showHeadInit", // "vuoto" perché è il primo che mi fa girare 
+			"":"showHeadInit", 
 			"preload":"showPreload",
 			"sceltaCitta":"showSceltaCitta",
 			"login":"showLogin",
@@ -100,75 +93,62 @@ define(function(require) {
 			"gotologin":"forceLogin"
 		},
 
-		/*i primi attributi servono per determinare delle view specifiche che
-		**vengono richiamate in determinati momenti.
-		firstView: Viene usata per la primissima schermata, "scelta città"
-		secondView: Viene usata per entrare dalla scelta città/login alla schermata
-		di offerte
-		loginView: Viene chiamata quando si entra nella schermata di login dal menu
-		oppure dal carrello (quando bisogna comprare qualcosa)*/
 		
-		firstView: "sceltaCitta", // deve essere cambiato con la prima schermata sceltaCitta
+		
+		firstView: "sceltaCitta", 
 		secondView: "offerte",
 		loginView: "login",
-		menuView: "nulla", // Questo viene cambiato dinamicamente
+		menuView: "nulla", 
 		lateLogCart: false,
 
 		initialize: function(options) {
-			/* INIZIO MODIFICA */
 
+			var Carrello = new Array();
+			if(!localStorage.getItem("Carrello") === null){
+				localStorage.setItem("Carrello", JSON.stringify(Carrello));
+			}
 			var listcat = new ListCategorie();
 
-            			listcat.fetch({
-               				 success: function(listcat, response, options) {
-                    				/*
-                    				Immagazino il modello della mia lista di categorie all'interno del localStorage
-                    				in modo da non dover effettuare chiamate API di tale lista in futuro.
-                    				*/
-                    				localStorage.setItem("cat", JSON.stringify(listcat));
+            		listcat.fetch({
+               			success: function(listcat, response, options) {
+                    		localStorage.setItem("cat", JSON.stringify(listcat));
+                		},
+                		error: function(listcat, response, options) {
 
-                			},
-                			error: function(listcat, response, options) {
+                		}
+            		});
 
-                			}
-            			});
 
-			/* Reperisco da JSON API lista AZIENDE */
-           		 var lista_azienda = new ListAz();
+           	var lista_azienda = new ListAz();
 
             		lista_azienda.fetch({
                 		success: function(lista_azienda, response, options) {
-                    			/*
-                    			Immagazino il modello della mia lista di categorie all'interno del localStorage
-                    			in modo da non dover effettuare chiamate API di tale lista in futuro.
-                   			*/
+
                     			(lista_azienda);
                     			localStorage.setItem("lista_azienda", JSON.stringify(lista_azienda));
 
                 			},
                 		error: function(lista_azienda, response, options) {
                 		}
-            			});
-            		/* FINE MODIFICA */
-			console.log("initialize - router.js");
-			console.log(this.menuView + " <--- menuView");
-			this.currentView = undefined; // 
+            		});
+
+
+
+			this.currentView = undefined; 
 
 			
 		},
 
 		showPreload: function(){
-			console.log("router.js -> preload!!");
-			
-			//Forse va messa qui la route che mi vede se ci sono le credenziali
-			//salvate (?) - così da dirottare direttamente verso le offerte
+
+
 			var page= new Preload({});
 			this.changePage(page);
 
 		},
 		
 		showSceltaCitta: function(){
-			console.log("router.js -> showSceltaCittà!!");
+
 
 			var page= new SceltaCitta({});
 			this.changePage(page);
@@ -176,16 +156,14 @@ define(function(require) {
 		},
 
 		showLogin: function(){
-			console.log("router.js -> showLogin!!");
+
 
 			var page= new Login({});
 			this.changePage(page);
 		},
 
 		showOfferte: function(){
-			console.log("router.js -> offerte!!");
 			if(this.secondView != "offerte") {
-				console.log("****** TRASFORMA secondView!!! >>>>" + this.secondView);
 				this.secondView = "offerte";
 			}
 
@@ -203,9 +181,8 @@ define(function(require) {
 		},
 
 		showDettaglioProdotto: function(){
-			console.log("router.js -> dettaglioProdotto");
+
 			if(this.secondView != "dettaglioprodotto") {
-				console.log("****** TRASFORMA secondView!!! >>>>" + this.secondView);
 				this.secondView = "dettaglioprodotto";
 			}
 			var page=new DettaglioProdotto({});
@@ -213,9 +190,7 @@ define(function(require) {
 		},
 
 		showDettaglioAzienda: function(){
-			console.log("router.js -> dettaglioAzienda");
 			if(this.secondView != "dettaglioazienda") {
-				console.log("** TRASFORMA secondView!!! >>>>" + this.secondView);
 				this.secondView = "dettaglioazienda";
 			}
 
@@ -224,7 +199,6 @@ define(function(require) {
 		},
 
 		showListaAziende: function(){
-			console.log("router.js -> listaAziende");
 			if(this.secondView != "listaaziende"){
 				this.secondView = "listaaziende";
 			}
@@ -234,7 +208,6 @@ define(function(require) {
 		},
 
 		showListaCategorie: function(){
-			console.log("router.js -> ListaCategorie");
 			if(this.secondView != "listacategorie"){
 				this.secondView = "listacategorie";
 			}
@@ -243,7 +216,6 @@ define(function(require) {
 			this.changePage(page);
 		},
 		showRisultatoRicerca: function(){
-			console.log("router.js -> risultatoRicerca");
 			if(this.secondView != "risultatoricerca"){
 				this.secondView = "risultatoricerca";
 			}
@@ -252,7 +224,6 @@ define(function(require) {
 		},
 
 		showRisultatoCategoria: function(){
-			console.log("router.js -> risultatoCategoria");
 			if(this.secondView != "risultatocategoria"){
 				this.secondView = "risultatocategoria";
 			}
@@ -267,23 +238,19 @@ define(function(require) {
 		//Inizio Funzioni per schermate interne al menu
 
 		showMieiOrdini: function(){
-			console.log("router -> miei ordini!");
 			var page= new MieiOrdini({});
 			this.changePage(page);
 		},
 		showOrdine: function(){
-			console.log("router js > Ordine");
 			
 			var page=new Ordine({});
 			this.changePage(page);
 		},
 		showOpzioni: function(){
-			console.log("router > Opzioni");
 			var page=new Opzioni({});
 			this.changePage(page);
 		},
 		showAiuto: function(){
-			console.log("router > Aiuto");
 			var page=new Aiuto({});
 			this.changePage(page);
 			$('.collapsible').collapsible({
@@ -292,33 +259,16 @@ define(function(require) {
 		},
 
 		showSpedizione: function(){
-			console.log("router > checkout");
 			var page=new InsDatiSpedizione({});
 			this.changePage(page);
 		},
 
 		showRiepilogo: function(){
-			console.log("router > riepilogo");
 			var page=new RiepilogoOrdine({});
 			this.changePage(page);
 		},
 
-
-		/*Cosa viene fatto in questa funzione?
-		Viene rimosso tutto il div log_bg e quindi pure tutto quello che contiene,
-		in pratica togliamo tutto headInit (guarda headInit.html in templates)
-		e quindi togliamo anche la pagina che stava dentro headInit (in questo caso
-		dovrebbe essere login.html) così da pulire la schermata. 
-		poi scriviamo che se c'è una structureView (penso sia tipo una variabile
-		che contiene la struttura html della nostra view PRINCIPALE, cioè headInit
-		ma non lo so precisamente, se vuoi saperlo basta fare un console.log di 
-		(this.structureView) ) allora ci cambi questa structureView in HeadNavigView
-		e la metti nel body.
-		this.navigate(this.secondView ecc ecc serve per mettere direttamente una pagina
-		all'interno di questa "structureView", in questo caso noi vogliamo mettere la
-		pagina delle offerte*/
 		showHeadNavig: function(){ 
-			console.log("router.js -> showHeadNavig!!");
 			if($('#Head_Menu').length) $('#Head_Menu').remove(); // Rimuove HeadNavig
 			if($('#Head_Init').length) $('#Head_Init').remove();
 			if(this.structureView){ 
@@ -326,7 +276,6 @@ define(function(require) {
 					this.secondView = this.structureView.secondView;
 				}
 				this.structureView = new HeadNavigView();
-				console.log("Router.js -> showHeadNavig");
 				document.body.appendChild(this.structureView.render().el);
 				this.structureView.trigger("inTheDOM");
 			}
@@ -335,11 +284,8 @@ define(function(require) {
 			});
 		},
 
-		/*NUOVO PEZZO DI CODICE:*/
-
 		/* showHeadMenu*/
 		showHeadMenu: function(){//Argomento da aggiungere: View da aprire
-			console.log("router.js -> showHeadMenu!!");
 			if($('#Head_Navig').length) $('#Head_Navig').remove(); // Rimuove HeadNavig
 			if($('#Head_Init').length) $('#Head_Init').remove();
 			if(this.currentView.menuView=="insdatispedizione"){
@@ -352,20 +298,16 @@ define(function(require) {
 				document.body.appendChild(this.structureView.render().el);
 				this.structureView.trigger("inTheDOM");
 			
-			//Alla fine qui rimane "nulla", come se non cambiasse niente
 			this.navigate(this.menuView, {
 				trigger:true
 			});
 		},
-		/*FINE NUOVO PEZZO*/
 
 		showHeadInit: function(){
-			console.log("router.js -> showHeadInit!!");
 			if($('#Head_Navig').length) $('#Head_Navig').remove(); // Rimuove HeadNavig
 			if($('#Head_Menu').length) $('#Head_Menu').remove();
 			if(!this.structureView){
 				this.structureView = new HeadInitView();
-				console.log("showHeadInit - router.js");
 				document.body.appendChild(this.structureView.render().el);
 				this.structureView.trigger("inTheDOM");
 
@@ -374,16 +316,11 @@ define(function(require) {
 				trigger:true
 			});
 		},
-		// Funzione "speciale" per login "ritardato"
 		forceLogin: function(){
-			console.log("Devi loggare prima");
 			if($('#Head_Navig').length) $('#Head_Navig').remove(); // Rimuove HeadNavig
 			
-				console.log("faccio le cose di routine");
 				this.lateLogCart = this.structureView.lateLogCart;
 				this.structureView = new HeadInitView();
-				//this.structureView.switchDes = this.lateLogCart;
-				//Comunico al login che la destinazione è un'altra!
 				document.body.appendChild(this.structureView.render().el);
 				this.structureView.trigger("inTheDOM");
 			
@@ -392,11 +329,8 @@ define(function(require) {
 				trigger:true
 			});
 			this.currentView.switchDes = this.lateLogCart
-			console.log("ECCO SECONDO PUNTO");
-			console.log(this.currentView.switchDes);
 		},
 
 	});
-	console.log("fine router js, ritorno AppRouter");
 	return AppRouter;
 });

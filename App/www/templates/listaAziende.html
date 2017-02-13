@@ -1,19 +1,11 @@
-<!-- 
--->
-            
+
 
 <div id="az_Content">
-
-    <div class="row">
+    <ul class="collection">
         {{#each this}}
-            <div class="col s6">
-                <div class="az_Quad center-block red darken-4" data-az="{{this.id}}" id="dettaglio_azienda">
-                    <div class="az_img">{{this.img}}</div>
-                    <span class="az_nome">{{this.name}}</span>
-                </div>
-            </div>
-        {{/each}}
-    </div>
 
-    
-</div>
+            <li id="dettaglio_azienda" class="collection-item" data-az="{{this.id}}">{{this.name}}</li>
+            
+        {{/each}}
+    </ul>
+</div>   

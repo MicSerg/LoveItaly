@@ -2,41 +2,46 @@
 
     <div id="dp_head"><!-- primo blocco -->
         <div class="row">
-            <div class="col s7" id="dettaglioprodotto">{{#if img}}
+            <div class="col s7" id="dettaglioprodotto">
 
-                <div id="dp_himg"><!-- Immagine -->
-                    <img class="responsive-img" src="{{img}}">
+                <div id="dp_himg" class="valign-wrapper"><!-- Immagine -->
+                    {{#if img}}
+                    <img src="{{img}}" class="valign"></img>
                     {{else}}
-                    <img class="responsive-img" src="img/no.jpg">
+                    <img src="img/no.jpg" class="valign"></img>
                     {{/if}}
-                    <p><div id="a"></div></p>
+
                 </div>
             </div>
 
             <div class="col s5">
-                <div id="dp_hinf"><!-- Informazioni a destra immagine -->
+                <div id="dp_hinf" data-prod="{{this.id}}" data-nome="{{this.name}}" data-qnt="{{this.quantity}}" data-prz="{{this.price}}"><!-- Informazioni a destra immagine -->
                     <!-- Varie stringhe di informazione -->
                     <!-- 2 pulsanti -->
-                    <p>{{this.name}}</p>
-                    <p>{{this.quantity}}</p>
-                    <p>€{{this.price}}</p>
-                    <p>Peso</p>
+                    <div id="p_id" value="{{this.id}}"></div>
+                    <div id="p_nome" value="{{this.name}}"><p><b>Nome : {{this.name}}</b></p></div>
+                    <div id="p_qnt" value="{{this.quantity}}"><p><b>Quantità:</b> {{this.quantity}}</p></div>
+                    <div id="p_prz" value="{{this.price}}"><p><b>Costo :</b> €{{this.price}}</p></div>
+                    <a id="p_cart" class="center-align waves-effect waves-light btn">Carrello</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="dp_thumb"><!-- secondo blocco -->
-        <div><!-- Lista Thumbnail ! USA HANDLEBARS -->
-        </div>
-    </div>
+    
 
 
     <div id="dp_dett"><!-- terzo blocco -->
         <div>
-            <p>{{this.description}}</p>
+            <br>
+            <br>
+            <h6><b>Descrizione Del prodotto</b></h6>
+            <br>
+            <div class="left-align" id="descriz_d">{{this.description}}</div>
+            <br>
+            <br>
+            <a class="center-align waves-effect waves-light btn"id="detAziendaButton">Vedi Dettagli Azienda</a>
 
-            <div class="center-block" id="detAziendaButton"> BOTTONE DETTAGLI AZIENDA </div>
         </div>
     </div>
 
