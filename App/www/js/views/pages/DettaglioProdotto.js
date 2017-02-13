@@ -31,7 +31,7 @@ define(function(require){
     		return this;*/
             var temp = localStorage.getItem("datoprod");
 
-            var model = new Products({
+            var model = new Prodotti({
                 id: temp
             });
 
@@ -69,7 +69,52 @@ define(function(require){
 
 
     	},
+        aggiungiAlCarrello: function(e){
+/*
+      el: $("#product-form");
+            var arraytemp = [];
+            arraytemp = localStorage.getItem("Carrello");
+            var self = this;
 
+            // In pratica prendi ogni campo dall'html e lo metti in delle var
+            // con cui crei un modello
+            //che vai ad inserire in una var "carrello" che si andrà
+            //a salvare nel local storage."
+
+            var idprod = $(this.el).find("#id_prodotto").val(),
+                name = $(this.el).find("#name").val(),
+                img = $(this.el).find("#img").val(),
+                price = $(this.el).find("#price").val(),
+                quantity = $(this.el).find("#span-number").html();
+
+            var prod = new Products({
+                name: name,
+                id: idprod,
+                img: img,
+                price: parseFloat(price).toFixed(2),
+                quantity: quantity,
+                total: price * quantity
+            });
+
+            var Carrello = JSON.parse(localStorage["Carrello"]);
+            Carrello.push(prod);
+            localStorage["Carrello"] = JSON.stringify(Carrello);
+
+            if (Backbone.history.fragment === 'basket') {
+                Backbone.history.stop();
+                Backbone.history.start()
+            }
+
+            Backbone.history.navigate("basket", {
+                trigger: true
+            });      
+
+
+
+
+*/
+
+        },
         toDettAzienda: function(){
             Backbone.history.navigate("dettaglioazienda",{
                 trigger: true
