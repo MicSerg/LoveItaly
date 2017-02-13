@@ -17,10 +17,7 @@ define(function(require){
     	id: "ListaCategorie",
     	className: "ListaCategorie",
 
-/*
-**  - Si clicca il tasto categoria e si aprono le eventuali subcategorie..
-**  - ..Oppure si va direttamente nella lista dei prodotti di quella categoria
-*/
+
     	events: {
     		"click #t_cat":"toRisCat",
     	},
@@ -29,10 +26,7 @@ define(function(require){
 
             var contenitore = new Array();
 
-            /*****************************************************
-             * Uso array del localStorage per avere un accesso
-             * piu veloce rispetto ad una chiamata AJAX
-             *****************************************************/
+            
 
             var stored = JSON.parse(localStorage.getItem("cat"));
 
@@ -49,9 +43,7 @@ define(function(require){
                 contenitore.push(categoria);
             }
 
-            /*****************************************************
-             * Rimuovo e pulisco ciò che ho ottenuto da Prestashop
-             *****************************************************/
+            
             contenitore.splice(0, 2);
             contenitore.splice(15, 2);
 
@@ -71,12 +63,7 @@ define(function(require){
                 trigger: true
             });
         },
-        /* -> SBAGLIATO!!!!!
-        prodotto: function(e) {
-            Backbone.history.navigate("listaprodotti", {
-                trigger: true
-            });
-        }*/
+        
 
     });
     return ListaCategorie;
