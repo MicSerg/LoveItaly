@@ -7,7 +7,7 @@ define(function(require){
 
     	constructorName: "sceltaCitta",
 
-    	//model: sceltaCitta (?),
+    	
 
     	initialize: function(){
     		this.template = Utils.templates.sceltaCitta;
@@ -18,9 +18,7 @@ define(function(require){
 
     	events: {
             "click #lLogin" : "toLogin",
-    		//Click sul bottone per andare nella login
-    		//Click sul bottone in fondo per andare nella pagine delle offerte 
-    		//da NON connesso
+    		
             "click #lScelta" : "toOfferte"
     	},
 
