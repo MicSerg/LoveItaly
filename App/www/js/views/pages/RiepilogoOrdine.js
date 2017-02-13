@@ -10,7 +10,7 @@ define(function(require){
 			this.template=Utils.templates.riepilogoOrdine;
 
 		},
-		id: "riepilogo_ordine", // ID che tiene TUTTO riepilogo ordine
+		id: "riepilogo_ordine", 
 		className: "",
 		events: {
 			"click #t_Back" : "goBackToNavig",
@@ -22,7 +22,7 @@ define(function(require){
 		},
 
 		goBackToNavig: function(){
-			console.log("torna ad offerte");
+			
 			Backbone.history.navigate("showheadnavig",{
 				trigger: true
 			});
