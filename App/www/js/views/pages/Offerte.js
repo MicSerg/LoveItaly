@@ -4,9 +4,9 @@ define(function(require){
 	var Backbone = require("backbone");
     var Utils = require("utils");
 
-    //inserimento modelli
+    
     var Prodotti_Home = require ("models/Prodotti_Home");
-    //nuovo modello prodotti_home che filtra i primi 5 prodotti
+    
     var Prodotti = require ("models/Prodotti");
     var Categorie = require ("collections/Categorie");
     var ProdottiHome = require ("models/ProdottiHome");
@@ -15,7 +15,7 @@ define(function(require){
 
 
 
-    console.log("Sono dentro Offerte.js");
+    
 
     var offerte = Utils.Page.extend({
 
@@ -30,10 +30,7 @@ define(function(require){
     	id: "",
     	className: "",
 
-/*
-**  - Si clicca il prodotto e si entra nel dettaglio prodotto specifico
-**  - Si clicca il simbolo del carrello e il prodotto selezionato va nel carrello
-*/
+
     	events: {
     		"click .productBox" : "toDettProdotto",
             
@@ -41,9 +38,7 @@ define(function(require){
 
     	render: function(){
             
-            /*****************************************************
-             * Riempio la home con i miei oggetti di interesse
-             *****************************************************/
+            
 
             var that = this;
 
@@ -51,14 +46,11 @@ define(function(require){
             var sale2 = new sweetProduct();
             var arraytest = [];
             var loca = localStorage.getItem("localizzazione");
-            console.log(localStorage.getItem("Carrello") + "<------");
+            
             online.fetch({
                 success: function() {
 
-                    /*****************************************************
-                     * Aggiungo immagini e setto a float i prezzi in modo
-                     * adeguato
-                     *****************************************************/
+                    
 
                     arraytest[0] = (online.attributes);
 
