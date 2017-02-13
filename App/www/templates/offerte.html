@@ -2,16 +2,22 @@
     <h6 class="center-align"><b>In Offerta</b></h6>
     <div class="autoplay">
 
-            {{#each this}}
-                <div class="productBox card white">
-                    <div class="prod_img card-image">immagine</div>
-                    <div class="card-content">
-                        <span class="prod_nome">prodotto</span>
-                        <span class="prod_az">azienda</span>
+            {{#each [0]}} {{#if name}}
+                <div class="productBox card white" id="dettaglioprodotto">
+                {{#if img}}
+                <div class="prod_img card-image">
+                
+                    <img src="{{img}}" data-prod="{{id}}">
+                    {{else}}
+                    <img src="img/no.jpg" data-prod="{{id}}"> {{/if}}
+                 </div>
+                    <div class="card-content" data-prod="{{id}}" imgSrc="{{img}}">
+                        <span class="prod_nome">{{name}}</span>
+                        <span class="prod_az"></span>
                     </div>
                     <a class="waves-effect waves-light btn">button</a>
                 </div>
-            {{/each}}
+               {{/if}} {{/each}}
 
     </div>
 </div>
@@ -20,16 +26,22 @@
     <h6 class="center-align"><b>Nuovi Arrivi</b></h6>
     <div class="autoplay">
 
-            {{#each this}}
-                <div class="productBox card white">
-                    <div class="prod_img card-image">immagine</div>
-                    <div class="card-content">
-                        <span class="prod_nome">prodotto</span>
-                        <span class="prod_az">azienda</span>
+            {{#each [0]}} {{#if name}}
+                <div class="productBox card white" id="dettaglioprodotto">
+                {{#if img}}
+                <div class="prod_img card-image">
+                
+                    <img src="{{img}}" data-prod="{{id}}">
+                    {{else}}
+                    <img src="img/no.jpg" data-prod="{{id}}"> {{/if}}
+                 </div>
+                    <div class="card-content" data-prod="{{id}}" imgSrc="{{img}}">
+                        <span class="prod_nome">{{name}}</span>
+                        <span class="prod_az"></span>
                     </div>
                     <a class="waves-effect waves-light btn">button</a>
                 </div>
-            {{/each}}
+               {{/if}} {{/each}}
 
     </div>
 </div>
