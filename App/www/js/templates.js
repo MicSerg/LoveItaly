@@ -12,30 +12,30 @@
 define({
 
 //HeadInit
-    headinit:"../../templates/headInit.html",
-    preload:"../../templates/preload.html",
-    login:"../../templates/login.html",
-    sceltaCitta:"../../templates/sceltaCitta.html",
+    headinit:"templates/headInit.html",
+    preload:"templates/preload.html",
+    login:"templates/login.html",
+    sceltaCitta:"templates/sceltaCitta.html",
 
 //HeadNavig
-    headnavig:"../../templates/headNavig.html",
-    offerte:"../../templates/offerte.html",
-    dettaglioAzienda:"../../templates/dettaglioAzienda.html",
-    dettaglioProdotto:"../../templates/dettaglioProdotto.html",
-    listaAziende:"../../templates/listaAziende.html",
-    listaCategorie:"../../templates/listaCategorie.html",
+    headnavig:"templates/headNavig.html",
+    offerte:"templates/offerte.html",
+    dettaglioAzienda:"templates/dettaglioAzienda.html",
+    dettaglioProdotto:"templates/dettaglioProdotto.html",
+    listaAziende:"templates/listaAziende.html",
+    listaCategorie:"templates/listaCategorie.html",
     // risCategoria -> lista prodotti
-    risultatoCategoria:"../../templates/risultatoCategoria.html",
-    risultatoRicerca:"../../templates/risultatoRicerca.html",
+    risultatoCategoria:"templates/risultatoCategoria.html",
+    risultatoRicerca:"templates/risultatoRicerca.html",
 
 //HeadMenu 
-    headmenu:"../../templates/headMenu.html",
-    mieiOrdini:"../../templates/mieiOrdini.html",
-    ordine:"../../templates/ordine.html",
-    aiuto:"../../templates/aiuto.html",
+    headmenu:"templates/headMenu.html",
+    mieiOrdini:"templates/mieiOrdini.html",
+    ordine:"templates/ordine.html",
+    aiuto:"templates/aiuto.html",
 
 //Le due schermate derivanti dal carrello
-    riepilogoOrdine:"../../templates/riepilogoOrdine.html",
-    insDatiSpedizione:"../../templates/insDatiSpedizione.html",
+    riepilogoOrdine:"templates/riepilogoOrdine.html",
+    insDatiSpedizione:"templates/insDatiSpedizione.html",
     
 });
