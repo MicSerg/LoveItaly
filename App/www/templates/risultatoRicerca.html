@@ -8,11 +8,13 @@
     <div class="row">
         {{#each this}}
             <div class="col s6">
-                <div class="productBox card white">
-                    <div class="prod_img card-image">immagine</div>
-                    <div class="card-content">
-                        <span class="prod_nome">prodotto</span>
-                        <span class="prod_az">azienda</span>
+                <div class="productBox card white" id="dettaglioprodotto" data-prod="{{id}}">
+                    <div class="prod_img card-image">
+                    <img src="{{img}}" data-prod="{{id}}">
+                    </div>
+                    <div class="card-content" data-prod="{{id}}">
+                        <span class="prod_nome">{{name}}</span>
+                        <span class="prod_az"></span>
                     </div>
                     <a class="waves-effect waves-light btn">button</a>
                 </div>
