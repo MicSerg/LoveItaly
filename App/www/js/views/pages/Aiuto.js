@@ -10,16 +10,21 @@ define(function(require){
 
     	initialize: function(){
     		this.template = Utils.templates.aiuto;
+
+              $(document).ready(function(){
+                $('.collapsible').collapsible();
+              });
+        
     	},
 
-    	id: "",
+    	id: "Aiuto_sc",
     	className: "",
 /*
 **  - Si torna indietro
 **  - Si clicca una domanda dell'aiuto e si apre la risposta!
 */
     	events: {
-    		"click #tastoIndietro" : "goBackToNavig", 
+    		"click #t_Back" : "goBackToNavig", 
     	},
 
     	render: function(){

@@ -278,11 +278,13 @@ select#sel_Citta {
     height:100%;
 }
 #scltCitta {
+    position:relative;
     text-align:center;
     text-decoration:none;
+    left:-3%;
     font-size:12px;
     font-family:'open sans','helveticaNeue-Light','helveticaNeue','helvetica','arial','sans-serif';
-    color:white;
+    color:black;
     border:none;
     background-color:transparent;
     -webkit-appearance: none;
@@ -303,6 +305,9 @@ select#sel_Citta {
 }
 #parteOP{
     display:none;
+}
+.switch{
+    display:inline-block;
 }
 
 #sdwModal{/* Ombra per il SideMenu */
@@ -707,4 +712,10 @@ select#sel_Citta {
     margin-top:20px;
 }
 
+/*AIUTO *************************************************/
 
+#Aiuto_sc > ul > li > .collapsible-body{
+    background-color: green;
+
+    color:white;
+}

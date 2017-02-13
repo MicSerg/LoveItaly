@@ -32,7 +32,6 @@ define({
     headmenu:"../../templates/headMenu.html",
     mieiOrdini:"../../templates/mieiOrdini.html",
     ordine:"../../templates/ordine.html",
-    opzioni:"../../templates/opzioni.html",
     aiuto:"../../templates/aiuto.html",
 
 //Le due schermate derivanti dal carrello

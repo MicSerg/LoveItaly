@@ -19,15 +19,21 @@
                         <div class="onMenu" id="logoRes">
                                     <img src="img/logo.png" id="logoMenu"> </img>
                         </div>
-
+<!-- #scltCitta  form   ||   select name scltCitta-->
                     
-                    <form id="scltCitta" class="onMenu"> Prova <!--Da specificare per cambiare select-->
-                        <select name="scltCitta">
-                            <option value="citta001">Milano</option>
-                            <option value="citta002">Roma</option>
-                            <option value="citta003">Genova</option>
-                        </select> 
-                    </form> 
+                    <select class="browser-default center-block onMenu" id="scltCitta" name="citta">
+                        <option value="" disabled selected>VUOI SCEGLIERE UNA CITTA?</option>
+                        <option value="Castel Frentano">CASTEL FRENTANO</option>
+                        <option value="Fossacesia">FOSSACESIA</option>
+                        <option value="Frisa">FRISA</option>
+                        <option value="Lanciano">LANCIANO</option>
+                        <option value="Mozzagrogna">MOZZAGROGNA</option>
+                        <option value="Ortona">ORTONA</option>
+                        <option value="Rocca San Giovanni">ROCCA SAN GIOVANNI</option>
+                        <option value="Santa Maria Imbaro">SANTA MARIA IMBARO</option>
+                        <option value="San Vito Chietino">SAN VITO CHIETINO</option>
+                        <option value="Treglio">TREGLIO</option>
+                      </select>
 
                     <div class="onMenu" href="#" id="m_opz">Opzioni</div>
                     <div class="onMenu" href="#" id="m_newsletter">Newsletter</div>
@@ -41,8 +47,21 @@
                 </div> 
                 
                 <div id="parteOP">
-                    <div class="onMenu" id="op_notif">Notifiche</div>
-                    <div class="onMenu" id="op_suoni">Suoni</div>
+                    <div class="onMenu" id="op_notif">Notifiche
+                        <div class="switch">
+                            <label>
+                              <input type="checkbox">
+                              <span class="lever"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="onMenu" id="op_suoni">Suoni
+                        <div class="switch">
+                            <label>
+                              <input type="checkbox">
+                              <span class="lever"></span>
+                            </label>
+                        </div></div>
                     <div class="onMenu" id="op_cancDatiLog">Cancella Dati Login</div>
                     <div class="onMenu" id="op_back">Indietro</div>
                 </div>

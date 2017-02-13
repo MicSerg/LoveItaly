@@ -51,7 +51,6 @@ define(function(require) {
 	//Lista pagine di HeadMenuView
 	var MieiOrdini = require("views/pages/MieiOrdini");
 	var Ordine = require("views/pages/Ordine");
-	var Opzioni = require("views/pages/Opzioni");
 	var Aiuto = require("views/pages/Aiuto");
 
 	//Eccessione HeadMenuView -> Raggiungibile da Carrello
@@ -287,6 +286,9 @@ define(function(require) {
 			console.log("router > Aiuto");
 			var page=new Aiuto({});
 			this.changePage(page);
+			$('.collapsible').collapsible({
+                accordion: false
+            });
 		},
 
 		showSpedizione: function(){

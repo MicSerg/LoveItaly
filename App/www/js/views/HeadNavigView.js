@@ -43,6 +43,7 @@ define(function(require){
 
     	events: {//Eventi scatenati
             //SIDEMENU
+            "click #scltCitta" : "setTown",
             "click #menuIcon" : "showSideMenu",
             "click #close" : "closeSideMenu", //Chiude side premendo la X
             "click #sdwModal" : "closeSideMenu", //Chiude side cliccando fuori
@@ -50,7 +51,7 @@ define(function(require){
             //*****Eventi che mi portano nel menu con la struttura HeadMenuView:
             "click #m_archord" : function(){this.enteringMenu("mieiordini");},
             "click #m_opz" : "toOpzioni",
-            "click #op_back" : "FromOpzioniToMenu",
+            
             //"click #m_newsletter" : function(){this.enteringMenu("");},
             "click #m_help" : function(){this.enteringMenu("aiuto");},
             "click #m_account" : "checkAccountInSite",
@@ -72,7 +73,11 @@ define(function(require){
             //Eventi scatenati dal click della sub-bar
             "click #tOfferte" : "showOfferte",
             "click #tCategorie" : "showListaCategorie",
-            "click #tAziende" : "showListaAziende"
+            "click #tAziende" : "showListaAziende",
+
+            //Eventi di OPZIONI
+            "click #op_cancDatiLog" : "cancDatiLog",
+            "click #op_back" : "FromOpzioniToMenu",
 
     	},
 
@@ -102,6 +107,14 @@ define(function(require){
 
     		return this;
     	},
+        setTown: function(event){
+            
+            if(this.$el.find('#scltCitta')[0].value != ""){
+                var dataloc = this.$el.find('#scltCitta')[0].value;
+                localStorage.setItem("localizzazione", dataloc);
+            }
+
+        },
         doLogout: function(){
             
             this.$el.find('#m_logout')[0].innerHTML="Login";
@@ -255,6 +268,13 @@ define(function(require){
             }
             
 
+        },
+        cancDatiLog: function(){
+            //rimuove TUTTo il localStorage.. per ora solo sessione
+            if(localStorage.getItem("sessione")){
+                console.log("rimuovi la sessione");
+                localStorage.removeItem("sessione");
+            }
         },
         showCart:function() {
             console.log("Apertura Carrello");
