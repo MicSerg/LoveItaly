@@ -3,7 +3,7 @@ define(function(require){
 	var Backbone = require("backbone");
 	var Lista_Prod_Cat = require("models/ListaProdottiDaCategoria");
     var Prodotti = require ("models/Prodotti");
-    //var VistaProdotti = require ("views/pages/VistaProdotti");
+    var DettaglioProdotto = require ("views/pages/DettaglioProdotto");
 	
     var Utils = require("utils");
 

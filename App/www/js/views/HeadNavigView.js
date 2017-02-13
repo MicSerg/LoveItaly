@@ -134,6 +134,7 @@ define(function(require){
         // structure "headMenu"
             console.log("enteringMenu... Connesso!");
             this.menuView = _string;
+            console.log(this.menuView);
             Backbone.history.navigate("showheadmenu",{
                 trigger: true,
             });

@@ -4,7 +4,7 @@ define(function(require){
     var Utils = require("utils");
     var Lista_Ricerca = require("models/SearchList");
     var Prodotti = require("models/Prodotti");
-    //var detProdotto = require("views/pages/dettaglioProdotto");
+    var DettaglioProdotto = require ("views/pages/DettaglioProdotto");
 
 
     var risultatoRicerca = Utils.Page.extend({

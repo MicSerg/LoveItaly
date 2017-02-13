@@ -4,7 +4,7 @@ define(function(require) {
     var Utils = require("utils");
     var SearchList = require("models/SearchList");
     var Prodotti = require("models/Prodotti");
-    var VistaProdotti = require("views/pages/VistaProdotti");
+    var DettaglioProdotto = require ("views/pages/DettaglioProdotto");
 
     var ListaSearch = Utils.Page.extend({
 

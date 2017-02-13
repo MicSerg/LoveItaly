@@ -342,7 +342,10 @@ define(function(require) {
 			if($('#Head_Init').length) $('#Head_Init').remove();
 			if(this.currentView.menuView=="insdatispedizione"){
 				this.menuView = this.currentView.menuView; /*IMPORTANTISSIMA*/
+			}else{
+				this.menuView = this.structureView.menuView;
 			}
+
 				this.structureView = new HeadMenuView();
 				document.body.appendChild(this.structureView.render().el);
 				this.structureView.trigger("inTheDOM");
