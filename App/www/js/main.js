@@ -39,7 +39,6 @@ require.config({
 });
 
 require(['backbone', 'utils'], function(Backbone, Utils) {
-    //console.log("MAIN:> Primo Require backbone / utils");
     require(['preloader', 'router'], function(PreLoader, AppRouter) {
         //console.log("MAIN:> Secondo Require preloader / router");
         //document.addEventListener("deviceready", run, false); // <-- per cordova
@@ -61,9 +60,7 @@ require(['backbone', 'utils'], function(Backbone, Utils) {
                             accordion: false
                         });
                 });
-
             }
-
         });
 
 

@@ -207,6 +207,7 @@ define(function(require){
 
             }
         },
+
         cancDatiLog: function(){
 
             if(localStorage.getItem("sessione")){
