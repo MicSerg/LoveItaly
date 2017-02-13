@@ -1,10 +1,10 @@
 <div id="dp_cont">
 
-    <div id="dp_head"><!-- primo blocco -->
+    <div id="dp_head">
         <div class="row">
             <div class="col s7" id="dettaglioprodotto">
 
-                <div id="dp_himg" class="valign-wrapper"><!-- Immagine -->
+                <div id="dp_himg" class="valign-wrapper">
                     {{#if img}}
                     <img src="{{img}}" class="valign"></img>
                     {{else}}
@@ -15,9 +15,8 @@
             </div>
 
             <div class="col s5">
-                <div id="dp_hinf" data-prod="{{this.id}}" data-nome="{{this.name}}" data-qnt="{{this.quantity}}" data-prz="{{this.price}}"><!-- Informazioni a destra immagine -->
-                    <!-- Varie stringhe di informazione -->
-                    <!-- 2 pulsanti -->
+                <div id="dp_hinf" data-prod="{{this.id}}" data-nome="{{this.name}}" data-qnt="{{this.quantity}}" data-prz="{{this.price}}">
+                    
                     <div id="p_id" value="{{this.id}}"></div>
                     <div id="p_nome" value="{{this.name}}"><p><b>Nome : {{this.name}}</b></p></div>
                     <div id="p_qnt" value="{{this.quantity}}"><p><b>Quantità:</b> {{this.quantity}}</p></div>
@@ -31,7 +30,7 @@
     
 
 
-    <div id="dp_dett"><!-- terzo blocco -->
+    <div id="dp_dett">
         <div>
             <br>
             <br>
