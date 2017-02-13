@@ -61,6 +61,7 @@ require(['backbone', 'utils'], function(Backbone, Utils) {
         }
 
         function run() {
+            document.addEventListener("backbutton", onBackKeyDown, false);
             Utils.loadTemplates().once("templatesLoaded", function() {
 
                 var images = []; 
