@@ -59,11 +59,10 @@ define(function(require){
             });
         },
 
-        toDettProdotto: function(e){
-            e.preventDefault();
-            var datoprod=$(e.currentTarget).attr("data-prod");
+        toDettProdotto: function(event){
+            event.preventDefault();
+            var datoprod = $(event.currentTarget).attr("data-prod");
             localStorage.setItem("datoprod", datoprod);
-
             Backbone.history.navigate("dettaglioprodotto",{
                 trigger: true
             });

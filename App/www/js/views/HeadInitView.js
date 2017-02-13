@@ -5,7 +5,7 @@ define(function(require){
     	var Backbone = require("backbone");
     	var Utils = require("utils");
     	var handlebars = require("handlebars");
-	var ListaSearch = require("views/pages/ListaSearch");
+
 
     console.log("Entro in HeadInitView.js");
 

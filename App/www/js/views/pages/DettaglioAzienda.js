@@ -1,11 +1,11 @@
 define(function(require){
 	var $ = require("jquery");
+    var Utils = require("utils");
 	var Backbone = require("backbone");
 	var ListaProdottiDaAzienda = require("models/ListaProdottiDaAzienda");
     var Azienda = require ("models/Azienda");
-	
-    var Utils = require("utils");
-
+	var Prodotti = require("models/Prodotti");
+    
     var dettaglioAzienda = Utils.Page.extend({
 
     	constructorName: "dettaglioAzienda",
@@ -52,6 +52,9 @@ define(function(require){
     	},
 
         toDettProdotto: function(event){
+            event.preventDefault();
+            var datoprod = $(event.currentTarget).attr("data-prod");
+            localStorage.setItem("datoprod", datoprod);
             Backbone.history.navigate("dettaglioprodotto",{
                 trigger: true
             });
