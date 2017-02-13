@@ -2,18 +2,24 @@
 
     <div id="dp_head"><!-- primo blocco -->
         <div class="row">
-            <div class="col s7">
+            <div class="col s7" id="dettaglioprodotto">{{#if img}}
+
                 <div id="dp_himg"><!-- Immagine -->
+                    <img class="responsive-img" src="{{img}}">
+                    {{else}}
+                    <img class="responsive-img" src="img/no.jpg">
+                    {{/if}}
                     <p><div id="a"></div></p>
                 </div>
             </div>
+
             <div class="col s5">
                 <div id="dp_hinf"><!-- Informazioni a destra immagine -->
                     <!-- Varie stringhe di informazione -->
                     <!-- 2 pulsanti -->
-                    <p>Nome Prodotto</p>
-                    <p>Quantità</p>
-                    <p>Costo</p>
+                    <p>{{this.name}}</p>
+                    <p>{{this.quantity}}</p>
+                    <p>€{{this.price}}</p>
                     <p>Peso</p>
                 </div>
             </div>
@@ -28,12 +34,8 @@
 
     <div id="dp_dett"><!-- terzo blocco -->
         <div>
-            <p>Dettagli</p>
-            <p>Lista di informazioni inerenti a dettaglio prodotto ecc</p>
+            <p>{{this.description}}</p>
 
-            <p>Nome Azienda Produttrice</p>
-            <p>partita iva</p>
-            <p>indirizzo ecc ecc ecc</p>
             <div class="center-block" id="detAziendaButton"> BOTTONE DETTAGLI AZIENDA </div>
         </div>
     </div>
