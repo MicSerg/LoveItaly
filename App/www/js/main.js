@@ -45,19 +45,20 @@ require(['backbone', 'utils'], function(Backbone, Utils) {
         require(['materialize', 'jquery'], function(Materialize, $) {
             document.addEventListener("deviceready", initComponents, false); 
             function initComponents() {
-                console.log("MAIN:> funzione initComponents dentro il terzo require");
                 require(
                     ['velocity', 'jquery.easing', 'animation', 'hammerjs', 'jquery.hammer', 'global', 'collapsible', 'dropdown', 'leanModal', 'materialbox', 'parallax', 'tabs', 'tooltip', 'waves', 'toasts', 'sideNav', 'scrollspy', 'forms', 'slider', 'cards', 'pushpin', 'buttons', 'scrollFire', 'transitions', 'picker', 'picker.date', 'character_counter'],
                     function() {
 
-                        $('.button-collapse').sideNav();
                         $('.collapsible').collapsible({
                             accordion: false
                         });
                 });
             }
         });
-
+        //disabilita il tastino "indietro"
+        function onBackKeyDown(e) {
+            e.preventDefault();
+        }
 
         function run() {
             Utils.loadTemplates().once("templatesLoaded", function() {
