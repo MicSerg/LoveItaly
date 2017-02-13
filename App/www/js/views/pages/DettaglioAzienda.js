@@ -24,8 +24,8 @@ define(function(require){
     	},
 
     	render: function(){
-    		//this.el.innerHTML = this.template({});
-    		//return this;
+    		
+    		
             var temp = localStorage.getItem("datoazienda");
             var model = new Azienda({
                 id: temp
